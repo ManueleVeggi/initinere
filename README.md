@@ -1,8 +1,13 @@
-# In itinere
+# <i>In itinere</i>
 
-An open data project on the attractiveness of University in Italy.
-Final project "Open Access and Digital Ethics"
+<b><i>In itinere</i></b> is an open data project on offsite student enrollment in Italian University.
+
+## Source Data
+
+
+## Credits
+Final project "Open Access and Digital Ethics", MA "Digital Humanities and Digital Knowledge"
 
 Students
-- Federica Bonifazi
-- Manuele Veggi
+- [Federica Bonifazi](mailto:federica.bonifazi@studio.unibo.it)
+- [Manuele Veggi](mailto:manuele.veggi@studio.unibo.it)
