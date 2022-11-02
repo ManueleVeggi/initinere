@@ -11420,8 +11420,9 @@ html {
 }
 
 .callout {
-  padding: 15rem 0;
-  background: linear-gradient(90deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.1) 100%), url("../assets/img/bg-callout.jpg");
+  padding: 5rem 15rem 15rem 15rem;
+  background: rgb(155,135,114);
+  background: linear-gradient(0deg, rgba(155,135,114,0.35476197314863445) 33%, rgba(100,55,53,0.30154068463322825) 74%);
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -11430,7 +11431,6 @@ html {
   font-size: 3.5rem;
   font-weight: 700;
   display: block;
-  max-width: 30rem;
 }
 
 footer.footer {
@@ -11562,7 +11562,7 @@ footer.footer .social-link:hover {
 
 .service-icon {
   background-color: #fff;
-  color: #1D809F;
+  color: #643735;
   height: 7rem;
   width: 7rem;
   display: block;

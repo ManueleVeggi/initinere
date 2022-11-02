@@ -1,0 +1,18 @@
+.masthead h1, .masthead h3 {
+    color: white;
+    text-shadow: 2px 2px black;
+}
+
+header .btn {
+    background-color: #ad3a31;
+    border: #643735;
+}
+
+header .btn:hover {
+    background-color: #643735;
+    border: #643735;
+}
+
+#services {
+    background-color: #643735;
+}
