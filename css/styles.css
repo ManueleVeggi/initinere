@@ -11339,7 +11339,7 @@ html {
   height: 100%;
   transition: all 0.4s ease 0s;
   transform: translateX(250px);
-  background: #1D809F;
+  background: #ad3a31;
   border-left: 1px solid rgba(255, 255, 255, 0.1);
 }
 
@@ -11372,7 +11372,8 @@ html {
 
 .sidebar-nav > .sidebar-brand {
   font-size: 1.2rem;
-  background: rgba(52, 58, 64, 0.1);
+  background: rgba(63, 47, 33, 0.1);
+  color: white;
   height: 80px;
   line-height: 50px;
   padding-top: 15px;
@@ -11444,29 +11445,23 @@ footer.footer .social-link {
   width: 4rem;
   line-height: 4.3rem;
   font-size: 1.5rem;
-  background-color: #1D809F;
+  background-color: #d8c8b6;
   transition: background-color 0.15s ease-in-out;
   box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.1);
 }
+
 footer.footer .social-link:hover {
-  background-color: #155d74;
+  background-color: #9b8772;
   text-decoration: none;
+  color: whitesmoke;
 }
 
-.map {
-  height: 30rem;
-}
-.map iframe {
-  pointer-events: none;
-  height: 100%;
-  width: 100%;
-  border: 0;
+.icon-social-github {
+  color: #643735;
 }
 
-@media (max-width: 992px) {
-  .map {
-    height: 75%;
-  }
+footer.footer .social-link:hover>.icon-social-github {
+  color: whitesmoke;
 }
 .masthead {
   min-height: 30rem;

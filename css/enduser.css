@@ -8,11 +8,53 @@ header .btn {
     border: #643735;
 }
 
-header .btn:hover {
+header .btn:hover, .btn:active, .btn:focus {
     background-color: #643735;
     border: #643735;
 }
 
+.btn:focus {
+    box-shadow: 0 0 0 0.25rem rgba(216, 200, 182, 0.5);
+}
+
 #services {
     background-color: #643735;
+}
+
+#indexdoc {
+    background-color: #d8c8b6;
+    padding: 0.5em;
+}
+
+.docsec {
+    padding: 1em;
+    font-size: 1.3em;
+}
+
+.docsec:not(#doc1) {
+    display: none;
+}
+
+.datainfo {
+    margin-top: 0.5em;
+    padding: 0.5em;
+    font-size: 1.5em;
+}
+.datainfo:not(#MUR1) {
+    display: none;
+}
+
+.datasetList {
+    color: #ad3a31;
+}
+
+.footer {
+    background-color: #643735;
+    color: whitesmoke;
+}
+
+.footer p a:any-link {
+    text-decoration: none;
+    color: whitesmoke;
+    font-weight: bold;
 }
