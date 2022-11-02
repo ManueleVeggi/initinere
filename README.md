@@ -1,6 +1,6 @@
 # <i>In itinere</i>
 
-<b><i>In itinere</i></b> is an open data project on offsite student enrollment in Italian University.
+<b><i>In itinere</i></b> is an open data project on offsite student enrollment in Italian University. The website can be accessed at the following [link](https://manueleveggi.github.io/initinere/).
 
 ## Source Data
 
