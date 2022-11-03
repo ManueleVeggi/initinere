@@ -1,4 +1,5 @@
-.masthead h1, .masthead h3 {
+.masthead h1,
+.masthead h3 {
     color: white;
     text-shadow: 2px 2px black;
 }
@@ -8,7 +9,9 @@ header .btn {
     border: #643735;
 }
 
-header .btn:hover, .btn:active, .btn:focus {
+header .btn:hover,
+.btn:active,
+.btn:focus {
     background-color: #643735;
     border: #643735;
 }
@@ -40,6 +43,7 @@ header .btn:hover, .btn:active, .btn:focus {
     padding: 0.5em;
     font-size: 1.5em;
 }
+
 .datainfo:not(#MUR1) {
     display: none;
 }
@@ -57,4 +61,18 @@ header .btn:hover, .btn:active, .btn:focus {
     text-decoration: none;
     color: whitesmoke;
     font-weight: bold;
+}
+
+#scrollnum {
+    font-size: 1.5em;
+    color: #ad3a31 !important
+}
+
+.stat-number {
+    font-size: 2.5em;
+    font-weight: 600;
+}
+
+.stat-title {
+    margin-top: 0.5em;
 }
