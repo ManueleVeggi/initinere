@@ -1,9 +1,7 @@
-from sqlite3 import connect
-from pandas import read_csv, read_sql, DataFrame
 import pandas as pd
-import re
 
 raw_dsu16 = pd.read_csv("data/dsu2016.csv", sep=";", encoding = "ISO-8859-1")
+raw_fee16 = pd.read_csv("data/fees2016.csv", sep=",", encoding = "ISO-8859-1")
 dsu16 = pd.DataFrame(columns=["uni_id", "university", "scholarship"])
 
 #Clean the dataframe: remove comments, simplify codes
@@ -32,9 +30,14 @@ for idx, row in raw_dsu16.iterrows():
     dsu16.at[i, "scholarship"] = sum
     i += 1
 
-#dsu16.drop_duplicates(ignore_index=True, inplace=True)
-#print(dsu16)
-    
+dsu16.drop_duplicates(ignore_index=True, inplace=True)
+for idx, row in raw_fee16.iterrows():
+    while row["COD_Ateneo"].startswith("0"):
+        row["COD_Ateneo"] = row["COD_Ateneo"][1:]
+    while len(str(row["COD_Ateneo"])) < 4:
+        row["COD_Ateneo"] = str(str(row["COD_Ateneo"]) + "0")
+    raw_fee16.at[idx, "COD_Ateneo"] = row["COD_Ateneo"]
 
-
-
+dsu16 = pd.merge(dsu16, raw_fee16, how='inner',left_on='uni_id',right_on='COD_Ateneo')
+dsu16 = dsu16[['uni_id', 'NOME_ATENEO', 'scholarship', 'TASSA_MEDIA_PAGANTI_LAUREA', 'TASSA_MEDIA_TOTALE_ISCRITTI_LAUREA']].rename(columns= {'NOME_ATENEO':'uni', 'TASSA_MEDIA_PAGANTI_LAUREA':'paidfee','TASSA_MEDIA_TOTALE_ISCRITTI_LAUREA':'totalfee'})
+print(dsu16)
