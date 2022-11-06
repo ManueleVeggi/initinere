@@ -1,25 +1,27 @@
 import pandas as pd
 
-def mergeCount(sourceDf, destDf, idcol, namecol, valcol):
+def mergeCount(sourceDf, destDf, col1, col2, col3, idcol, namecol, valcol):
     i = 0
     for idx, row in sourceDf.iterrows():
-        destDf.at[i, [1]] = row[idcol]  
-        destDf.at[i, [2]] = row[namecol]
+        destDf.at[i, col1] = row[idcol]  
+        destDf.at[i, col2] = row[namecol]
         temp = sourceDf.query('{0} == "{1}"'.format(idcol, row[idcol]))
         sum = 0
         for tempidx, temprow in temp.iterrows():
             sum += int(temprow[valcol])
-        destDf.at[i, [3]] = sum
+        destDf.at[i, col3] = sum
         i += 1
     destDf.drop_duplicates(ignore_index=True, inplace=True)
     return destDf
 
 def refineStudId(myDf):
+    idList = [] 
     for idx, row in myDf.iterrows():
         while len(str(row["AteneoCOD"])) < 4:
             row["AteneoCOD"] = str(row["AteneoCOD"]) + "0"
-        myDf.at[idx, "AteneoCOD"] = str(row["AteneoCOD"])
-        return myDf
+        idList.append(str(row["AteneoCOD"]))
+    myDf["AteneoCOD"] = idList
+    return myDf
 
 def dataligner(dsupath, feepath, studpath, intpath, year, outputpath):
     
@@ -51,7 +53,7 @@ def dataligner(dsupath, feepath, studpath, intpath, year, outputpath):
                 row[5] = str(str(row[5]) + "0")
             dsuRaw.at[idx, "CODICE_ISTITUTO"] = row[5][:-2:]
 
-    dsuDf = mergeCount(dsuRaw, dsuDf, "CODICE_ISTITUTO", "NOME_ISTITUTO", "SPESA_LAUREA")
+    dsuDf = mergeCount(dsuRaw, dsuDf, "uni_id", "university", "scholarship", "CODICE_ISTITUTO", "NOME_ISTITUTO", "SPESA_LAUREA")
 
     #FASE 3
     #Refine and uniform the ids in the fees dataframe
@@ -70,13 +72,14 @@ def dataligner(dsupath, feepath, studpath, intpath, year, outputpath):
     #FASE 4
     #Apply similar processes for overall enrolling
     studentRaw = refineStudId(studentRaw)
-    studDf = mergeCount(studentRaw, studDf, "AteneoCOD", "AteneoNOME", "Isc")
+    studDf = mergeCount(studentRaw, studDf, "uni_id", "uni", "total_students", "AteneoCOD", "AteneoNOME", "Isc")
     studDf = pd.merge(dsuDf, studDf, how='inner',left_on='uni_id',right_on='uni_id')
     studDf = studDf[['uni_id', 'uni_y', 'scholarship', 'paidfee', 'totalfee', 'total_students']].rename(columns= {'uni_y':'uni'})
 
     #Apply similar processes for international enrolling
     intstudRaw = refineStudId(intstudRaw)
-    outputDf = mergeCount(intstudRaw, studDf, "AteneoCOD", "AteneoNOME", "Isc_S") 
+    outputDf = mergeCount(intstudRaw, outputDf, "uni_id", "uni", "int_students", "AteneoCOD", "AteneoNOME", "Isc_S") 
+    print(outputDf)
     outputDf = pd.merge(outputDf, studDf, how='inner',left_on='uni_id',right_on='uni_id')
     outputDf = outputDf[['uni_id', 'uni_y', 'scholarship', 'paidfee', 'totalfee', 'total_students_y', 'int_students', 'perc_intern']].rename(columns= {'uni_y':'uni','total_students_y':'total_students'})
 
@@ -89,13 +92,31 @@ def dataligner(dsupath, feepath, studpath, intpath, year, outputpath):
     outputDf.to_csv(outputpath, index=False)
     return outputDf
 
+# Call the function and create the datasets
+
+stud = "data/student.csv"
+ints = "data/intStudent.csv"
+
 dsu2016 = "data/dsu2016.csv"
 fee2016 = "data/fees2016.csv"
-stud2016 = "data/student.csv"
-ints2016 = "data/intStudent.csv"
 dest2016 = "data/output/2016.csv"
 
-print(dataligner(dsu2016, fee2016, stud2016, ints2016, "2015/2016", dest2016))
+dsu2017 = "data/dsu2017.csv"
+fee2017 = "data/fees2017.csv"
+dest2017 = "data/output/2017.csv"
+
+dsu2018 = "data/dsu2018.csv"
+fee2018 = "data/fees2018.csv"
+dest2018 = "data/output/2018.csv"
+
+dsu2019 = "data/dsu2019.csv"
+fee2019 = "data/fees2019.csv"
+dest2019 = "data/output/2019.csv"
+
+#print(dataligner(dsu2016, fee2016, stud, ints, "2015/2016", dest2016))
+print(dataligner(dsu2017, fee2017, stud, ints, "2016/2017", dest2017))
+print(dataligner(dsu2018, fee2018, stud, ints, "2017/2018", dest2018))
+print(dataligner(dsu2019, fee2019, stud, ints, "2018/2019", dest2019))
 
 
 
