@@ -117,9 +117,3 @@ dest2019 = "data/output/2019.csv"
 print(dataligner(dsu2017, fee2017, stud, ints, "2016/2017", dest2017))
 print(dataligner(dsu2018, fee2018, stud, ints, "2017/2018", dest2018))
 print(dataligner(dsu2019, fee2019, stud, ints, "2018/2019", dest2019))
-
-
-
-
-
-
