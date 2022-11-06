@@ -1,100 +1,100 @@
-Ôªø_id,ANNO_ACCADEMICO,COD_Ateneo,NOME_ATENEO,TASSA_MEDIA_PAGANTI_LAUREA,TASSA_MEDIA_TOTALE_ISCRITTI_LAUREA
-1,2015-2016,TTTTT,Totale Italia,"1531,35","1374,54"
-2,2015-2016,SSSSS,Totale Atenei Statali,"1214,83","1090,56"
-3,2015-2016,LLLLL,Totale Atenei Non Statali,"4535,68","4066,75"
-4,2015-2016,00101,Torino - Universit√† degli studi,"1374,95","1275,10"
-5,2015-2016,00102,Torino - Politecnico,"1093,96","948,63"
-6,2015-2016,00201,"Vercelli - Universit√† degli studi del Piemonte orientale ""A. Avogadro""","1314,37","1230,55"
-7,2015-2016,00401,Bra (CN) - Universit√† di Scienze Gastronomiche,"10307,32","8798,04"
-8,2015-2016,00701,Aosta - Universit√† degli studi,"1356,28","1187,87"
-9,2015-2016,01001,Genova - Universit√† degli studi,"1445,01","1319,39"
-10,2015-2016,01201,"Castellanza - Universit√† ""Carlo Cattaneo""","6716,98","6515,16"
-11,2015-2016,01202,Varese - Universit√† dell' Insubria,"1871,42","1816,21"
-12,2015-2016,01301,"Novedrate (CO) - Universit√† telematica ""e-Campus""","4054,43","3654,36"
-13,2015-2016,01501,Milano - Universit√† degli studi,"1745,93","1639,18"
-14,2015-2016,01502,Milano - Politecnico,"2102,38","1911,13"
-15,2015-2016,01503,"Milano - Universit√† commerciale ""Luigi Bocconi""","10166,20","9234,32"
-16,2015-2016,01504,"Milano - Universit√† Cattolica del ""Sacro Cuore""","5207,50","4819,32"
-17,2015-2016,01505,Milano - Libera Universit√† di Lingue e Comunicazione (IULM),"5588,00","5267,05"
-18,2015-2016,01508,Milano - Universit√† Vita-Salute San Raffaele,"7934,58","7707,13"
-19,2015-2016,01509,Milano-Bicocca - Universit√† degli studi,"1345,25","1236,69"
-20,2015-2016,01510,Rozzano (MI) Humanitas University,"7860,27","7813,76"
-21,2015-2016,01601,Bergamo - Universit√† degli studi,"1188,95","1074,56"
-22,2015-2016,01701,Brescia - Universit√† degli studi,"1281,26","1186,79"
-23,2015-2016,01801,Pavia - Universit√† degli studi,"1651,64","1525,36"
-24,2015-2016,01802,Pavia - Istituto universitario di studi superiori,"0,00","0,00"
-25,2015-2016,02101,Bolzano - Libera Universit√†,"1176,23","754,26"
-26,2015-2016,02201,Trento - Universit√† degli studi,"1408,93","1151,04"
-27,2015-2016,02301,Verona - Universit√† degli studi,"1473,38","1346,60"
-28,2015-2016,02701,"Venezia - Universit√† degli studi ""C√† Foscari""","1505,74","1334,20"
-29,2015-2016,02702,Venezia - Universit√† IUAV,"1930,97","1684,74"
-30,2015-2016,02801,Padova - Universit√† degli studi,"1568,98","1401,68"
-31,2015-2016,03001,Udine - Universit√† degli studi,"1467,27","1284,46"
-32,2015-2016,03201,Trieste - Universit√† degli studi,"1280,77","1115,98"
-33,2015-2016,03202,Trieste - Scuola internazionale superiore di studi avanzati,"0,00","0,00"
-34,2015-2016,03401,Parma - Universit√† degli studi,"1106,84","1007,89"
-35,2015-2016,03601,Modena e Reggio Emilia - Universit√† degli studi,"1534,08","1361,86"
-36,2015-2016,03701,Bologna - Universit√† degli studi,"1512,33","1305,65"
-37,2015-2016,03801,Ferrara - Universit√† degli studi,"1146,17","1037,97"
-38,2015-2016,04101,"Urbino - Universit√† degli studi ""Carlo Bo""","1339,94","1188,41"
-39,2015-2016,04201,Ancona - Universit√† Politecnica delle Marche,"1076,14","987,87"
-40,2015-2016,04301,Macerata - Universit√† degli studi,"883,83","779,67"
-41,2015-2016,04302,Camerino - Universit√† degli studi,"1073,64","916,31"
-42,2015-2016,04601,Lucca - Scuola IMT Alti Studi,"0,00","0,00"
-43,2015-2016,04801,Firenze - Universit√† degli studi,"976,19","902,41"
-44,2015-2016,04804,"Firenze - Universit√† telematica ""Italian University line""","1644,68","1644,68"
-45,2015-2016,05001,Pisa - Universit√† degli studi,"1161,20","1010,47"
-46,2015-2016,05002,Pisa - Scuola normale superiore,"0,00","0,00"
-47,2015-2016,05003,"Pisa - Scuola superiore studi universitari e perfezionamento ""S. Anna""","0,00","0,00"
-48,2015-2016,05201,Siena - Universit√† degli studi,"1613,86","1398,44"
-49,2015-2016,05202,Siena - Universit√† per stranieri,"1760,50","1314,34"
-50,2015-2016,05401,Perugia - Universit√† degli studi,"1155,75","1025,90"
-51,2015-2016,05403,Perugia - Universit√† per stranieri,"828,87","570,89"
-52,2015-2016,05601,Viterbo - Universit√† della Tuscia,"1009,62","813,54"
-53,2015-2016,05801,"Roma - Universit√† degli studi ""La Sapienza""","1171,23","1051,29"
-54,2015-2016,05802,"Roma - Universit√† degli studi di ""Tor Vergata""","1335,72","1229,10"
-55,2015-2016,05803,Roma - Libera Universit√† Maria SS.Assunta (LUMSA),"4032,82","3758,84"
-56,2015-2016,05805,Roma - Libera Universit√† internazionale degli studi sociali Guido Carli (LUISS),"8793,34","8387,83"
-57,2015-2016,05806,"Roma - Universit√† degli studi del ""Foro Italico""","1003,78","924,94"
-58,2015-2016,05807,Roma - III Universit√† degli studi,"1023,31","957,86"
-59,2015-2016,05808,"Roma - Universit√† ""Campus Bio-Medico""","7319,60","7066,60"
-60,2015-2016,05809,Roma - Universit√† degli Studi Internazionali ¬ñ UNINT,"4442,31","4023,35"
-61,2015-2016,05810,"Roma - Universit√† telematica ""Guglielmo Marconi""","1991,60","1891,68"
-62,2015-2016,05811,"Roma - Universit√† telematica ""Unitelma Sapienza""","1323,76","1265,05"
-63,2015-2016,05812,Roma - Universit√† Europea,"5000,94","4825,84"
-64,2015-2016,05813,"Roma - Universit√† telematica internazionale ""UNINETTUNO""","1594,11","513,39"
-65,2015-2016,05814,Roma - Universitas Mercatorum,"1842,17","1780,25"
-66,2015-2016,05815,Roma - Universit√† telematica Niccol√≤ Cusano (gi√† UNISU),"2108,78","2041,35"
-67,2015-2016,05816,"Roma - Universit√† telematica ""San Raffaele"" - gi√† ""UNITEL""","2160,68","2110,71"
-68,2015-2016,05817,Roma - Link Campus University,"3046,76","2407,00"
-69,2015-2016,06001,Cassino - Universit√† degli Studi di Cassino e del Lazio Meridionale,"805,08","659,71"
-70,2015-2016,06201,Benevento - Universit√† degli studi del Sannio,"1059,19","971,38"
-71,2015-2016,06202,"Benevento - Universit√† telematica ""Giustino Fortunato""","2144,55","2134,86"
-72,2015-2016,06301,"Napoli - Universit√† degli studi ""Federico II""","941,01","886,91"
-73,2015-2016,06302,"Napoli - Universit√† degli studi ""Parthenope""","728,88","688,20"
-74,2015-2016,06303,"Napoli - Universit√† degli studi ""L' Orientale""","947,51","835,52"
-75,2015-2016,06304,"Napoli - Universit√† degli studi ""Suor Orsola Benincasa""","2393,99","2185,02"
-76,2015-2016,06306,Napoli - Seconda Universit√† degli studi,"1391,51","1273,41"
-77,2015-2016,06307,"Napoli - Universit√† telematica ""Pegaso""","1949,70","1949,21"
-78,2015-2016,06501,Salerno - Universit√† degli studi,"923,18","827,67"
-79,2015-2016,06601,L'Aquila - Universit√† degli studi,"675,78","624,80"
-80,2015-2016,06701,Teramo - Universit√† degli studi,"1158,30","1052,94"
-81,2015-2016,06901,Chieti e Pescara - Universit√† degli studi Gabriele D'Annunzio,"929,09","832,15"
-82,2015-2016,06902,"Torrevecchia Teatina (CH) - Universit√† telematica ""Leonardo da Vinci""","926,36","878,45"
-83,2015-2016,07001,Campobasso - Universit√† degli studi del Molise,"1223,07","1080,22"
-84,2015-2016,07101,Foggia - Universit√† degli studi,"977,39","804,56"
-85,2015-2016,07201,Bari - Universit√† degli studi,"1018,62","848,92"
-86,2015-2016,07202,Bari - Politecnico,"688,22","618,25"
-87,2015-2016,07203,"Casamassima - Libera Universit√† Mediterranea ""Jean Monnet""","3704,44","3520,45"
-88,2015-2016,07501,Lecce - Universit√† del Salento,"932,51","767,86"
-89,2015-2016,07601,Potenza - Universit√† degli studi della Basilicata,"612,15","516,80"
-90,2015-2016,07801,Arcavacata di Rende - Universit√† della Calabria,"782,80","659,48"
-91,2015-2016,07901,"Catanzaro - Universit√† degli studi ""Magna Grecia""","687,07","569,68"
-92,2015-2016,08001,Reggio Calabria - Universit√† degli studi Mediterranea,"973,68","899,56"
-93,2015-2016,08003,Reggio Calabria - Universit√† per Stranieri,"631,95","537,64"
-94,2015-2016,08201,Palermo - Universit√† degli studi,"919,99","863,68"
-95,2015-2016,08301,Messina - Universit√† degli studi,"1022,82","1009,29"
-96,2015-2016,08601,"Enna - Libera Universit√† della Sicilia Centrale ""KORE""","2760,04","2760,04"
-97,2015-2016,08701,Catania - Universit√† degli studi,"741,29","663,47"
-98,2015-2016,09001,Sassari - Universit√† degli studi,"879,94","737,18"
-99,2015-2016,09201,Cagliari - Universit√† degli studi,"795,16","641,48"
+_id;ANNO_ACCADEMICO;COD_Ateneo;NOME_ATENEO;TASSA_MEDIA_PAGANTI_LAUREA;TASSA_MEDIA_TOTALE_ISCRITTI_LAUREA
+1;2015-2016;TTTTT;Totale Italia;1531,35;1374,54
+2;2015-2016;SSSSS;Totale Atenei Statali;1214,83;1090,56
+3;2015-2016;LLLLL;Totale Atenei Non Statali;4535,68;4066,75
+4;2015-2016;00101;Torino - Universit‡ degli studi;1374,95;1275,1
+5;2015-2016;00102;Torino - Politecnico;1093,96;948,63
+6;2015-2016;00201;"Vercelli - Universit‡ degli studi del Piemonte orientale ""A. Avogadro""";1314,37;1230,55
+7;2015-2016;00401;Bra (CN) - Universit‡ di Scienze Gastronomiche;10307,32;8798,04
+8;2015-2016;00701;Aosta - Universit‡ degli studi;1356,28;1187,87
+9;2015-2016;01001;Genova - Universit‡ degli studi;1445,01;1319,39
+10;2015-2016;01201;"Castellanza - Universit‡ ""Carlo Cattaneo""";6716,98;6515,16
+11;2015-2016;01202;Varese - Universit‡ dell' Insubria;1871,42;1816,21
+12;2015-2016;01301;"Novedrate (CO) - Universit‡ telematica ""e-Campus""";4054,43;3654,36
+13;2015-2016;01501;Milano - Universit‡ degli studi;1745,93;1639,18
+14;2015-2016;01502;Milano - Politecnico;2102,38;1911,13
+15;2015-2016;01503;"Milano - Universit‡ commerciale ""Luigi Bocconi""";10166,2;9234,32
+16;2015-2016;01504;"Milano - Universit‡ Cattolica del ""Sacro Cuore""";5207,5;4819,32
+17;2015-2016;01505;Milano - Libera Universit‡ di Lingue e Comunicazione (IULM);5588;5267,05
+18;2015-2016;01508;Milano - Universit‡ Vita-Salute San Raffaele;7934,58;7707,13
+19;2015-2016;01509;Milano-Bicocca - Universit‡ degli studi;1345,25;1236,69
+20;2015-2016;01510;Rozzano (MI) Humanitas University;7860,27;7813,76
+21;2015-2016;01601;Bergamo - Universit‡ degli studi;1188,95;1074,56
+22;2015-2016;01701;Brescia - Universit‡ degli studi;1281,26;1186,79
+23;2015-2016;01801;Pavia - Universit‡ degli studi;1651,64;1525,36
+24;2015-2016;01802;Pavia - Istituto universitario di studi superiori;0;0
+25;2015-2016;02101;Bolzano - Libera Universit‡;1176,23;754,26
+26;2015-2016;02201;Trento - Universit‡ degli studi;1408,93;1151,04
+27;2015-2016;02301;Verona - Universit‡ degli studi;1473,38;1346,6
+28;2015-2016;02701;"Venezia - Universit‡ degli studi ""C‡ Foscari""";1505,74;1334,2
+29;2015-2016;02702;Venezia - Universit‡ IUAV;1930,97;1684,74
+30;2015-2016;02801;Padova - Universit‡ degli studi;1568,98;1401,68
+31;2015-2016;03001;Udine - Universit‡ degli studi;1467,27;1284,46
+32;2015-2016;03201;Trieste - Universit‡ degli studi;1280,77;1115,98
+33;2015-2016;03202;Trieste - Scuola internazionale superiore di studi avanzati;0;0
+34;2015-2016;03401;Parma - Universit‡ degli studi;1106,84;1007,89
+35;2015-2016;03601;Modena e Reggio Emilia - Universit‡ degli studi;1534,08;1361,86
+36;2015-2016;03701;Bologna - Universit‡ degli studi;1512,33;1305,65
+37;2015-2016;03801;Ferrara - Universit‡ degli studi;1146,17;1037,97
+38;2015-2016;04101;"Urbino - Universit‡ degli studi ""Carlo Bo""";1339,94;1188,41
+39;2015-2016;04201;Ancona - Universit‡ Politecnica delle Marche;1076,14;987,87
+40;2015-2016;04301;Macerata - Universit‡ degli studi;883,83;779,67
+41;2015-2016;04302;Camerino - Universit‡ degli studi;1073,64;916,31
+42;2015-2016;04601;Lucca - Scuola IMT Alti Studi;0;0
+43;2015-2016;04801;Firenze - Universit‡ degli studi;976,19;902,41
+44;2015-2016;04804;"Firenze - Universit‡ telematica ""Italian University line""";1644,68;1644,68
+45;2015-2016;05001;Pisa - Universit‡ degli studi;1161,2;1010,47
+46;2015-2016;05002;Pisa - Scuola normale superiore;0;0
+47;2015-2016;05003;"Pisa - Scuola superiore studi universitari e perfezionamento ""S. Anna""";0;0
+48;2015-2016;05201;Siena - Universit‡ degli studi;1613,86;1398,44
+49;2015-2016;05202;Siena - Universit‡ per stranieri;1760,5;1314,34
+50;2015-2016;05401;Perugia - Universit‡ degli studi;1155,75;1025,9
+51;2015-2016;05403;Perugia - Universit‡ per stranieri;828,87;570,89
+52;2015-2016;05601;Viterbo - Universit‡ della Tuscia;1009,62;813,54
+53;2015-2016;05801;"Roma - Universit‡ degli studi ""La Sapienza""";1171,23;1051,29
+54;2015-2016;05802;"Roma - Universit‡ degli studi di ""Tor Vergata""";1335,72;1229,1
+55;2015-2016;05803;Roma - Libera Universit‡ Maria SS.Assunta (LUMSA);4032,82;3758,84
+56;2015-2016;05805;Roma - Libera Universit‡ internazionale degli studi sociali Guido Carli (LUISS);8793,34;8387,83
+57;2015-2016;05806;"Roma - Universit‡ degli studi del ""Foro Italico""";1003,78;924,94
+58;2015-2016;05807;Roma - III Universit‡ degli studi;1023,31;957,86
+59;2015-2016;05808;"Roma - Universit‡ ""Campus Bio-Medico""";7319,6;7066,6
+60;2015-2016;05809;Roma - Universit‡ degli Studi Internazionali ñ UNINT;4442,31;4023,35
+61;2015-2016;05810;"Roma - Universit‡ telematica ""Guglielmo Marconi""";1991,6;1891,68
+62;2015-2016;05811;"Roma - Universit‡ telematica ""Unitelma Sapienza""";1323,76;1265,05
+63;2015-2016;05812;Roma - Universit‡ Europea;5000,94;4825,84
+64;2015-2016;05813;"Roma - Universit‡ telematica internazionale ""UNINETTUNO""";1594,11;513,39
+65;2015-2016;05814;Roma - Universitas Mercatorum;1842,17;1780,25
+66;2015-2016;05815;Roma - Universit‡ telematica NiccolÚ Cusano (gi‡ UNISU);2108,78;2041,35
+67;2015-2016;05816;"Roma - Universit‡ telematica ""San Raffaele"" - gi‡ ""UNITEL""";2160,68;2110,71
+68;2015-2016;05817;Roma - Link Campus University;3046,76;2407
+69;2015-2016;06001;Cassino - Universit‡ degli Studi di Cassino e del Lazio Meridionale;805,08;659,71
+70;2015-2016;06201;Benevento - Universit‡ degli studi del Sannio;1059,19;971,38
+71;2015-2016;06202;"Benevento - Universit‡ telematica ""Giustino Fortunato""";2144,55;2134,86
+72;2015-2016;06301;"Napoli - Universit‡ degli studi ""Federico II""";941,01;886,91
+73;2015-2016;06302;"Napoli - Universit‡ degli studi ""Parthenope""";728,88;688,2
+74;2015-2016;06303;"Napoli - Universit‡ degli studi ""L' Orientale""";947,51;835,52
+75;2015-2016;06304;"Napoli - Universit‡ degli studi ""Suor Orsola Benincasa""";2393,99;2185,02
+76;2015-2016;06306;Napoli - Seconda Universit‡ degli studi;1391,51;1273,41
+77;2015-2016;06307;"Napoli - Universit‡ telematica ""Pegaso""";1949,7;1949,21
+78;2015-2016;06501;Salerno - Universit‡ degli studi;923,18;827,67
+79;2015-2016;06601;L'Aquila - Universit‡ degli studi;675,78;624,8
+80;2015-2016;06701;Teramo - Universit‡ degli studi;1158,3;1052,94
+81;2015-2016;06901;Chieti e Pescara - Universit‡ degli studi Gabriele D'Annunzio;929,09;832,15
+82;2015-2016;06902;"Torrevecchia Teatina (CH) - Universit‡ telematica ""Leonardo da Vinci""";926,36;878,45
+83;2015-2016;07001;Campobasso - Universit‡ degli studi del Molise;1223,07;1080,22
+84;2015-2016;07101;Foggia - Universit‡ degli studi;977,39;804,56
+85;2015-2016;07201;Bari - Universit‡ degli studi;1018,62;848,92
+86;2015-2016;07202;Bari - Politecnico;688,22;618,25
+87;2015-2016;07203;"Casamassima - Libera Universit‡ Mediterranea ""Jean Monnet""";3704,44;3520,45
+88;2015-2016;07501;Lecce - Universit‡ del Salento;932,51;767,86
+89;2015-2016;07601;Potenza - Universit‡ degli studi della Basilicata;612,15;516,8
+90;2015-2016;07801;Arcavacata di Rende - Universit‡ della Calabria;782,8;659,48
+91;2015-2016;07901;"Catanzaro - Universit‡ degli studi ""Magna Grecia""";687,07;569,68
+92;2015-2016;08001;Reggio Calabria - Universit‡ degli studi Mediterranea;973,68;899,56
+93;2015-2016;08003;Reggio Calabria - Universit‡ per Stranieri;631,95;537,64
+94;2015-2016;08201;Palermo - Universit‡ degli studi;919,99;863,68
+95;2015-2016;08301;Messina - Universit‡ degli studi;1022,82;1009,29
+96;2015-2016;08601;"Enna - Libera Universit‡ della Sicilia Centrale ""KORE""";2760,04;2760,04
+97;2015-2016;08701;Catania - Universit‡ degli studi;741,29;663,47
+98;2015-2016;09001;Sassari - Universit‡ degli studi;879,94;737,18
+99;2015-2016;09201;Cagliari - Universit‡ degli studi;795,16;641,48
