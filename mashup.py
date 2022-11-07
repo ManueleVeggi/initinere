@@ -37,7 +37,7 @@ def dataligner(dsupath, feepath, studpath, intpath, year, outputpath):
     #Defines two intermediate and one last output dataframes
     dsuDf = pd.DataFrame(columns=["uni_id", "university", "scholarship"])
     studDf = pd.DataFrame(columns=["uni_id", "uni", "total_students"])
-    outputDf = pd.DataFrame(columns=["uni_id", "uni", "total_students", "int_students", "perc_intern"])
+    outputDf = pd.DataFrame(columns=["uni_id", "uni", "total_students", "int_students", "perc_intern", "relative_scholarship"])
 
     #FASE 2
     #Clean dataframe about "Diritto allo studio", aka scholarships
@@ -82,11 +82,15 @@ def dataligner(dsupath, feepath, studpath, intpath, year, outputpath):
     intstudRaw = refineStudId(intstudRaw)
     outputDf = mergeCount(intstudRaw, outputDf, "uni_id", "uni", "int_students", "AteneoCOD", "AteneoNOME", "Isc_S") 
     outputDf = pd.merge(outputDf, studDf, how='inner',left_on='uni_id',right_on='uni_id')
-    outputDf = outputDf[['uni_id', 'uni_y', 'scholarship', 'paidfee', 'totalfee', 'total_students_y', 'int_students', 'perc_intern']].rename(columns= {'uni_y':'uni','total_students_y':'total_students'})
+    outputDf = outputDf[['uni_id', 'uni_y', 'scholarship', 'paidfee', 'totalfee', 'total_students_y', 'int_students', 'perc_intern', 'relative_scholarship']].rename(columns= {'uni_y':'uni','total_students_y':'total_students'})
 
     #Compute percentages of international students
     for idx, row in outputDf.iterrows():
         outputDf.at[idx, "perc_intern"] = 100 * int(row["int_students"])/int(row["total_students"])
+        
+    #Compute relative scholarship per students
+    for idx, row in outputDf.iterrows():
+        outputDf.at[idx, "relative_scholarship"] = int(row["scholarship"])/int(row["total_students"])
     
     #FASE 6
     #Export the dataframe
@@ -117,4 +121,4 @@ dest2019 = "data/output/2019.csv"
 #print(dataligner(dsu2016, fee2016, stud, ints, "2015/2016", dest2016))
 #print(dataligner(dsu2017, fee2017, stud, ints, "2016/2017", dest2017))
 #print(dataligner(dsu2018, fee2018, stud, ints, "2017/2018", dest2018))
-#print(dataligner(dsu2019, fee2019, stud, ints, "2018/2019", dest2019))
+dataligner(dsu2019, fee2019, stud, ints, "2018/2019", dest2019)
