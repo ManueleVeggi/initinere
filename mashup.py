@@ -42,10 +42,13 @@ def dataligner(dsupath, feepath, studpath, intpath, year, outputpath):
     #FASE 2
     #Clean dataframe about "Diritto allo studio", aka scholarships
     dsuRaw = dsuRaw.query('TIPO_ISTITUTO == "Ateneo"')
+    dsuRaw = dsuRaw.astype({'NOME_ISTITUTO':'string'})
+    dsuRaw = dsuRaw.astype({'CODICE_ISTITUTO':'int64'})
+    dsuRaw = dsuRaw.astype({'CODICE_ISTITUTO':'string'})
 
     #Do not consider telematic university, simplify redundant records, uniform the ids
     for idx, row in dsuRaw.iterrows():
-        if "telematic" not in row[6]:
+        if "telematic" not in row['NOME_ISTITUTO']:
             if "<" in row[6]:
                 row[6] = (row[6].split("<"))[0]
             elif "(" in row[6]:
@@ -53,8 +56,7 @@ def dataligner(dsupath, feepath, studpath, intpath, year, outputpath):
             row[5]= str(row[5])
             while len(str(row[5])) < 6:
                 row[5] = str(str(row[5]) + "0")
-            dsuRaw.at[idx, "CODICE_ISTITUTO"] = row[5][:-2:]
-
+            dsuRaw.at[idx, "CODICE_ISTITUTO"] = row[5][:-2:]        
     dsuDf = mergeCount(dsuRaw, dsuDf, "uni_id", "university", "scholarship", "CODICE_ISTITUTO", "NOME_ISTITUTO", "SPESA_LAUREA")
 
     #FASE 3
@@ -126,7 +128,7 @@ dsu2019 = "data/dsu2019.csv"
 fee2019 = "data/fees2019.csv"
 dest2019 = "data/output/2019.csv"
 
-# print(dataligner(dsu2016, fee2016, stud, ints, "2015/2016", dest2016))
-# print(dataligner(dsu2017, fee2017, stud, ints, "2016/2017", dest2017))
+print(dataligner(dsu2016, fee2016, stud, ints, "2015/2016", dest2016))
+print(dataligner(dsu2017, fee2017, stud, ints, "2016/2017", dest2017))
 print(dataligner(dsu2018, fee2018, stud, ints, "2017/2018", dest2018))
 print(dataligner(dsu2019, fee2019, stud, ints, "2018/2019", dest2019))
