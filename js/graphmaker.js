@@ -26,7 +26,7 @@ function makeChart(rawData) {
         vAxes: {
             0: {
                 logScale: false,
-                title: 'Spent amount of € (fees, scholarships)',
+                title: 'Spent amount of € per students (fees, scholarships)',
                 gridlines: {
                     color: 'transparent'
                 }
