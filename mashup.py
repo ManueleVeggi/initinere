@@ -136,25 +136,3 @@ dest2019 = "data/output/2019.csv"
 # print(dataligner(dsu2017, fee2017, stud, ints, "2016/2017", dest2017))
 # print(dataligner(dsu2018, fee2018, stud, ints, "2017/2018", dest2018))
 # print(dataligner(dsu2019, fee2019, stud, ints, "2018/2019", dest2019))
-
-def compare(d1, d2, d3, d4, year):
-    df1 = pd.read_csv(d1, sep=";", encoding = "ISO-8859-1")
-    df2 = pd.read_csv(d2, sep=";", encoding = "ISO-8859-1")
-    df3 = pd.read_csv(d3, sep=",", encoding = "ISO-8859-1").query('AnnoA == "{0}"'.format(year))
-    df4 = pd.read_csv(d4, sep=",", encoding = "ISO-8859-1").query('AnnoA == "{0}"'.format(year))
-    print(year)
-    d = {
-        "dsu": len(df1),
-        "fee": len(df2),
-        "stu": len(df3),
-        "int": len(df4)
-    }
-    return d
-
-print(compare(dsu2016, fee2016, stud, ints, "2015/2016"))
-print("*****************")
-print(compare(dsu2017, fee2017, stud, ints, "2016/2017"))
-print("*****************")
-print(compare(dsu2018, fee2018, stud, ints, "2017/2018"))
-print("*****************")
-print(compare(dsu2019, fee2019, stud, ints, "2018/2019"))
