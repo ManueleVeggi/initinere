@@ -5,7 +5,14 @@ df17 = pd.read_csv("data/output/2017.csv")
 df18 = pd.read_csv("data/output/2018.csv")
 df19 = pd.read_csv("data/output/2019.csv")
 
-print(df16.info())
+print("16")
+print(df16.sort_values(by=['perc_intern'], ascending=False))
+print("17")
+print(df17.sort_values(by=['perc_intern'], ascending=False))
+print("18")
+print(df18.sort_values(by=['perc_intern'], ascending=False))
+print("19")
+print(df19.sort_values(by=['perc_intern'], ascending=False))
 
 def concatenateVal(colname):
     paidFee = pd.concat([

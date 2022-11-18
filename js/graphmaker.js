@@ -33,7 +33,7 @@ function makeChart(rawData) {
             },
             1: {
                 logScale: false,
-                maxValue: 45,
+                maxValue: 40,
                 gridlines: {
                     color: 'transparent'
                 },

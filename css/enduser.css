@@ -52,6 +52,17 @@ header .btn:hover,
     color: #ad3a31;
 }
 
+#drawbutton {
+    background-color: #ad3a31;
+    border: #643735;
+    color: white;
+}
+
+#drawbutton:active {
+    background-color: #643735;
+    border: #643735;
+}
+
 .footer {
     background-color: #643735;
     color: whitesmoke;

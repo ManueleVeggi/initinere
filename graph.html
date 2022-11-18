@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.7.0/d3.min.js"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript" src="js/doccharts.js"></script>
+</head>
+
+<body>
+    <div>
+        <p><i><b>X Axis:</b></i></p>
+        <form id="xAxis">
+            <label><input type="radio" name="x" value="paidfee"> Paid fee</label>
+            <label><input type="radio" name="x" value="relative_scholarship"> Average scholarship per student</label>
+            <label><input type="radio" name="x" value="perc_intern"> % of international students </label>
+        </form>
+        <p><i><b>Y Axis:</b></i></p>
+        <form id="yAxis">
+            <label><input type="radio" name="y" value="paidfee"> Paid fee</label>
+            <label><input type="radio" name="y" value="relative_scholarship"> Average scholarship per student</label>
+            <label><input type="radio" name="y" value="perc_intern"> % of international students </label>
+        </form>
+        <p><i><b>Academic year:</b></i></p>
+        <form id="ayear">
+            <label><input type="radio" name="ayear" value="data/output/2016.csv"> 2015/16</label>
+            <label><input type="radio" name="ayear" value="data/output/2017.csv"> 2016/7</label>
+            <label><input type="radio" name="ayear" value="data/output/2018.csv"> 2017/8</label>
+            <label><input type="radio" name="ayear" value="data/output/2019.csv"> 2018/9</label>
+        </form>
+        <button onclick="getdata()">Draw!</button>
+        <div id="chart_div" style="width: 100%; height: 500px;"></div>
+    </div>
+    <script>
+        
+    </script>
+</body>
+
+</html>
