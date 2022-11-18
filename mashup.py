@@ -92,6 +92,7 @@ def dataligner(dsupath, feepath, studpath, intpath, year, outputpath):
     for idx, row in outputDf.iterrows():
         outputDf.at[idx, "relative_scholarship"] = int(row["scholarship"])/int(row["total_students"])
     
+    #Replace comma with dot to streamline further data conversion 
     for idx, row in outputDf.iterrows(): 
         val1 = str(row["paidfee"]); val2 = str(row["totalfee"])
         outputDf.at[idx, "paidfee"] = val1.replace(',', '.')
@@ -125,7 +126,7 @@ dsu2019 = "data/dsu2019.csv"
 fee2019 = "data/fees2019.csv"
 dest2019 = "data/output/2019.csv"
 
-print(dataligner(dsu2016, fee2016, stud, ints, "2015/2016", dest2016))
-print(dataligner(dsu2017, fee2017, stud, ints, "2016/2017", dest2017))
+# print(dataligner(dsu2016, fee2016, stud, ints, "2015/2016", dest2016))
+# print(dataligner(dsu2017, fee2017, stud, ints, "2016/2017", dest2017))
 print(dataligner(dsu2018, fee2018, stud, ints, "2017/2018", dest2018))
 print(dataligner(dsu2019, fee2019, stud, ints, "2018/2019", dest2019))

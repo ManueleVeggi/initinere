@@ -20,7 +20,8 @@ Yfee = df[['paidfee']]
 Zdsu = df[['relative_scholarship']]
 
 X_axis = np.arange(len(Xuni))
-  
+
+"""  
 plt.bar(X_axis - 0.2, Yfee, 0.4, label = 'Paid fee')
 plt.bar(X_axis + 0.2, Zdsu, 0.4, label = 'Average scholarship for students')
   
@@ -55,4 +56,3 @@ plt.ylabel("paidfee")
 plt.xlabel("relative_scholarship")
 plt.title("Clusters found by KMeans")
 plt.show()
-"""
