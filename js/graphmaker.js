@@ -42,13 +42,16 @@ function makeChart(rawData) {
         },
         series: {
             0: {
-                targetAxisIndex: 0
+                targetAxisIndex: 0,
+                color: '#ad3a31'
             },
             1: {
-                targetAxisIndex: 0
+                targetAxisIndex: 0,
+                color: '#05247a'
             },
             2: {
                 targetAxisIndex: 1,
+                color: '#ECB807',
                 type: 'line'
             }
         }

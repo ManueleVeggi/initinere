@@ -12,7 +12,7 @@ function makeChart1(rawData) {
     var yaxis = document.getElementById("yAxis").elements["y"].value;
 
     if (xaxis == yaxis) {
-        alert("Same value in x and y axis: please choose a more informative visualization!")
+        alert("Same value in x and y axes: please choose a more informative visualization!")
     }
 
     function assignLabel(value){
@@ -39,6 +39,7 @@ function makeChart1(rawData) {
     var data = google.visualization.arrayToDataTable(arr);
 
     var options = {
+        colors: ['#643735'],
         hAxis: {title: labelx},
         vAxis: {title: labely},
         legend: 'none'
