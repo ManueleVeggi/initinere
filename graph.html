@@ -4,6 +4,7 @@
 <head>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.7.0/d3.min.js"></script>
+    <script type="text/javascript" src="js/graphmaker.js"></script>
 </head>
 
 <body>
@@ -17,32 +18,7 @@
         <canvas id="myChart"></canvas>
     </div>
     <script>
-        function scraper(file) {
-            //"https://github.com/ManueleVeggi/initinere/blob/af76d48ea0dc18be75fcc0ed51a9c42d358a147e/data/output/2016.csv")
-            d3.csv(file).then(makeChart);
-        }
         
-        // Plot the data with Chart.js
-        function makeChart(data) {
-            var yearLabels = data.map(function (d) {
-                return d.uni;
-            });
-            var countData = data.map(function (d) {
-                return d.paidfee;
-            });
-
-            var chart = new Chart("myChart", {
-                type: "bar",
-                data: {
-                    labels: yearLabels,
-                    datasets: [{
-                        label: "Paid fees",
-                        data: countData,
-                        backgroundColor: 'rgb(255, 99, 132)',
-                    }]
-                }
-            });
-        }
     </script>
 </body>
 
