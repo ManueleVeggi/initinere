@@ -38,6 +38,7 @@ def dataligner(dsupath, feepath, studpath, intpath, year, outputpath):
     dsuDf = pd.DataFrame(columns=["uni_id", "university", "scholarship"])
     studDf = pd.DataFrame(columns=["uni_id", "uni", "total_students"])
     outputDf = pd.DataFrame(columns=["uni_id", "uni", "total_students", "int_students", "perc_intern", "relative_scholarship"])
+    mashupDf = pd.DataFrame(columns=["uni_id", "uni", "total_students", "int_students", "perc_intern", "relative_scholarship"])
 
     #FASE 2
     #Clean dataframe about "Diritto allo studio", aka scholarships
@@ -56,7 +57,7 @@ def dataligner(dsupath, feepath, studpath, intpath, year, outputpath):
             row[5]= str(row[5])
             while len(str(row[5])) < 6:
                 row[5] = str(str(row[5]) + "0")
-            dsuRaw.at[idx, "CODICE_ISTITUTO"] = row[5][:-2:]        
+            dsuRaw.at[idx, "CODICE_ISTITUTO"] = row[5][:-2:]       
     dsuDf = mergeCount(dsuRaw, dsuDf, "uni_id", "university", "scholarship", "CODICE_ISTITUTO", "NOME_ISTITUTO", "SPESA_LAUREA")
 
     #FASE 3
@@ -102,6 +103,9 @@ def dataligner(dsupath, feepath, studpath, intpath, year, outputpath):
     outputDf['paidfee'] = outputDf['paidfee'].astype(float)
     outputDf['totalfee'] = outputDf['totalfee'].astype(float)
     
+    #Some telematic univeristies remain in the dF: we have to drop these institutions
+    outputDf.drop(outputDf[outputDf['uni'].str.contains(" - telematica")].index, inplace = True)
+
     #FASE 6
     #Export the dataframe
     outputDf.to_csv(outputpath, index=False)

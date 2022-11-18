@@ -4,6 +4,18 @@
 <head>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.7.0/d3.min.js"></script>
+</head>
+
+<body>
+    <div>
+        <ul>
+            <li onclick="scraper('data/output/2016.csv')">2016</li>
+            <li onclick="scraper('data/output/2017.csv')">2017</li>
+            <li onclick="scraper('data/output/2018.csv')">2018</li>
+            <li onclick="scraper('data/output/2019.csv')">2019</li>
+        </ul>
+        <canvas id="myChart"></canvas>
+    </div>
     <script>
         function scraper(file) {
             //"https://github.com/ManueleVeggi/initinere/blob/af76d48ea0dc18be75fcc0ed51a9c42d358a147e/data/output/2016.csv")
@@ -32,18 +44,6 @@
             });
         }
     </script>
-</head>
-
-<body>
-    <div>
-        <ul>
-            <li onclick="scraper('data/output/2016.csv')">2016</li>
-            <li onclick="scraper('data/output/2017.csv')">2017</li>
-            <li onclick="scraper('data/output/2018.csv')">2018</li>
-            <li onclick="scraper('data/output/2019.csv')">2019</li>
-        </ul>
-        <canvas id="myChart"></canvas>
-    </div>
 </body>
 
 </html>
