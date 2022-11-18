@@ -4,6 +4,7 @@
 <head>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.7.0/d3.min.js"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script type="text/javascript" src="js/graphmaker.js"></script>
 </head>
 
@@ -15,7 +16,7 @@
             <li onclick="scraper('data/output/2018.csv')">2018</li>
             <li onclick="scraper('data/output/2019.csv')">2019</li>
         </ul>
-        <canvas id="myChart"></canvas>
+        <div id="myChart" style="width: 100%; height: 500px;"></div>
     </div>
     <script>
         

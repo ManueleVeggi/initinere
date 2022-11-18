@@ -11421,7 +11421,7 @@ html {
 }
 
 .callout {
-  padding: 5rem 15rem 15rem 15rem;
+  padding: 5rem 5rem 5rem 5rem;
   background: rgb(155,135,114);
   background: linear-gradient(0deg, rgba(155,135,114,0.35476197314863445) 33%, rgba(100,55,53,0.30154068463322825) 74%);
   background-position: center center;

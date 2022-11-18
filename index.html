@@ -26,6 +26,8 @@
     <!-- Libraries for visualization -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.7.0/d3.min.js"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript" src="js/graphmaker.js"></script>
 </head>
 
 <body id="page-top">
@@ -55,7 +57,8 @@
         <div class="container px-4 px-lg-5">
             <div class="content-section-heading">
                 <h3 class="text-secondary mb-0">RESEARCH QUESTION & METHODOLOGY</h3>
-                <h2 class="mb-5">Are fees amount and scholarships availability <br> correlated to the enorolment of international students in Italian university?</h2>
+                <h2 class="mb-5">Are fees amount and scholarships availability <br> correlated to the enorolment of
+                    international students in Italian university?</h2>
             </div>
             <div class="row gx-4 gx-lg-5">
                 <div class="col-lg-3 col-md-6 mb-5 mb-lg-0">
@@ -88,22 +91,47 @@
     <section class="callout" id="results">
         <h2 class="px-4 px-lg-5 text-center">Main results</h2>
         <div class="container">
-            <div class="row mt-3" id="scrollnum">
+            <div class="row mt-3 mb-3" id="scrollnum">
                 <div class="col-3 stat-one text-center">
-                    <div class="stat-number" data-n="1500">0</div>
-                    <div class="stat-title">Average fee</div>
+                    <div class="stat-number" data-n="2216">0</div>
+                    <div class="stat-title">Average amount of paid fees <br> <small>(in €)</small></div>
                 </div>
                 <div class="col-3 stat-two text-center">
-                    <div class="stat-number" data-n="2000">0</div>
-                    <div class="stat-title">Average scholarship expenses</div>
+                    <div class="stat-number" data-n="7186">0</div>
+                    <div class="stat-title">Average amount of funded scholarship <br> <small>(in thousands of €)</small>
+                    </div>
                 </div>
                 <div class="col-3 stat-three text-center">
-                    <div class="stat-number" data-n="1000">0</div>
-                    <div class="stat-title">Students</div>
+                    <div class="stat-number" data-n="1596762">0</div>
+                    <div class="stat-title">Everage number of students in Italian universities</div>
                 </div>
                 <div class="col-3 stat-four text-center">
-                    <div class="stat-number" data-n="200">0</div>
-                    <div class="stat-title">Average distance</div>
+                    <div class="stat-number" data-n="79382">0</div>
+                    <div class="stat-title">Everage number of international students in Italian universities</div>
+                </div>
+            </div>
+        </div>
+        <div class="container mt-7" style="margin-top: 5em;">
+            <div class="row">
+                <div class="col-2">
+                    <form action="/action_page.php" style="font-size: 1em;">
+                        <p style="font-weight: bolder;">Please select the reference academic year:</p>
+                        <input type="radio" id="2016" name="year" value="2016"
+                            onclick="scraper('data/output/2016.csv')">
+                        <label for="2016">2015/16</label><br>
+                        <input type="radio" id="2017" name="year" value="2017"
+                            onclick="scraper('data/output/2017.csv')">
+                        <label for="2017">2016/17</label><br>
+                        <input type="radio" id="2018" name="year" value="2019"
+                            onclick="scraper('data/output/2018.csv')">
+                        <label for="2018">2017/18</label><br>
+                        <input type="radio" id="2019" name="year" value="2019"
+                            onclick="scraper('data/output/2019.csv')">
+                        <label for="2019">2018/19</label>
+                    </form>
+                </div>
+                <div class="col-10">
+                    <div id="myChart" style="width: 100%; height: 500px;"></div>
                 </div>
             </div>
         </div>

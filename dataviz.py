@@ -1,27 +1,28 @@
+# https://medium.com/@sk.shravan00/k-means-for-3-variables-260d20849730
+
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns 
 from sklearn import cluster
 
-def floatConvert(pdDf): #easy conversion into float
-    for idx, row in pdDf.iterrows(): 
-        val1 = str(row["paidfee"]); val2 = str(row["totalfee"])
-        pdDf.at[idx, "paidfee"] = val1.replace(',', '.')
-        pdDf.at[idx, "totalfee"] = val2.replace(',', '.')
-    pdDf['paidfee'] = pdDf['paidfee'].astype(float)
-    pdDf['totalfee'] = pdDf['totalfee'].astype(float)
-    return pdDf
+df = pd.read_csv("data/output/2016.csv")
+X = df[["paidfee", "relative_scholarship", "perc_intern"]]
+print(X)
 
-df = floatConvert(pd.read_csv("data/output/2016.csv"))
+wcss = []
+k_means_optimum = cluster.KMeans(n_clusters = 2, init = 'k-means++',  random_state=42)
+y = k_means_optimum.fit_predict(X)
+print(y)
 
+"""  
 Xuni = df[['uni']]
 Yfee = df[['paidfee']]
 Zdsu = df[['relative_scholarship']]
 
 X_axis = np.arange(len(Xuni))
 
-"""  
+
 plt.bar(X_axis - 0.2, Yfee, 0.4, label = 'Paid fee')
 plt.bar(X_axis + 0.2, Zdsu, 0.4, label = 'Average scholarship for students')
   
@@ -32,7 +33,7 @@ plt.title("Fee vs DSU")
 plt.legend()
 plt.show()
 
-"""
+
 wcss = []
 X = df[['relative_scholarship', 'paidfee']].copy()
 
@@ -56,3 +57,4 @@ plt.ylabel("paidfee")
 plt.xlabel("relative_scholarship")
 plt.title("Clusters found by KMeans")
 plt.show()
+"""
