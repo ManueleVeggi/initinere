@@ -1,5 +1,8 @@
 import pandas as pd
+import folium
+from folium.plugins import HeatMap
 from geopy.geocoders import Nominatim
+
 
 myDf = pd.read_csv("data/output/averages.csv")
 
@@ -11,6 +14,10 @@ for idx, row in myDf.iterrows():
         uniname = "Casamassima"
     elif row["uni"] == "Rozzano (MI) Humanitas University":
         uniname = "Rozzano"
+    elif row["uni"] == "Salento":
+        uniname = "Lecce"
+    elif row["uni"] == "Sannio":
+        uniname = "Benevento"
     else:
         uniname = row["uni"]
     loc = Nominatim(user_agent="GetLoc")

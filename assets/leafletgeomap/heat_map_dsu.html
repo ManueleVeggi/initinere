@@ -1,0 +1,2181 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_b5ffaf4bf426321963859969beb80b79 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+        
+    <script src="https://cdn.jsdelivr.net/gh/python-visualization/folium@main/folium/templates/leaflet_heat.min.js"></script>
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_b5ffaf4bf426321963859969beb80b79" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_b5ffaf4bf426321963859969beb80b79 = L.map(
+                "map_b5ffaf4bf426321963859969beb80b79",
+                {
+                    center: [43.0, 11.0],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 5,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_24d8c69a78ae56b0b29a3edad38a2d73 = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_b5ffaf4bf426321963859969beb80b79);
+        
+    
+            var heat_map_19836934e53afd9da12a9d98c6202b05 = L.heatLayer(
+                [[45.0677551, 7.6824892, 262.49], [45.0627483, 7.6630648, 482.75], [45.3274674, 8.424624497433843, 220.33], [44.6822372, 7.893787911680173, 0.0], [45.7370885, 7.3196649, 760.22], [44.40726, 8.9338624, 253.82], [45.61258185, 8.901595642530218, 105.74], [45.4522853, 9.2213678, 75.51], [45.4641943, 9.1896346, 160.42], [45.4786583, 9.2261817, 313.69], [45.449719400000006, 9.188708672031792, 277.73], [45.4618543, 9.177056282599018, 248.36], [45.44204, 9.162599554489333, 184.99], [45.4654227, 9.1913654, 91.41], [45.5149166, 9.2111381, 192.02], [45.3832366, 9.1541309, 10.32], [45.7566557, 9.754219200862249, 168.3], [45.77958045, 10.4258729694612, 323.2], [45.03685465, 9.137825082826026, 334.68], [46.65594545, 11.23021287087526, 651.99], [46.1030443, 11.129840331695068, 402.86], [45.4384958, 10.9924122, 260.21], [45.4344957, 12.3264484, 294.76], [45.4319507, 12.3148641, 348.14], [45.4077172, 11.8734455, 300.5], [46.0634632, 13.2358377, 490.7], [45.6496485, 13.7772781, 494.77], [44.8013678, 10.3280833, 420.66], [44.6432168, 10.9252076, 401.2], [44.4938203, 11.3426327, 493.5], [44.76676425, 11.827938995640167, 319.06], [43.7262608, 12.6363135, 406.66], [43.3458388, 13.1415872, 249.91], [43.15297805, 13.150882217502016, 301.91], [43.1357641, 13.0683092, 429.46], [43.7698712, 11.2555757, 283.94], [43.7159395, 10.4018624, 391.09], [43.1672254, 11.467181161339118, 623.15], [43.3314122, 11.3215102, 1047.73], [43.1070321, 12.402996209906489, 551.22], [43.1148526, 12.3895193, 1525.21], [43.4586541, 11.1389204, 251.12], [41.9066442, 12.5168288, 327.5], [41.8605744, 12.6204579, 287.31], [41.90371, 12.46343957780154, 187.52], [41.92150525, 12.513290697916666, 157.51], [41.92917785, 12.4560047929854, 286.36], [39.0796457, 17.1247999, 215.71], [41.7714412, 12.4674612, 123.35], [41.86025825, 12.49684247945029, 386.91], [41.4925576, 13.8305297, 622.46], [41.2476307, 14.705705363146528, 214.72], [40.84804835, 14.24790527733246, 175.36], [40.8305276, 14.2448043, 159.78], [40.8455307, 14.2551106, 146.16], [40.6807798, 14.7245238, 174.42], [40.8439246, 14.2317581, 146.19], [40.41944165, 15.310756230322482, 345.85], [42.1368853, 13.610341022538911, 322.2], [42.65811795, 13.69787458752063, 369.91], [42.3372711, 14.1283165, 427.08], [41.684672, 14.595614, 276.52], [41.50281055, 15.452899609627728, 546.83], [41.1257843, 16.8620293, 519.45], [41.1092176, 16.8851188, 406.99], [40.957131, 16.920388, 45.59], [40.1522173, 18.2260628338229, 682.1], [40.500571, 16.081953, 528.47], [39.0565974, 16.5249864, 578.41], [38.82996034999999, 16.43155687627833, 206.54], [38.1035389, 15.6397556, 261.71], [38.354247, 16.0206809, 288.51], [38.1112268, 13.3524434, 301.55], [38.1937571, 15.5542082, 283.7], [37.55381355, 14.293522564541211, 318.51], [37.5023612, 15.0873718, 249.57], [40.7232643, 8.5610074, 636.38], [39.2171994, 9.113311, 710.77]],
+                {"blur": 15, "maxZoom": 18, "minOpacity": 0.5, "radius": 25}
+            ).addTo(map_b5ffaf4bf426321963859969beb80b79);
+        
+    
+            var marker_15a72d1bb9f68c446c79ff6e75f0581d = L.marker(
+                [45.0677551, 7.6824892],
+                {}
+            ).addTo(map_b5ffaf4bf426321963859969beb80b79);
+        
+    
+            var icon_bdbd62b224c427ffa77b29728fa021d2 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "graduation-cap", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_15a72d1bb9f68c446c79ff6e75f0581d.setIcon(icon_bdbd62b224c427ffa77b29728fa021d2);
+        
+    
+        var popup_c0435cddf4e01a1b6ef0e41465dad584 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_0afd0b6ec72740fea46c838ad8be5b39 = $(`<div id="html_0afd0b6ec72740fea46c838ad8be5b39" style="width: 100.0%; height: 100.0%;">Torino  Scholarship: 262.49</div>`)[0];
+                popup_c0435cddf4e01a1b6ef0e41465dad584.setContent(html_0afd0b6ec72740fea46c838ad8be5b39);
+            
+        
+
+        marker_15a72d1bb9f68c446c79ff6e75f0581d.bindPopup(popup_c0435cddf4e01a1b6ef0e41465dad584)
+        ;
+
+        
+    
+    
+            var marker_0d24e37f78bca9bdb2183becb7e58131 = L.marker(
+                [45.0627483, 7.6630648],
+                {}
+            ).addTo(map_b5ffaf4bf426321963859969beb80b79);
+        
+    
+            var icon_0e6423236865432659c9dcbd734a4d44 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "graduation-cap", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_0d24e37f78bca9bdb2183becb7e58131.setIcon(icon_0e6423236865432659c9dcbd734a4d44);
+        
+    
+        var popup_f6c59a36d06b278fb68eca2bbc66a66c = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_4def71564cfd3ab4da1c6dd5a0893300 = $(`<div id="html_4def71564cfd3ab4da1c6dd5a0893300" style="width: 100.0%; height: 100.0%;">Torino Politecnico  Scholarship: 482.75</div>`)[0];
+                popup_f6c59a36d06b278fb68eca2bbc66a66c.setContent(html_4def71564cfd3ab4da1c6dd5a0893300);
+            
+        
+
+        marker_0d24e37f78bca9bdb2183becb7e58131.bindPopup(popup_f6c59a36d06b278fb68eca2bbc66a66c)
+        ;
+
+        
+    
+    
+            var marker_541344fa286f272168a5128b892e5e8f = L.marker(
+                [45.3274674, 8.424624497433843],
+                {}
+            ).addTo(map_b5ffaf4bf426321963859969beb80b79);
+        
+    
+            var icon_359191582ec08614e219e351d0c489db = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "graduation-cap", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_541344fa286f272168a5128b892e5e8f.setIcon(icon_359191582ec08614e219e351d0c489db);
+        
+    
+        var popup_2f9282a1a4fb8550c3583c6dbc921443 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_14b9639403ddeaaf0997cb54383dabcb = $(`<div id="html_14b9639403ddeaaf0997cb54383dabcb" style="width: 100.0%; height: 100.0%;">Piemonte Orientale  Scholarship: 220.33</div>`)[0];
+                popup_2f9282a1a4fb8550c3583c6dbc921443.setContent(html_14b9639403ddeaaf0997cb54383dabcb);
+            
+        
+
+        marker_541344fa286f272168a5128b892e5e8f.bindPopup(popup_2f9282a1a4fb8550c3583c6dbc921443)
+        ;
+
+        
+    
+    
+            var marker_445f01d24ac3157ba122d5578a93d7d5 = L.marker(
+                [44.6822372, 7.893787911680173],
+                {}
+            ).addTo(map_b5ffaf4bf426321963859969beb80b79);
+        
+    
+            var icon_2e07b90e40248d03be40e8bbf26b4888 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "graduation-cap", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_445f01d24ac3157ba122d5578a93d7d5.setIcon(icon_2e07b90e40248d03be40e8bbf26b4888);
+        
+    
+        var popup_e48c772336445917c27eb7717c168f14 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_212d0d531a962268cfc7d7cec1506c6a = $(`<div id="html_212d0d531a962268cfc7d7cec1506c6a" style="width: 100.0%; height: 100.0%;">Bra Scienze Gastronomiche  Scholarship: 0.0</div>`)[0];
+                popup_e48c772336445917c27eb7717c168f14.setContent(html_212d0d531a962268cfc7d7cec1506c6a);
+            
+        
+
+        marker_445f01d24ac3157ba122d5578a93d7d5.bindPopup(popup_e48c772336445917c27eb7717c168f14)
+        ;
+
+        
+    
+    
+            var marker_ddbb1444dc35c1ade8a5b9cc1c05edf0 = L.marker(
+                [45.7370885, 7.3196649],
+                {}
+            ).addTo(map_b5ffaf4bf426321963859969beb80b79);
+        
+    
+            var icon_74e51f85c909cea13212aa67ce9e97f1 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "graduation-cap", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_ddbb1444dc35c1ade8a5b9cc1c05edf0.setIcon(icon_74e51f85c909cea13212aa67ce9e97f1);
+        
+    
+        var popup_00864cc60b578ceff2b552f6b56186be = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_940a00662efcc67376b815f51d457dca = $(`<div id="html_940a00662efcc67376b815f51d457dca" style="width: 100.0%; height: 100.0%;">Aosta  Scholarship: 760.22</div>`)[0];
+                popup_00864cc60b578ceff2b552f6b56186be.setContent(html_940a00662efcc67376b815f51d457dca);
+            
+        
+
+        marker_ddbb1444dc35c1ade8a5b9cc1c05edf0.bindPopup(popup_00864cc60b578ceff2b552f6b56186be)
+        ;
+
+        
+    
+    
+            var marker_b45cf6610cc2810d37e63eae15b3a81e = L.marker(
+                [44.40726, 8.9338624],
+                {}
+            ).addTo(map_b5ffaf4bf426321963859969beb80b79);
+        
+    
+            var icon_1a291b12d0193b0ea61057e8c557c8e0 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "graduation-cap", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_b45cf6610cc2810d37e63eae15b3a81e.setIcon(icon_1a291b12d0193b0ea61057e8c557c8e0);
+        
+    
+        var popup_ab3a18a8ff2cae3177aada04287f733b = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_d81bbdf8dba9ad078a90d8aa98faf4a0 = $(`<div id="html_d81bbdf8dba9ad078a90d8aa98faf4a0" style="width: 100.0%; height: 100.0%;">Genova  Scholarship: 253.82</div>`)[0];
+                popup_ab3a18a8ff2cae3177aada04287f733b.setContent(html_d81bbdf8dba9ad078a90d8aa98faf4a0);
+            
+        
+
+        marker_b45cf6610cc2810d37e63eae15b3a81e.bindPopup(popup_ab3a18a8ff2cae3177aada04287f733b)
+        ;
+
+        
+    
+    
+            var marker_3905d98b38e07e69ec205d7f6dfa01c3 = L.marker(
+                [45.61258185, 8.901595642530218],
+                {}
+            ).addTo(map_b5ffaf4bf426321963859969beb80b79);
+        
+    
+            var icon_125bbd9d26d4d713b2f40988aa1798fa = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "graduation-cap", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_3905d98b38e07e69ec205d7f6dfa01c3.setIcon(icon_125bbd9d26d4d713b2f40988aa1798fa);
+        
+    
+        var popup_b0ef4d12f6fa63d850a1c3e34e477b92 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_95861e182689819c37e6e125d72e4e17 = $(`<div id="html_95861e182689819c37e6e125d72e4e17" style="width: 100.0%; height: 100.0%;">Castellanza LIUC  Scholarship: 105.74</div>`)[0];
+                popup_b0ef4d12f6fa63d850a1c3e34e477b92.setContent(html_95861e182689819c37e6e125d72e4e17);
+            
+        
+
+        marker_3905d98b38e07e69ec205d7f6dfa01c3.bindPopup(popup_b0ef4d12f6fa63d850a1c3e34e477b92)
+        ;
+
+        
+    
+    
+            var marker_70b6b431f2dff07d2ef1e1f8bb511074 = L.marker(
+                [45.4522853, 9.2213678],
+                {}
+            ).addTo(map_b5ffaf4bf426321963859969beb80b79);
+        
+    
+            var icon_971eb51805b395d47ab7fcfa780f73d4 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "graduation-cap", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_70b6b431f2dff07d2ef1e1f8bb511074.setIcon(icon_971eb51805b395d47ab7fcfa780f73d4);
+        
+    
+        var popup_bb88b8141cc7d681c632a95e27eb896e = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_be2bd9dc0ce3b1662184d0123cc50400 = $(`<div id="html_be2bd9dc0ce3b1662184d0123cc50400" style="width: 100.0%; height: 100.0%;">Insubria  Scholarship: 75.51</div>`)[0];
+                popup_bb88b8141cc7d681c632a95e27eb896e.setContent(html_be2bd9dc0ce3b1662184d0123cc50400);
+            
+        
+
+        marker_70b6b431f2dff07d2ef1e1f8bb511074.bindPopup(popup_bb88b8141cc7d681c632a95e27eb896e)
+        ;
+
+        
+    
+    
+            var marker_695238f74f145a48f3eb2f9fa6def39c = L.marker(
+                [45.4641943, 9.1896346],
+                {}
+            ).addTo(map_b5ffaf4bf426321963859969beb80b79);
+        
+    
+            var icon_773e1f9b958984963ed9dc17af94572b = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "graduation-cap", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_695238f74f145a48f3eb2f9fa6def39c.setIcon(icon_773e1f9b958984963ed9dc17af94572b);
+        
+    
+        var popup_1a25f0e82525b0d2ba1e8217f180c8ed = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_2f844c0de5e977af86674e112fefac98 = $(`<div id="html_2f844c0de5e977af86674e112fefac98" style="width: 100.0%; height: 100.0%;">Milano  Scholarship: 160.42</div>`)[0];
+                popup_1a25f0e82525b0d2ba1e8217f180c8ed.setContent(html_2f844c0de5e977af86674e112fefac98);
+            
+        
+
+        marker_695238f74f145a48f3eb2f9fa6def39c.bindPopup(popup_1a25f0e82525b0d2ba1e8217f180c8ed)
+        ;
+
+        
+    
+    
+            var marker_5caacd49d733c8f46341d5d65e4b5680 = L.marker(
+                [45.4786583, 9.2261817],
+                {}
+            ).addTo(map_b5ffaf4bf426321963859969beb80b79);
+        
+    
+            var icon_3b045271b5db30bcdad9f5f1b59b8da4 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "graduation-cap", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_5caacd49d733c8f46341d5d65e4b5680.setIcon(icon_3b045271b5db30bcdad9f5f1b59b8da4);
+        
+    
+        var popup_2480680eec29befa26e611e1605797cf = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_11df5ac42a9fb54ce87f4f21de8f47c4 = $(`<div id="html_11df5ac42a9fb54ce87f4f21de8f47c4" style="width: 100.0%; height: 100.0%;">Milano Politecnico  Scholarship: 313.69</div>`)[0];
+                popup_2480680eec29befa26e611e1605797cf.setContent(html_11df5ac42a9fb54ce87f4f21de8f47c4);
+            
+        
+
+        marker_5caacd49d733c8f46341d5d65e4b5680.bindPopup(popup_2480680eec29befa26e611e1605797cf)
+        ;
+
+        
+    
+    
+            var marker_1e755fbe11f274a79c14ca5b79777b81 = L.marker(
+                [45.449719400000006, 9.188708672031792],
+                {}
+            ).addTo(map_b5ffaf4bf426321963859969beb80b79);
+        
+    
+            var icon_4cb146fcbf0b4e46e942730852f82f4f = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "graduation-cap", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_1e755fbe11f274a79c14ca5b79777b81.setIcon(icon_4cb146fcbf0b4e46e942730852f82f4f);
+        
+    
+        var popup_63eec11103fd5ccc8ca4824e54705aec = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_6c9ec27ca2d490f8585445e428315ef9 = $(`<div id="html_6c9ec27ca2d490f8585445e428315ef9" style="width: 100.0%; height: 100.0%;">Milano Bocconi  Scholarship: 277.73</div>`)[0];
+                popup_63eec11103fd5ccc8ca4824e54705aec.setContent(html_6c9ec27ca2d490f8585445e428315ef9);
+            
+        
+
+        marker_1e755fbe11f274a79c14ca5b79777b81.bindPopup(popup_63eec11103fd5ccc8ca4824e54705aec)
+        ;
+
+        
+    
+    
+            var marker_0ebcfd170b621112ab7f6dabdf38f656 = L.marker(
+                [45.4618543, 9.177056282599018],
+                {}
+            ).addTo(map_b5ffaf4bf426321963859969beb80b79);
+        
+    
+            var icon_a85e75befd4dd674fa976dbf567015ae = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "graduation-cap", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_0ebcfd170b621112ab7f6dabdf38f656.setIcon(icon_a85e75befd4dd674fa976dbf567015ae);
+        
+    
+        var popup_2c0b9230c290097196d00416a8b562af = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_0b1cd1c84c5feef1f7c51665254f7727 = $(`<div id="html_0b1cd1c84c5feef1f7c51665254f7727" style="width: 100.0%; height: 100.0%;">Milano Cattolica  Scholarship: 248.36</div>`)[0];
+                popup_2c0b9230c290097196d00416a8b562af.setContent(html_0b1cd1c84c5feef1f7c51665254f7727);
+            
+        
+
+        marker_0ebcfd170b621112ab7f6dabdf38f656.bindPopup(popup_2c0b9230c290097196d00416a8b562af)
+        ;
+
+        
+    
+    
+            var marker_31aa948652ed2892d47a986f838946fa = L.marker(
+                [45.44204, 9.162599554489333],
+                {}
+            ).addTo(map_b5ffaf4bf426321963859969beb80b79);
+        
+    
+            var icon_c4bd67f896caf96780e9e5329c36761d = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "graduation-cap", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_31aa948652ed2892d47a986f838946fa.setIcon(icon_c4bd67f896caf96780e9e5329c36761d);
+        
+    
+        var popup_8c35d331ac07c3a00a951e90d5a5150f = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_454f86bf07ddc7d79e95b5e212c0959b = $(`<div id="html_454f86bf07ddc7d79e95b5e212c0959b" style="width: 100.0%; height: 100.0%;">Milano IULM  Scholarship: 184.99</div>`)[0];
+                popup_8c35d331ac07c3a00a951e90d5a5150f.setContent(html_454f86bf07ddc7d79e95b5e212c0959b);
+            
+        
+
+        marker_31aa948652ed2892d47a986f838946fa.bindPopup(popup_8c35d331ac07c3a00a951e90d5a5150f)
+        ;
+
+        
+    
+    
+            var marker_82b8318c60cf67d261bcfdb6e65a2491 = L.marker(
+                [45.4654227, 9.1913654],
+                {}
+            ).addTo(map_b5ffaf4bf426321963859969beb80b79);
+        
+    
+            var icon_cdd7ca4925d5c213e591ca599c7696c2 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "graduation-cap", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_82b8318c60cf67d261bcfdb6e65a2491.setIcon(icon_cdd7ca4925d5c213e591ca599c7696c2);
+        
+    
+        var popup_01a81c64707fcda988a2cf4ec2addf27 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_3d4249f6e9b401a15cd68a5ba55f1d45 = $(`<div id="html_3d4249f6e9b401a15cd68a5ba55f1d45" style="width: 100.0%; height: 100.0%;">Milano San Raffaele  Scholarship: 91.41</div>`)[0];
+                popup_01a81c64707fcda988a2cf4ec2addf27.setContent(html_3d4249f6e9b401a15cd68a5ba55f1d45);
+            
+        
+
+        marker_82b8318c60cf67d261bcfdb6e65a2491.bindPopup(popup_01a81c64707fcda988a2cf4ec2addf27)
+        ;
+
+        
+    
+    
+            var marker_6e1623c0111d1057a02d773ab5d9a12f = L.marker(
+                [45.5149166, 9.2111381],
+                {}
+            ).addTo(map_b5ffaf4bf426321963859969beb80b79);
+        
+    
+            var icon_ddd4a700350cf3c3b7ce166c7abba958 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "graduation-cap", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_6e1623c0111d1057a02d773ab5d9a12f.setIcon(icon_ddd4a700350cf3c3b7ce166c7abba958);
+        
+    
+        var popup_05997ac3fdc272ae6a45098bed799d45 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_ec6532e7fa2a76c34f5f0f4d33cc1f91 = $(`<div id="html_ec6532e7fa2a76c34f5f0f4d33cc1f91" style="width: 100.0%; height: 100.0%;">Milano Bicocca  Scholarship: 192.02</div>`)[0];
+                popup_05997ac3fdc272ae6a45098bed799d45.setContent(html_ec6532e7fa2a76c34f5f0f4d33cc1f91);
+            
+        
+
+        marker_6e1623c0111d1057a02d773ab5d9a12f.bindPopup(popup_05997ac3fdc272ae6a45098bed799d45)
+        ;
+
+        
+    
+    
+            var marker_227dfa0cda74b12493e3ff26afdc2246 = L.marker(
+                [45.3832366, 9.1541309],
+                {}
+            ).addTo(map_b5ffaf4bf426321963859969beb80b79);
+        
+    
+            var icon_2ce0495641d902d989da2d9ca1b1315e = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "graduation-cap", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_227dfa0cda74b12493e3ff26afdc2246.setIcon(icon_2ce0495641d902d989da2d9ca1b1315e);
+        
+    
+        var popup_ba10201f79209214c57e59c36ee1ef63 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_8ac100c99f63c309d0041073ce395f37 = $(`<div id="html_8ac100c99f63c309d0041073ce395f37" style="width: 100.0%; height: 100.0%;">Rozzano (MI) Humanitas University  Scholarship: 10.32</div>`)[0];
+                popup_ba10201f79209214c57e59c36ee1ef63.setContent(html_8ac100c99f63c309d0041073ce395f37);
+            
+        
+
+        marker_227dfa0cda74b12493e3ff26afdc2246.bindPopup(popup_ba10201f79209214c57e59c36ee1ef63)
+        ;
+
+        
+    
+    
+            var marker_d4d109f72fc2434d61149990c1c0e9e3 = L.marker(
+                [45.7566557, 9.754219200862249],
+                {}
+            ).addTo(map_b5ffaf4bf426321963859969beb80b79);
+        
+    
+            var icon_e0f507dca19585ed83a907504322aaa7 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "graduation-cap", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_d4d109f72fc2434d61149990c1c0e9e3.setIcon(icon_e0f507dca19585ed83a907504322aaa7);
+        
+    
+        var popup_6de2387ee2a9ca8fa50c58b0eb751220 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_e0f7b7922594b14bac44938cfa04a617 = $(`<div id="html_e0f7b7922594b14bac44938cfa04a617" style="width: 100.0%; height: 100.0%;">Bergamo  Scholarship: 168.3</div>`)[0];
+                popup_6de2387ee2a9ca8fa50c58b0eb751220.setContent(html_e0f7b7922594b14bac44938cfa04a617);
+            
+        
+
+        marker_d4d109f72fc2434d61149990c1c0e9e3.bindPopup(popup_6de2387ee2a9ca8fa50c58b0eb751220)
+        ;
+
+        
+    
+    
+            var marker_ec3a06b72ac8700ff74b520826b5f22b = L.marker(
+                [45.77958045, 10.4258729694612],
+                {}
+            ).addTo(map_b5ffaf4bf426321963859969beb80b79);
+        
+    
+            var icon_0a5f3932582318828a7dc38821f3c77e = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "graduation-cap", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_ec3a06b72ac8700ff74b520826b5f22b.setIcon(icon_0a5f3932582318828a7dc38821f3c77e);
+        
+    
+        var popup_79babb519b7c8a7fd8e48dbe7e8d4d84 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_bc735dd4c1e695bc0bb5308030f1f560 = $(`<div id="html_bc735dd4c1e695bc0bb5308030f1f560" style="width: 100.0%; height: 100.0%;">Brescia  Scholarship: 323.2</div>`)[0];
+                popup_79babb519b7c8a7fd8e48dbe7e8d4d84.setContent(html_bc735dd4c1e695bc0bb5308030f1f560);
+            
+        
+
+        marker_ec3a06b72ac8700ff74b520826b5f22b.bindPopup(popup_79babb519b7c8a7fd8e48dbe7e8d4d84)
+        ;
+
+        
+    
+    
+            var marker_521806b16f75993f17c72aca25c9814b = L.marker(
+                [45.03685465, 9.137825082826026],
+                {}
+            ).addTo(map_b5ffaf4bf426321963859969beb80b79);
+        
+    
+            var icon_afa2e276dedccaa0ac047800243ffb5b = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "graduation-cap", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_521806b16f75993f17c72aca25c9814b.setIcon(icon_afa2e276dedccaa0ac047800243ffb5b);
+        
+    
+        var popup_d73c008bf9402ecb06c4537067f43803 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_597a7a4bbadfdf2e17fdac6af8c23b4a = $(`<div id="html_597a7a4bbadfdf2e17fdac6af8c23b4a" style="width: 100.0%; height: 100.0%;">Pavia  Scholarship: 334.68</div>`)[0];
+                popup_d73c008bf9402ecb06c4537067f43803.setContent(html_597a7a4bbadfdf2e17fdac6af8c23b4a);
+            
+        
+
+        marker_521806b16f75993f17c72aca25c9814b.bindPopup(popup_d73c008bf9402ecb06c4537067f43803)
+        ;
+
+        
+    
+    
+            var marker_4885362c9fcecbf1a093a726184ada7f = L.marker(
+                [46.65594545, 11.23021287087526],
+                {}
+            ).addTo(map_b5ffaf4bf426321963859969beb80b79);
+        
+    
+            var icon_d24c2e813afe656ece1776c24eafc835 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "graduation-cap", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_4885362c9fcecbf1a093a726184ada7f.setIcon(icon_d24c2e813afe656ece1776c24eafc835);
+        
+    
+        var popup_c5f6fb673dc9119d8c526f78921bf5f5 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_9a95cdde6e320e2c1ff1e0c6744d4906 = $(`<div id="html_9a95cdde6e320e2c1ff1e0c6744d4906" style="width: 100.0%; height: 100.0%;">Bolzano  Scholarship: 651.99</div>`)[0];
+                popup_c5f6fb673dc9119d8c526f78921bf5f5.setContent(html_9a95cdde6e320e2c1ff1e0c6744d4906);
+            
+        
+
+        marker_4885362c9fcecbf1a093a726184ada7f.bindPopup(popup_c5f6fb673dc9119d8c526f78921bf5f5)
+        ;
+
+        
+    
+    
+            var marker_cc349ab787bc5abbe237cbe12381e867 = L.marker(
+                [46.1030443, 11.129840331695068],
+                {}
+            ).addTo(map_b5ffaf4bf426321963859969beb80b79);
+        
+    
+            var icon_1f9a0e74df805e568ad24d09a27ce182 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "graduation-cap", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_cc349ab787bc5abbe237cbe12381e867.setIcon(icon_1f9a0e74df805e568ad24d09a27ce182);
+        
+    
+        var popup_2702d5691af803837102333f8ac3cc54 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_5f30c2efd4efc6e3df87f55584b594b1 = $(`<div id="html_5f30c2efd4efc6e3df87f55584b594b1" style="width: 100.0%; height: 100.0%;">Trento  Scholarship: 402.86</div>`)[0];
+                popup_2702d5691af803837102333f8ac3cc54.setContent(html_5f30c2efd4efc6e3df87f55584b594b1);
+            
+        
+
+        marker_cc349ab787bc5abbe237cbe12381e867.bindPopup(popup_2702d5691af803837102333f8ac3cc54)
+        ;
+
+        
+    
+    
+            var marker_c041899403fcee9faf419c7574ee733d = L.marker(
+                [45.4384958, 10.9924122],
+                {}
+            ).addTo(map_b5ffaf4bf426321963859969beb80b79);
+        
+    
+            var icon_3a9a2135cf1216e00452d8bf7c51dea0 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "graduation-cap", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_c041899403fcee9faf419c7574ee733d.setIcon(icon_3a9a2135cf1216e00452d8bf7c51dea0);
+        
+    
+        var popup_444549f7f4f28a5a5a92640bbc15b375 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_ca3f72387d83b9381a21bdc6061e4b82 = $(`<div id="html_ca3f72387d83b9381a21bdc6061e4b82" style="width: 100.0%; height: 100.0%;">Verona  Scholarship: 260.21</div>`)[0];
+                popup_444549f7f4f28a5a5a92640bbc15b375.setContent(html_ca3f72387d83b9381a21bdc6061e4b82);
+            
+        
+
+        marker_c041899403fcee9faf419c7574ee733d.bindPopup(popup_444549f7f4f28a5a5a92640bbc15b375)
+        ;
+
+        
+    
+    
+            var marker_67fde3b2ae8c2dba2966f153d0801c00 = L.marker(
+                [45.4344957, 12.3264484],
+                {}
+            ).addTo(map_b5ffaf4bf426321963859969beb80b79);
+        
+    
+            var icon_cf2fdd56081dbf6ed84972dc14ad26e2 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "graduation-cap", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_67fde3b2ae8c2dba2966f153d0801c00.setIcon(icon_cf2fdd56081dbf6ed84972dc14ad26e2);
+        
+    
+        var popup_d7640dd06e306aa7041f9d3ddcd6e438 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_2e7c28d902fb60196652e6278c478521 = $(`<div id="html_2e7c28d902fb60196652e6278c478521" style="width: 100.0%; height: 100.0%;">Venezia C Foscari  Scholarship: 294.76</div>`)[0];
+                popup_d7640dd06e306aa7041f9d3ddcd6e438.setContent(html_2e7c28d902fb60196652e6278c478521);
+            
+        
+
+        marker_67fde3b2ae8c2dba2966f153d0801c00.bindPopup(popup_d7640dd06e306aa7041f9d3ddcd6e438)
+        ;
+
+        
+    
+    
+            var marker_8e404362941cdc4ee36ab546c3737765 = L.marker(
+                [45.4319507, 12.3148641],
+                {}
+            ).addTo(map_b5ffaf4bf426321963859969beb80b79);
+        
+    
+            var icon_9bfccc6a101d311875f94305c88a67d2 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "graduation-cap", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_8e404362941cdc4ee36ab546c3737765.setIcon(icon_9bfccc6a101d311875f94305c88a67d2);
+        
+    
+        var popup_53338652292a0a1d95e37cb0e68966e9 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_bb72462e5f8a6d10679073411aa49a7a = $(`<div id="html_bb72462e5f8a6d10679073411aa49a7a" style="width: 100.0%; height: 100.0%;">Venezia Iuav  Scholarship: 348.14</div>`)[0];
+                popup_53338652292a0a1d95e37cb0e68966e9.setContent(html_bb72462e5f8a6d10679073411aa49a7a);
+            
+        
+
+        marker_8e404362941cdc4ee36ab546c3737765.bindPopup(popup_53338652292a0a1d95e37cb0e68966e9)
+        ;
+
+        
+    
+    
+            var marker_3ede912aada8b933a50565ec12fe743b = L.marker(
+                [45.4077172, 11.8734455],
+                {}
+            ).addTo(map_b5ffaf4bf426321963859969beb80b79);
+        
+    
+            var icon_140a0d2e94f2ea31ebb3126ca43c45f7 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "graduation-cap", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_3ede912aada8b933a50565ec12fe743b.setIcon(icon_140a0d2e94f2ea31ebb3126ca43c45f7);
+        
+    
+        var popup_a3e63da825aa68c234bc89b3786479da = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_12eee00067e4963353ac219cf31ac6bc = $(`<div id="html_12eee00067e4963353ac219cf31ac6bc" style="width: 100.0%; height: 100.0%;">Padova  Scholarship: 300.5</div>`)[0];
+                popup_a3e63da825aa68c234bc89b3786479da.setContent(html_12eee00067e4963353ac219cf31ac6bc);
+            
+        
+
+        marker_3ede912aada8b933a50565ec12fe743b.bindPopup(popup_a3e63da825aa68c234bc89b3786479da)
+        ;
+
+        
+    
+    
+            var marker_40e0cf98873902a36b3079dd1f474122 = L.marker(
+                [46.0634632, 13.2358377],
+                {}
+            ).addTo(map_b5ffaf4bf426321963859969beb80b79);
+        
+    
+            var icon_bf3d3b2914d85a2d751ae3e752923790 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "graduation-cap", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_40e0cf98873902a36b3079dd1f474122.setIcon(icon_bf3d3b2914d85a2d751ae3e752923790);
+        
+    
+        var popup_7c42224876e524e115ceb7b71ba6f75b = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_13c66a3a0fa6d93dceb0410b63021623 = $(`<div id="html_13c66a3a0fa6d93dceb0410b63021623" style="width: 100.0%; height: 100.0%;">Udine  Scholarship: 490.7</div>`)[0];
+                popup_7c42224876e524e115ceb7b71ba6f75b.setContent(html_13c66a3a0fa6d93dceb0410b63021623);
+            
+        
+
+        marker_40e0cf98873902a36b3079dd1f474122.bindPopup(popup_7c42224876e524e115ceb7b71ba6f75b)
+        ;
+
+        
+    
+    
+            var marker_7229e3ec65876c7b11fefe27ca2c4c9c = L.marker(
+                [45.6496485, 13.7772781],
+                {}
+            ).addTo(map_b5ffaf4bf426321963859969beb80b79);
+        
+    
+            var icon_52cbd0a433ab7b62795ed01fd33ae725 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "graduation-cap", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_7229e3ec65876c7b11fefe27ca2c4c9c.setIcon(icon_52cbd0a433ab7b62795ed01fd33ae725);
+        
+    
+        var popup_9cdb9b3481bf3ebac5f9a6937845544e = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_2d802b57cef7365c1ee76bca6262a848 = $(`<div id="html_2d802b57cef7365c1ee76bca6262a848" style="width: 100.0%; height: 100.0%;">Trieste  Scholarship: 494.77</div>`)[0];
+                popup_9cdb9b3481bf3ebac5f9a6937845544e.setContent(html_2d802b57cef7365c1ee76bca6262a848);
+            
+        
+
+        marker_7229e3ec65876c7b11fefe27ca2c4c9c.bindPopup(popup_9cdb9b3481bf3ebac5f9a6937845544e)
+        ;
+
+        
+    
+    
+            var marker_f3b8981588271fdda62858744afb618c = L.marker(
+                [44.8013678, 10.3280833],
+                {}
+            ).addTo(map_b5ffaf4bf426321963859969beb80b79);
+        
+    
+            var icon_ebe3176196d132087c794e128f1df2ee = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "graduation-cap", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_f3b8981588271fdda62858744afb618c.setIcon(icon_ebe3176196d132087c794e128f1df2ee);
+        
+    
+        var popup_80d5ed73801146844c0f41a10cdbe418 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_2002166e860b053f1e29b94fef1a5dc7 = $(`<div id="html_2002166e860b053f1e29b94fef1a5dc7" style="width: 100.0%; height: 100.0%;">Parma  Scholarship: 420.66</div>`)[0];
+                popup_80d5ed73801146844c0f41a10cdbe418.setContent(html_2002166e860b053f1e29b94fef1a5dc7);
+            
+        
+
+        marker_f3b8981588271fdda62858744afb618c.bindPopup(popup_80d5ed73801146844c0f41a10cdbe418)
+        ;
+
+        
+    
+    
+            var marker_596da11a2533d7b457acfa5120c85244 = L.marker(
+                [44.6432168, 10.9252076],
+                {}
+            ).addTo(map_b5ffaf4bf426321963859969beb80b79);
+        
+    
+            var icon_a1becf2cb6ae313799cf839c133e8ce5 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "graduation-cap", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_596da11a2533d7b457acfa5120c85244.setIcon(icon_a1becf2cb6ae313799cf839c133e8ce5);
+        
+    
+        var popup_46e59d8d1b3adc184405737173175f86 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_04db3b01c0f7444bda233b483475f698 = $(`<div id="html_04db3b01c0f7444bda233b483475f698" style="width: 100.0%; height: 100.0%;">Modena e Reggio Emilia  Scholarship: 401.2</div>`)[0];
+                popup_46e59d8d1b3adc184405737173175f86.setContent(html_04db3b01c0f7444bda233b483475f698);
+            
+        
+
+        marker_596da11a2533d7b457acfa5120c85244.bindPopup(popup_46e59d8d1b3adc184405737173175f86)
+        ;
+
+        
+    
+    
+            var marker_106fd66d203c8cb524fbc1d5f7f3d7a3 = L.marker(
+                [44.4938203, 11.3426327],
+                {}
+            ).addTo(map_b5ffaf4bf426321963859969beb80b79);
+        
+    
+            var icon_eefa71e5803408f7f336a9e6c528e953 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "graduation-cap", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_106fd66d203c8cb524fbc1d5f7f3d7a3.setIcon(icon_eefa71e5803408f7f336a9e6c528e953);
+        
+    
+        var popup_beb101e6556a9046badb2225835ff5f4 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_fd0d4f5a6eddb2a6beeb1ec10ee7f330 = $(`<div id="html_fd0d4f5a6eddb2a6beeb1ec10ee7f330" style="width: 100.0%; height: 100.0%;">Bologna  Scholarship: 493.5</div>`)[0];
+                popup_beb101e6556a9046badb2225835ff5f4.setContent(html_fd0d4f5a6eddb2a6beeb1ec10ee7f330);
+            
+        
+
+        marker_106fd66d203c8cb524fbc1d5f7f3d7a3.bindPopup(popup_beb101e6556a9046badb2225835ff5f4)
+        ;
+
+        
+    
+    
+            var marker_5a7a1999583985038cd4dd75035f709f = L.marker(
+                [44.76676425, 11.827938995640167],
+                {}
+            ).addTo(map_b5ffaf4bf426321963859969beb80b79);
+        
+    
+            var icon_91fff46f128f0beb0b969da3725e1b05 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "graduation-cap", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_5a7a1999583985038cd4dd75035f709f.setIcon(icon_91fff46f128f0beb0b969da3725e1b05);
+        
+    
+        var popup_3b3e717fcb22feecfc65bb234271c372 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_5a1277d184e175895e2603bbd7e5901a = $(`<div id="html_5a1277d184e175895e2603bbd7e5901a" style="width: 100.0%; height: 100.0%;">Ferrara  Scholarship: 319.06</div>`)[0];
+                popup_3b3e717fcb22feecfc65bb234271c372.setContent(html_5a1277d184e175895e2603bbd7e5901a);
+            
+        
+
+        marker_5a7a1999583985038cd4dd75035f709f.bindPopup(popup_3b3e717fcb22feecfc65bb234271c372)
+        ;
+
+        
+    
+    
+            var marker_1faa447c52b8be9a64db4d97b90a346f = L.marker(
+                [43.7262608, 12.6363135],
+                {}
+            ).addTo(map_b5ffaf4bf426321963859969beb80b79);
+        
+    
+            var icon_95841821a5809ffe3d1606a70adfdaf0 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "graduation-cap", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_1faa447c52b8be9a64db4d97b90a346f.setIcon(icon_95841821a5809ffe3d1606a70adfdaf0);
+        
+    
+        var popup_c5c80af3deba8f9229bc0dcf269ad85d = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_43db71740d884935f937131b179a21d2 = $(`<div id="html_43db71740d884935f937131b179a21d2" style="width: 100.0%; height: 100.0%;">Urbino  Scholarship: 406.66</div>`)[0];
+                popup_c5c80af3deba8f9229bc0dcf269ad85d.setContent(html_43db71740d884935f937131b179a21d2);
+            
+        
+
+        marker_1faa447c52b8be9a64db4d97b90a346f.bindPopup(popup_c5c80af3deba8f9229bc0dcf269ad85d)
+        ;
+
+        
+    
+    
+            var marker_875ddc1266a490ffccdc5ef98f7d93f9 = L.marker(
+                [43.3458388, 13.1415872],
+                {}
+            ).addTo(map_b5ffaf4bf426321963859969beb80b79);
+        
+    
+            var icon_ea57bd9dbf243845fee7b35bd25ee20a = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "graduation-cap", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_875ddc1266a490ffccdc5ef98f7d93f9.setIcon(icon_ea57bd9dbf243845fee7b35bd25ee20a);
+        
+    
+        var popup_348e275ef4859d88774e4d1662fd51ee = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_278609876afb15566a3e1cb9fed81e8a = $(`<div id="html_278609876afb15566a3e1cb9fed81e8a" style="width: 100.0%; height: 100.0%;">Marche  Scholarship: 249.91</div>`)[0];
+                popup_348e275ef4859d88774e4d1662fd51ee.setContent(html_278609876afb15566a3e1cb9fed81e8a);
+            
+        
+
+        marker_875ddc1266a490ffccdc5ef98f7d93f9.bindPopup(popup_348e275ef4859d88774e4d1662fd51ee)
+        ;
+
+        
+    
+    
+            var marker_0a1c178a0e1a9867259d1b4c8e7bee66 = L.marker(
+                [43.15297805, 13.150882217502016],
+                {}
+            ).addTo(map_b5ffaf4bf426321963859969beb80b79);
+        
+    
+            var icon_c923f6baa012e44c5051581c98c2c378 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "graduation-cap", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_0a1c178a0e1a9867259d1b4c8e7bee66.setIcon(icon_c923f6baa012e44c5051581c98c2c378);
+        
+    
+        var popup_d307ffb1fe959ba2850cd2ecb6d2f35b = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_af0759ddd3cc8d97c3b98ee1d0323c17 = $(`<div id="html_af0759ddd3cc8d97c3b98ee1d0323c17" style="width: 100.0%; height: 100.0%;">Macerata  Scholarship: 301.91</div>`)[0];
+                popup_d307ffb1fe959ba2850cd2ecb6d2f35b.setContent(html_af0759ddd3cc8d97c3b98ee1d0323c17);
+            
+        
+
+        marker_0a1c178a0e1a9867259d1b4c8e7bee66.bindPopup(popup_d307ffb1fe959ba2850cd2ecb6d2f35b)
+        ;
+
+        
+    
+    
+            var marker_283733b79a58e9a1f877fb77a0f26e95 = L.marker(
+                [43.1357641, 13.0683092],
+                {}
+            ).addTo(map_b5ffaf4bf426321963859969beb80b79);
+        
+    
+            var icon_bfd7e88aac43da65f4aa58b5cf12d70a = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "graduation-cap", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_283733b79a58e9a1f877fb77a0f26e95.setIcon(icon_bfd7e88aac43da65f4aa58b5cf12d70a);
+        
+    
+        var popup_068c7149ca12b431969c8ec027ced4a9 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_c8c36a542240d54d397435b9919bd5fa = $(`<div id="html_c8c36a542240d54d397435b9919bd5fa" style="width: 100.0%; height: 100.0%;">Camerino  Scholarship: 429.46</div>`)[0];
+                popup_068c7149ca12b431969c8ec027ced4a9.setContent(html_c8c36a542240d54d397435b9919bd5fa);
+            
+        
+
+        marker_283733b79a58e9a1f877fb77a0f26e95.bindPopup(popup_068c7149ca12b431969c8ec027ced4a9)
+        ;
+
+        
+    
+    
+            var marker_95e2b277ac81c85892d4483e2851f2f6 = L.marker(
+                [43.7698712, 11.2555757],
+                {}
+            ).addTo(map_b5ffaf4bf426321963859969beb80b79);
+        
+    
+            var icon_42de0e43c282ee73c88ced2b3029139c = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "graduation-cap", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_95e2b277ac81c85892d4483e2851f2f6.setIcon(icon_42de0e43c282ee73c88ced2b3029139c);
+        
+    
+        var popup_69f8dce0a393258031c93f3378a2ccc5 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_d662583abe93d143e71fa7c9ea025b48 = $(`<div id="html_d662583abe93d143e71fa7c9ea025b48" style="width: 100.0%; height: 100.0%;">Firenze  Scholarship: 283.94</div>`)[0];
+                popup_69f8dce0a393258031c93f3378a2ccc5.setContent(html_d662583abe93d143e71fa7c9ea025b48);
+            
+        
+
+        marker_95e2b277ac81c85892d4483e2851f2f6.bindPopup(popup_69f8dce0a393258031c93f3378a2ccc5)
+        ;
+
+        
+    
+    
+            var marker_669c0520265453e6779d9bf1adda1e47 = L.marker(
+                [43.7159395, 10.4018624],
+                {}
+            ).addTo(map_b5ffaf4bf426321963859969beb80b79);
+        
+    
+            var icon_b35a4bb085580577f63573fa89b1008d = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "graduation-cap", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_669c0520265453e6779d9bf1adda1e47.setIcon(icon_b35a4bb085580577f63573fa89b1008d);
+        
+    
+        var popup_7abf4957eb29e270b92f5e2915cd6ac8 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_bd8f10a291545348ada4300d32ab5941 = $(`<div id="html_bd8f10a291545348ada4300d32ab5941" style="width: 100.0%; height: 100.0%;">Pisa  Scholarship: 391.09</div>`)[0];
+                popup_7abf4957eb29e270b92f5e2915cd6ac8.setContent(html_bd8f10a291545348ada4300d32ab5941);
+            
+        
+
+        marker_669c0520265453e6779d9bf1adda1e47.bindPopup(popup_7abf4957eb29e270b92f5e2915cd6ac8)
+        ;
+
+        
+    
+    
+            var marker_7ce56d0306a7c3ddf870e7a4bc331532 = L.marker(
+                [43.1672254, 11.467181161339118],
+                {}
+            ).addTo(map_b5ffaf4bf426321963859969beb80b79);
+        
+    
+            var icon_21bf2a705efe7379def160623fc92ff6 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "graduation-cap", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_7ce56d0306a7c3ddf870e7a4bc331532.setIcon(icon_21bf2a705efe7379def160623fc92ff6);
+        
+    
+        var popup_868513f00d91024887cac3e612d6965d = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_002a8d509df05bc3179489ab09c70afa = $(`<div id="html_002a8d509df05bc3179489ab09c70afa" style="width: 100.0%; height: 100.0%;">Siena  Scholarship: 623.15</div>`)[0];
+                popup_868513f00d91024887cac3e612d6965d.setContent(html_002a8d509df05bc3179489ab09c70afa);
+            
+        
+
+        marker_7ce56d0306a7c3ddf870e7a4bc331532.bindPopup(popup_868513f00d91024887cac3e612d6965d)
+        ;
+
+        
+    
+    
+            var marker_c103778eb6bcf8dd054e8bb8ff6d9f3a = L.marker(
+                [43.3314122, 11.3215102],
+                {}
+            ).addTo(map_b5ffaf4bf426321963859969beb80b79);
+        
+    
+            var icon_444c22b5b72ebdc4f7687f5a29e022df = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "graduation-cap", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_c103778eb6bcf8dd054e8bb8ff6d9f3a.setIcon(icon_444c22b5b72ebdc4f7687f5a29e022df);
+        
+    
+        var popup_fd2914655e85e8fb44ba62eb0d05a7f7 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_228f5be916153291624114a50bb0258f = $(`<div id="html_228f5be916153291624114a50bb0258f" style="width: 100.0%; height: 100.0%;">Siena Stranieri  Scholarship: 1047.73</div>`)[0];
+                popup_fd2914655e85e8fb44ba62eb0d05a7f7.setContent(html_228f5be916153291624114a50bb0258f);
+            
+        
+
+        marker_c103778eb6bcf8dd054e8bb8ff6d9f3a.bindPopup(popup_fd2914655e85e8fb44ba62eb0d05a7f7)
+        ;
+
+        
+    
+    
+            var marker_ef6b137e06ce2f3a6691305ef1fa74a8 = L.marker(
+                [43.1070321, 12.402996209906489],
+                {}
+            ).addTo(map_b5ffaf4bf426321963859969beb80b79);
+        
+    
+            var icon_69411e0eddc624e8cb1d2e13dd380260 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "graduation-cap", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_ef6b137e06ce2f3a6691305ef1fa74a8.setIcon(icon_69411e0eddc624e8cb1d2e13dd380260);
+        
+    
+        var popup_88f7db490097c0caff33666b6b1f1809 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_ffd74af6b491a62be4ab5434fcf6100f = $(`<div id="html_ffd74af6b491a62be4ab5434fcf6100f" style="width: 100.0%; height: 100.0%;">Perugia  Scholarship: 551.22</div>`)[0];
+                popup_88f7db490097c0caff33666b6b1f1809.setContent(html_ffd74af6b491a62be4ab5434fcf6100f);
+            
+        
+
+        marker_ef6b137e06ce2f3a6691305ef1fa74a8.bindPopup(popup_88f7db490097c0caff33666b6b1f1809)
+        ;
+
+        
+    
+    
+            var marker_92c1a3c6feb1a60b235f5cda5104a4ee = L.marker(
+                [43.1148526, 12.3895193],
+                {}
+            ).addTo(map_b5ffaf4bf426321963859969beb80b79);
+        
+    
+            var icon_bd93465e3767a58b5dad054ee11f9936 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "graduation-cap", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_92c1a3c6feb1a60b235f5cda5104a4ee.setIcon(icon_bd93465e3767a58b5dad054ee11f9936);
+        
+    
+        var popup_f1fd092e3474b7948089f2aed276b7b7 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_6edc2441d0e4527616c312bcd5a19d7d = $(`<div id="html_6edc2441d0e4527616c312bcd5a19d7d" style="width: 100.0%; height: 100.0%;">Perugia Stranieri  Scholarship: 1525.21</div>`)[0];
+                popup_f1fd092e3474b7948089f2aed276b7b7.setContent(html_6edc2441d0e4527616c312bcd5a19d7d);
+            
+        
+
+        marker_92c1a3c6feb1a60b235f5cda5104a4ee.bindPopup(popup_f1fd092e3474b7948089f2aed276b7b7)
+        ;
+
+        
+    
+    
+            var marker_2a48d31c980933ab5eb1603d28dad3c1 = L.marker(
+                [43.4586541, 11.1389204],
+                {}
+            ).addTo(map_b5ffaf4bf426321963859969beb80b79);
+        
+    
+            var icon_e412d0076c2b99832e39b26cb69e7533 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "graduation-cap", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_2a48d31c980933ab5eb1603d28dad3c1.setIcon(icon_e412d0076c2b99832e39b26cb69e7533);
+        
+    
+        var popup_da081ffe039d5dc9b761af738b8e418c = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_92b3e5ff7ab04eedc6609eec6a772300 = $(`<div id="html_92b3e5ff7ab04eedc6609eec6a772300" style="width: 100.0%; height: 100.0%;">Tuscia  Scholarship: 251.12</div>`)[0];
+                popup_da081ffe039d5dc9b761af738b8e418c.setContent(html_92b3e5ff7ab04eedc6609eec6a772300);
+            
+        
+
+        marker_2a48d31c980933ab5eb1603d28dad3c1.bindPopup(popup_da081ffe039d5dc9b761af738b8e418c)
+        ;
+
+        
+    
+    
+            var marker_ce4049ff5d0804fd93c49084735b8dd4 = L.marker(
+                [41.9066442, 12.5168288],
+                {}
+            ).addTo(map_b5ffaf4bf426321963859969beb80b79);
+        
+    
+            var icon_d7cab446fafa901a1021d7be47088d77 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "graduation-cap", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_ce4049ff5d0804fd93c49084735b8dd4.setIcon(icon_d7cab446fafa901a1021d7be47088d77);
+        
+    
+        var popup_c0dd9e063a1e341baf1d9f4bbe753f8b = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_8ec4f15ad8ce955c01b6d744ffa977a4 = $(`<div id="html_8ec4f15ad8ce955c01b6d744ffa977a4" style="width: 100.0%; height: 100.0%;">Roma La Sapienza  Scholarship: 327.5</div>`)[0];
+                popup_c0dd9e063a1e341baf1d9f4bbe753f8b.setContent(html_8ec4f15ad8ce955c01b6d744ffa977a4);
+            
+        
+
+        marker_ce4049ff5d0804fd93c49084735b8dd4.bindPopup(popup_c0dd9e063a1e341baf1d9f4bbe753f8b)
+        ;
+
+        
+    
+    
+            var marker_ba5c165c5d5b5fbce026f6441385419e = L.marker(
+                [41.8605744, 12.6204579],
+                {}
+            ).addTo(map_b5ffaf4bf426321963859969beb80b79);
+        
+    
+            var icon_929011a6bd8db85df96b3d776867e700 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "graduation-cap", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_ba5c165c5d5b5fbce026f6441385419e.setIcon(icon_929011a6bd8db85df96b3d776867e700);
+        
+    
+        var popup_c2977e774d1eb5482a842aadbe064d85 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_92626972c363a8b80a93f65a3ece5f75 = $(`<div id="html_92626972c363a8b80a93f65a3ece5f75" style="width: 100.0%; height: 100.0%;">Roma Tor Vergata  Scholarship: 287.31</div>`)[0];
+                popup_c2977e774d1eb5482a842aadbe064d85.setContent(html_92626972c363a8b80a93f65a3ece5f75);
+            
+        
+
+        marker_ba5c165c5d5b5fbce026f6441385419e.bindPopup(popup_c2977e774d1eb5482a842aadbe064d85)
+        ;
+
+        
+    
+    
+            var marker_9d004d31c8c037db88a24fc5d953c479 = L.marker(
+                [41.90371, 12.46343957780154],
+                {}
+            ).addTo(map_b5ffaf4bf426321963859969beb80b79);
+        
+    
+            var icon_caeb81c3d92736bad75903eebff29ce1 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "graduation-cap", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_9d004d31c8c037db88a24fc5d953c479.setIcon(icon_caeb81c3d92736bad75903eebff29ce1);
+        
+    
+        var popup_5c659ea5016790b55e686e4b93959da2 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_de28e638ef4f070af384dd3cba1008f7 = $(`<div id="html_de28e638ef4f070af384dd3cba1008f7" style="width: 100.0%; height: 100.0%;">Roma LUMSA  Scholarship: 187.52</div>`)[0];
+                popup_5c659ea5016790b55e686e4b93959da2.setContent(html_de28e638ef4f070af384dd3cba1008f7);
+            
+        
+
+        marker_9d004d31c8c037db88a24fc5d953c479.bindPopup(popup_5c659ea5016790b55e686e4b93959da2)
+        ;
+
+        
+    
+    
+            var marker_b184a04d13edd1b28457449d51a8e952 = L.marker(
+                [41.92150525, 12.513290697916666],
+                {}
+            ).addTo(map_b5ffaf4bf426321963859969beb80b79);
+        
+    
+            var icon_675f3af510411aa4a78bf21553fcde31 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "graduation-cap", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_b184a04d13edd1b28457449d51a8e952.setIcon(icon_675f3af510411aa4a78bf21553fcde31);
+        
+    
+        var popup_9d81aba36759afc202aacc9a6383d2cb = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_00aec0c92012e62e985668392b780c2e = $(`<div id="html_00aec0c92012e62e985668392b780c2e" style="width: 100.0%; height: 100.0%;">Roma LUISS  Scholarship: 157.51</div>`)[0];
+                popup_9d81aba36759afc202aacc9a6383d2cb.setContent(html_00aec0c92012e62e985668392b780c2e);
+            
+        
+
+        marker_b184a04d13edd1b28457449d51a8e952.bindPopup(popup_9d81aba36759afc202aacc9a6383d2cb)
+        ;
+
+        
+    
+    
+            var marker_1f3bf4607113e0cef3acd121da670699 = L.marker(
+                [41.92917785, 12.4560047929854],
+                {}
+            ).addTo(map_b5ffaf4bf426321963859969beb80b79);
+        
+    
+            var icon_a8b6b87e8c7df4d521f22499ed5e5e72 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "graduation-cap", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_1f3bf4607113e0cef3acd121da670699.setIcon(icon_a8b6b87e8c7df4d521f22499ed5e5e72);
+        
+    
+        var popup_c22d40fcdeb0a120fbdd0ecb40ecaad1 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_17be92103f5d102c217f29195c20b558 = $(`<div id="html_17be92103f5d102c217f29195c20b558" style="width: 100.0%; height: 100.0%;">Roma Foro Italico  Scholarship: 286.36</div>`)[0];
+                popup_c22d40fcdeb0a120fbdd0ecb40ecaad1.setContent(html_17be92103f5d102c217f29195c20b558);
+            
+        
+
+        marker_1f3bf4607113e0cef3acd121da670699.bindPopup(popup_c22d40fcdeb0a120fbdd0ecb40ecaad1)
+        ;
+
+        
+    
+    
+            var marker_ec02109fbbace6f2f5f014736a19dd21 = L.marker(
+                [39.0796457, 17.1247999],
+                {}
+            ).addTo(map_b5ffaf4bf426321963859969beb80b79);
+        
+    
+            var icon_81e5b68eb6ec5af5d2d8b33b03eb1be9 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "graduation-cap", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_ec02109fbbace6f2f5f014736a19dd21.setIcon(icon_81e5b68eb6ec5af5d2d8b33b03eb1be9);
+        
+    
+        var popup_ac8d4e8e6cac83df355f557b3f442bba = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_754395f508e93a5526e8ce18ead7f1cb = $(`<div id="html_754395f508e93a5526e8ce18ead7f1cb" style="width: 100.0%; height: 100.0%;">Roma Tre  Scholarship: 215.71</div>`)[0];
+                popup_ac8d4e8e6cac83df355f557b3f442bba.setContent(html_754395f508e93a5526e8ce18ead7f1cb);
+            
+        
+
+        marker_ec02109fbbace6f2f5f014736a19dd21.bindPopup(popup_ac8d4e8e6cac83df355f557b3f442bba)
+        ;
+
+        
+    
+    
+            var marker_3226c5e694c8d95538521e7fc72d6a0b = L.marker(
+                [41.7714412, 12.4674612],
+                {}
+            ).addTo(map_b5ffaf4bf426321963859969beb80b79);
+        
+    
+            var icon_bf04abaaa468a4bd65997a3bc5a03d20 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "graduation-cap", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_3226c5e694c8d95538521e7fc72d6a0b.setIcon(icon_bf04abaaa468a4bd65997a3bc5a03d20);
+        
+    
+        var popup_210292758706f8bbce9bb0866c1a5aab = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_2c7d890eaca705fb859f774a80aa92fe = $(`<div id="html_2c7d890eaca705fb859f774a80aa92fe" style="width: 100.0%; height: 100.0%;">Roma Biomedico  Scholarship: 123.35</div>`)[0];
+                popup_210292758706f8bbce9bb0866c1a5aab.setContent(html_2c7d890eaca705fb859f774a80aa92fe);
+            
+        
+
+        marker_3226c5e694c8d95538521e7fc72d6a0b.bindPopup(popup_210292758706f8bbce9bb0866c1a5aab)
+        ;
+
+        
+    
+    
+            var marker_43f8c83e9f33c55e8729cb3439202d4b = L.marker(
+                [41.86025825, 12.49684247945029],
+                {}
+            ).addTo(map_b5ffaf4bf426321963859969beb80b79);
+        
+    
+            var icon_de14f786508c10f20f139d7be41cca4b = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "graduation-cap", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_43f8c83e9f33c55e8729cb3439202d4b.setIcon(icon_de14f786508c10f20f139d7be41cca4b);
+        
+    
+        var popup_a2e44557d024a492ad86584362943080 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_9547b08f4ccda6e1ae4c31ad7818fac7 = $(`<div id="html_9547b08f4ccda6e1ae4c31ad7818fac7" style="width: 100.0%; height: 100.0%;">Roma UNINT  Scholarship: 386.91</div>`)[0];
+                popup_a2e44557d024a492ad86584362943080.setContent(html_9547b08f4ccda6e1ae4c31ad7818fac7);
+            
+        
+
+        marker_43f8c83e9f33c55e8729cb3439202d4b.bindPopup(popup_a2e44557d024a492ad86584362943080)
+        ;
+
+        
+    
+    
+            var marker_37f6f4de81dc7c2f6e76824a119f4e19 = L.marker(
+                [41.4925576, 13.8305297],
+                {}
+            ).addTo(map_b5ffaf4bf426321963859969beb80b79);
+        
+    
+            var icon_08b120a8b6abb4624210a343dd7f1e95 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "graduation-cap", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_37f6f4de81dc7c2f6e76824a119f4e19.setIcon(icon_08b120a8b6abb4624210a343dd7f1e95);
+        
+    
+        var popup_f94876540bf34ed47bafcde90d769714 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_e5697e1f3f8603a41a130931f68a7374 = $(`<div id="html_e5697e1f3f8603a41a130931f68a7374" style="width: 100.0%; height: 100.0%;">Cassino  Scholarship: 622.46</div>`)[0];
+                popup_f94876540bf34ed47bafcde90d769714.setContent(html_e5697e1f3f8603a41a130931f68a7374);
+            
+        
+
+        marker_37f6f4de81dc7c2f6e76824a119f4e19.bindPopup(popup_f94876540bf34ed47bafcde90d769714)
+        ;
+
+        
+    
+    
+            var marker_834433bc639bf723f98cbe9e85acea30 = L.marker(
+                [41.2476307, 14.705705363146528],
+                {}
+            ).addTo(map_b5ffaf4bf426321963859969beb80b79);
+        
+    
+            var icon_d7f4e6e109010c93d8c3306a3be0af1c = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "graduation-cap", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_834433bc639bf723f98cbe9e85acea30.setIcon(icon_d7f4e6e109010c93d8c3306a3be0af1c);
+        
+    
+        var popup_92743887bb439db058073b2894a54a2b = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_98f2d62d62dba7f5745af9c7514e349b = $(`<div id="html_98f2d62d62dba7f5745af9c7514e349b" style="width: 100.0%; height: 100.0%;">Sannio  Scholarship: 214.72</div>`)[0];
+                popup_92743887bb439db058073b2894a54a2b.setContent(html_98f2d62d62dba7f5745af9c7514e349b);
+            
+        
+
+        marker_834433bc639bf723f98cbe9e85acea30.bindPopup(popup_92743887bb439db058073b2894a54a2b)
+        ;
+
+        
+    
+    
+            var marker_2addd1969639b9862066a7947f4dd800 = L.marker(
+                [40.84804835, 14.24790527733246],
+                {}
+            ).addTo(map_b5ffaf4bf426321963859969beb80b79);
+        
+    
+            var icon_51646fe7f9ec3849ff2de03e6d7c56e3 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "graduation-cap", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_2addd1969639b9862066a7947f4dd800.setIcon(icon_51646fe7f9ec3849ff2de03e6d7c56e3);
+        
+    
+        var popup_87e284924e9ea4b5df9d7a531fb00489 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_0ff2841e0b2620da439f74358ed8391a = $(`<div id="html_0ff2841e0b2620da439f74358ed8391a" style="width: 100.0%; height: 100.0%;">Napoli Federico II  Scholarship: 175.36</div>`)[0];
+                popup_87e284924e9ea4b5df9d7a531fb00489.setContent(html_0ff2841e0b2620da439f74358ed8391a);
+            
+        
+
+        marker_2addd1969639b9862066a7947f4dd800.bindPopup(popup_87e284924e9ea4b5df9d7a531fb00489)
+        ;
+
+        
+    
+    
+            var marker_8b7eeeb109ac551ed7fd44cc2b6b4654 = L.marker(
+                [40.8305276, 14.2448043],
+                {}
+            ).addTo(map_b5ffaf4bf426321963859969beb80b79);
+        
+    
+            var icon_051f535b021d96d6ab3adcf41726c063 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "graduation-cap", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_8b7eeeb109ac551ed7fd44cc2b6b4654.setIcon(icon_051f535b021d96d6ab3adcf41726c063);
+        
+    
+        var popup_f0003e230d413adaae5dacabc257af56 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_c55ba13060cc7220bbcc56b620ba2855 = $(`<div id="html_c55ba13060cc7220bbcc56b620ba2855" style="width: 100.0%; height: 100.0%;">Napoli Parthenope  Scholarship: 159.78</div>`)[0];
+                popup_f0003e230d413adaae5dacabc257af56.setContent(html_c55ba13060cc7220bbcc56b620ba2855);
+            
+        
+
+        marker_8b7eeeb109ac551ed7fd44cc2b6b4654.bindPopup(popup_f0003e230d413adaae5dacabc257af56)
+        ;
+
+        
+    
+    
+            var marker_936d12282c1a66d83082550ebe676ffc = L.marker(
+                [40.8455307, 14.2551106],
+                {}
+            ).addTo(map_b5ffaf4bf426321963859969beb80b79);
+        
+    
+            var icon_f9beb8bb8279f7ca0da6467f59425020 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "graduation-cap", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_936d12282c1a66d83082550ebe676ffc.setIcon(icon_f9beb8bb8279f7ca0da6467f59425020);
+        
+    
+        var popup_6d84ecb4200e7d1f7717e182137650a6 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_50cebfe583b522635edc58bfa3cb47aa = $(`<div id="html_50cebfe583b522635edc58bfa3cb47aa" style="width: 100.0%; height: 100.0%;">Napoli L'Orientale  Scholarship: 146.16</div>`)[0];
+                popup_6d84ecb4200e7d1f7717e182137650a6.setContent(html_50cebfe583b522635edc58bfa3cb47aa);
+            
+        
+
+        marker_936d12282c1a66d83082550ebe676ffc.bindPopup(popup_6d84ecb4200e7d1f7717e182137650a6)
+        ;
+
+        
+    
+    
+            var marker_9814380a9bfaf9f624479494d92f164b = L.marker(
+                [40.6807798, 14.7245238],
+                {}
+            ).addTo(map_b5ffaf4bf426321963859969beb80b79);
+        
+    
+            var icon_a214f46bb97e93465ecf017431d76a26 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "graduation-cap", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_9814380a9bfaf9f624479494d92f164b.setIcon(icon_a214f46bb97e93465ecf017431d76a26);
+        
+    
+        var popup_70d2542c772d37022fadb3e694e01cbf = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_d2fc206aa49ab21c3e3ba1c372da52a4 = $(`<div id="html_d2fc206aa49ab21c3e3ba1c372da52a4" style="width: 100.0%; height: 100.0%;">Napoli Benincasa  Scholarship: 174.42</div>`)[0];
+                popup_70d2542c772d37022fadb3e694e01cbf.setContent(html_d2fc206aa49ab21c3e3ba1c372da52a4);
+            
+        
+
+        marker_9814380a9bfaf9f624479494d92f164b.bindPopup(popup_70d2542c772d37022fadb3e694e01cbf)
+        ;
+
+        
+    
+    
+            var marker_c5cd9dfa7732899c5b7eae8d4130f7b8 = L.marker(
+                [40.8439246, 14.2317581],
+                {}
+            ).addTo(map_b5ffaf4bf426321963859969beb80b79);
+        
+    
+            var icon_f88754448dbf5f0b52550f4919be2818 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "graduation-cap", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_c5cd9dfa7732899c5b7eae8d4130f7b8.setIcon(icon_f88754448dbf5f0b52550f4919be2818);
+        
+    
+        var popup_2541f4a0b732d467b31a25b5824659e7 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_a853470ec216e41dfcc474a986ffe4b5 = $(`<div id="html_a853470ec216e41dfcc474a986ffe4b5" style="width: 100.0%; height: 100.0%;">Napoli Vanvitelli  Scholarship: 146.19</div>`)[0];
+                popup_2541f4a0b732d467b31a25b5824659e7.setContent(html_a853470ec216e41dfcc474a986ffe4b5);
+            
+        
+
+        marker_c5cd9dfa7732899c5b7eae8d4130f7b8.bindPopup(popup_2541f4a0b732d467b31a25b5824659e7)
+        ;
+
+        
+    
+    
+            var marker_7ed0767f2c02a5de0b21db3229860524 = L.marker(
+                [40.41944165, 15.310756230322482],
+                {}
+            ).addTo(map_b5ffaf4bf426321963859969beb80b79);
+        
+    
+            var icon_632875af4da3a0fdb9bf00847b572386 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "graduation-cap", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_7ed0767f2c02a5de0b21db3229860524.setIcon(icon_632875af4da3a0fdb9bf00847b572386);
+        
+    
+        var popup_ea97c7e1fe182072ff5ff7d69bf7bbee = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_18df37f52add1ef53ccaad4b56e21711 = $(`<div id="html_18df37f52add1ef53ccaad4b56e21711" style="width: 100.0%; height: 100.0%;">Salerno  Scholarship: 345.85</div>`)[0];
+                popup_ea97c7e1fe182072ff5ff7d69bf7bbee.setContent(html_18df37f52add1ef53ccaad4b56e21711);
+            
+        
+
+        marker_7ed0767f2c02a5de0b21db3229860524.bindPopup(popup_ea97c7e1fe182072ff5ff7d69bf7bbee)
+        ;
+
+        
+    
+    
+            var marker_05b5b6a3c3643444d5eb6aeb63372e96 = L.marker(
+                [42.1368853, 13.610341022538911],
+                {}
+            ).addTo(map_b5ffaf4bf426321963859969beb80b79);
+        
+    
+            var icon_8167e16abfbd4562e7d2dbf66da5df0a = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "graduation-cap", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_05b5b6a3c3643444d5eb6aeb63372e96.setIcon(icon_8167e16abfbd4562e7d2dbf66da5df0a);
+        
+    
+        var popup_2aab7589e530c6a00dccb79fca56c237 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_38762bce99bc351e5681091be33d29f4 = $(`<div id="html_38762bce99bc351e5681091be33d29f4" style="width: 100.0%; height: 100.0%;">L'Aquila  Scholarship: 322.2</div>`)[0];
+                popup_2aab7589e530c6a00dccb79fca56c237.setContent(html_38762bce99bc351e5681091be33d29f4);
+            
+        
+
+        marker_05b5b6a3c3643444d5eb6aeb63372e96.bindPopup(popup_2aab7589e530c6a00dccb79fca56c237)
+        ;
+
+        
+    
+    
+            var marker_c31cb6fb5006dcd52ba1ab645bc7e465 = L.marker(
+                [42.65811795, 13.69787458752063],
+                {}
+            ).addTo(map_b5ffaf4bf426321963859969beb80b79);
+        
+    
+            var icon_67cc3846928783989a2cf38b745414ca = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "graduation-cap", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_c31cb6fb5006dcd52ba1ab645bc7e465.setIcon(icon_67cc3846928783989a2cf38b745414ca);
+        
+    
+        var popup_60e208e0e9cba45a4cb3dd78b8df359f = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_f6936359316ec8f73dde967f575e0ba1 = $(`<div id="html_f6936359316ec8f73dde967f575e0ba1" style="width: 100.0%; height: 100.0%;">Teramo  Scholarship: 369.91</div>`)[0];
+                popup_60e208e0e9cba45a4cb3dd78b8df359f.setContent(html_f6936359316ec8f73dde967f575e0ba1);
+            
+        
+
+        marker_c31cb6fb5006dcd52ba1ab645bc7e465.bindPopup(popup_60e208e0e9cba45a4cb3dd78b8df359f)
+        ;
+
+        
+    
+    
+            var marker_a236f7fff65f4fd4ab829c15d2902db8 = L.marker(
+                [42.3372711, 14.1283165],
+                {}
+            ).addTo(map_b5ffaf4bf426321963859969beb80b79);
+        
+    
+            var icon_9dd14e396168e73785f4491c3a35a784 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "graduation-cap", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_a236f7fff65f4fd4ab829c15d2902db8.setIcon(icon_9dd14e396168e73785f4491c3a35a784);
+        
+    
+        var popup_0d7fa9891e39892dcd320b54abfa4f4a = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_98f4a5553b262fa6bf5f22940cbc9de8 = $(`<div id="html_98f4a5553b262fa6bf5f22940cbc9de8" style="width: 100.0%; height: 100.0%;">Chieti e Pescara  Scholarship: 427.08</div>`)[0];
+                popup_0d7fa9891e39892dcd320b54abfa4f4a.setContent(html_98f4a5553b262fa6bf5f22940cbc9de8);
+            
+        
+
+        marker_a236f7fff65f4fd4ab829c15d2902db8.bindPopup(popup_0d7fa9891e39892dcd320b54abfa4f4a)
+        ;
+
+        
+    
+    
+            var marker_41e9f6253ba46302317d1e2fe2974d0f = L.marker(
+                [41.684672, 14.595614],
+                {}
+            ).addTo(map_b5ffaf4bf426321963859969beb80b79);
+        
+    
+            var icon_cf8b74baacdc11446ac131d66c47da0a = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "graduation-cap", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_41e9f6253ba46302317d1e2fe2974d0f.setIcon(icon_cf8b74baacdc11446ac131d66c47da0a);
+        
+    
+        var popup_2769a873a679918bda7d8324d6c6fa9d = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_d3ed76c404eccdde525962e853218fe8 = $(`<div id="html_d3ed76c404eccdde525962e853218fe8" style="width: 100.0%; height: 100.0%;">Molise  Scholarship: 276.52</div>`)[0];
+                popup_2769a873a679918bda7d8324d6c6fa9d.setContent(html_d3ed76c404eccdde525962e853218fe8);
+            
+        
+
+        marker_41e9f6253ba46302317d1e2fe2974d0f.bindPopup(popup_2769a873a679918bda7d8324d6c6fa9d)
+        ;
+
+        
+    
+    
+            var marker_cc2671b0e33ffac1e772193b9b05d8c7 = L.marker(
+                [41.50281055, 15.452899609627728],
+                {}
+            ).addTo(map_b5ffaf4bf426321963859969beb80b79);
+        
+    
+            var icon_924f09f77b4980c67b69ca6200889161 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "graduation-cap", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_cc2671b0e33ffac1e772193b9b05d8c7.setIcon(icon_924f09f77b4980c67b69ca6200889161);
+        
+    
+        var popup_f485bd599abb3d7f6183d00d3650ebb6 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_13fc4e3d1a45254a58b4f08f7eadbfdf = $(`<div id="html_13fc4e3d1a45254a58b4f08f7eadbfdf" style="width: 100.0%; height: 100.0%;">Foggia  Scholarship: 546.83</div>`)[0];
+                popup_f485bd599abb3d7f6183d00d3650ebb6.setContent(html_13fc4e3d1a45254a58b4f08f7eadbfdf);
+            
+        
+
+        marker_cc2671b0e33ffac1e772193b9b05d8c7.bindPopup(popup_f485bd599abb3d7f6183d00d3650ebb6)
+        ;
+
+        
+    
+    
+            var marker_da5297891fd35bd5e2e38f37ffd47152 = L.marker(
+                [41.1257843, 16.8620293],
+                {}
+            ).addTo(map_b5ffaf4bf426321963859969beb80b79);
+        
+    
+            var icon_f8d0665434ece6b886689d66f244b27b = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "graduation-cap", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_da5297891fd35bd5e2e38f37ffd47152.setIcon(icon_f8d0665434ece6b886689d66f244b27b);
+        
+    
+        var popup_80206bacd08d3679da1929ade1dfe65d = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_64423b0d4654a420ac50584587a3a62b = $(`<div id="html_64423b0d4654a420ac50584587a3a62b" style="width: 100.0%; height: 100.0%;">Bari  Scholarship: 519.45</div>`)[0];
+                popup_80206bacd08d3679da1929ade1dfe65d.setContent(html_64423b0d4654a420ac50584587a3a62b);
+            
+        
+
+        marker_da5297891fd35bd5e2e38f37ffd47152.bindPopup(popup_80206bacd08d3679da1929ade1dfe65d)
+        ;
+
+        
+    
+    
+            var marker_3cdda101c4b396f7945c79da6a391ec1 = L.marker(
+                [41.1092176, 16.8851188],
+                {}
+            ).addTo(map_b5ffaf4bf426321963859969beb80b79);
+        
+    
+            var icon_6e489cb2f0e3c9396bc63e515e43a02e = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "graduation-cap", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_3cdda101c4b396f7945c79da6a391ec1.setIcon(icon_6e489cb2f0e3c9396bc63e515e43a02e);
+        
+    
+        var popup_f354acfc710c63344ea62e8c3d1348a9 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_4c96f854f6ebe332a6e32bc0b6c164d1 = $(`<div id="html_4c96f854f6ebe332a6e32bc0b6c164d1" style="width: 100.0%; height: 100.0%;">Bari Politecnico  Scholarship: 406.99</div>`)[0];
+                popup_f354acfc710c63344ea62e8c3d1348a9.setContent(html_4c96f854f6ebe332a6e32bc0b6c164d1);
+            
+        
+
+        marker_3cdda101c4b396f7945c79da6a391ec1.bindPopup(popup_f354acfc710c63344ea62e8c3d1348a9)
+        ;
+
+        
+    
+    
+            var marker_bcacc361d2958b1ae0c7c7746cebfa31 = L.marker(
+                [40.957131, 16.920388],
+                {}
+            ).addTo(map_b5ffaf4bf426321963859969beb80b79);
+        
+    
+            var icon_a9659b015f15dabd8947e50242de84cd = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "graduation-cap", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_bcacc361d2958b1ae0c7c7746cebfa31.setIcon(icon_a9659b015f15dabd8947e50242de84cd);
+        
+    
+        var popup_f0a7c226c8bdbe78495d5a461ef0b510 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_baee624dc2421fc68bb23a686f1d4858 = $(`<div id="html_baee624dc2421fc68bb23a686f1d4858" style="width: 100.0%; height: 100.0%;">Casamassima - G.Degennaro  Scholarship: 45.59</div>`)[0];
+                popup_f0a7c226c8bdbe78495d5a461ef0b510.setContent(html_baee624dc2421fc68bb23a686f1d4858);
+            
+        
+
+        marker_bcacc361d2958b1ae0c7c7746cebfa31.bindPopup(popup_f0a7c226c8bdbe78495d5a461ef0b510)
+        ;
+
+        
+    
+    
+            var marker_579948c8d7cbe2f9f2402385bb1b9fc7 = L.marker(
+                [40.1522173, 18.2260628338229],
+                {}
+            ).addTo(map_b5ffaf4bf426321963859969beb80b79);
+        
+    
+            var icon_af8000b4dbd377f115ecd923189d2db9 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "graduation-cap", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_579948c8d7cbe2f9f2402385bb1b9fc7.setIcon(icon_af8000b4dbd377f115ecd923189d2db9);
+        
+    
+        var popup_883b69deee367cebce2f9b0b19273288 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_20ad89a3d285e04239b3c5c29fa6f47d = $(`<div id="html_20ad89a3d285e04239b3c5c29fa6f47d" style="width: 100.0%; height: 100.0%;">Salento  Scholarship: 682.1</div>`)[0];
+                popup_883b69deee367cebce2f9b0b19273288.setContent(html_20ad89a3d285e04239b3c5c29fa6f47d);
+            
+        
+
+        marker_579948c8d7cbe2f9f2402385bb1b9fc7.bindPopup(popup_883b69deee367cebce2f9b0b19273288)
+        ;
+
+        
+    
+    
+            var marker_94633a7fd5d726d1d1c9762c060d8d7a = L.marker(
+                [40.500571, 16.081953],
+                {}
+            ).addTo(map_b5ffaf4bf426321963859969beb80b79);
+        
+    
+            var icon_521af568ccff2075f3d64b2a314594b6 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "graduation-cap", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_94633a7fd5d726d1d1c9762c060d8d7a.setIcon(icon_521af568ccff2075f3d64b2a314594b6);
+        
+    
+        var popup_739d35be2e55160e766ff98e003b7f24 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_d185c5964aba6948831464b6e31b0a7c = $(`<div id="html_d185c5964aba6948831464b6e31b0a7c" style="width: 100.0%; height: 100.0%;">Basilicata  Scholarship: 528.47</div>`)[0];
+                popup_739d35be2e55160e766ff98e003b7f24.setContent(html_d185c5964aba6948831464b6e31b0a7c);
+            
+        
+
+        marker_94633a7fd5d726d1d1c9762c060d8d7a.bindPopup(popup_739d35be2e55160e766ff98e003b7f24)
+        ;
+
+        
+    
+    
+            var marker_99cdc30aa9e64e6f388e99ed9195a35f = L.marker(
+                [39.0565974, 16.5249864],
+                {}
+            ).addTo(map_b5ffaf4bf426321963859969beb80b79);
+        
+    
+            var icon_28324c3651b1a296be09964f44ad6f53 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "graduation-cap", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_99cdc30aa9e64e6f388e99ed9195a35f.setIcon(icon_28324c3651b1a296be09964f44ad6f53);
+        
+    
+        var popup_4f82c28ecefed5d4b056b124bd6d575f = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_a187d67aca79f320d346a6483408225f = $(`<div id="html_a187d67aca79f320d346a6483408225f" style="width: 100.0%; height: 100.0%;">Calabria  Scholarship: 578.41</div>`)[0];
+                popup_4f82c28ecefed5d4b056b124bd6d575f.setContent(html_a187d67aca79f320d346a6483408225f);
+            
+        
+
+        marker_99cdc30aa9e64e6f388e99ed9195a35f.bindPopup(popup_4f82c28ecefed5d4b056b124bd6d575f)
+        ;
+
+        
+    
+    
+            var marker_1c407ec86637511a0572e39bfe0550a3 = L.marker(
+                [38.82996034999999, 16.43155687627833],
+                {}
+            ).addTo(map_b5ffaf4bf426321963859969beb80b79);
+        
+    
+            var icon_06a44d17ccbcf3f848814b8f5917a4be = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "graduation-cap", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_1c407ec86637511a0572e39bfe0550a3.setIcon(icon_06a44d17ccbcf3f848814b8f5917a4be);
+        
+    
+        var popup_5e91008e49d3dfe879678b592af36967 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_9c95499a81072a71f586297edd76cff6 = $(`<div id="html_9c95499a81072a71f586297edd76cff6" style="width: 100.0%; height: 100.0%;">Catanzaro  Scholarship: 206.54</div>`)[0];
+                popup_5e91008e49d3dfe879678b592af36967.setContent(html_9c95499a81072a71f586297edd76cff6);
+            
+        
+
+        marker_1c407ec86637511a0572e39bfe0550a3.bindPopup(popup_5e91008e49d3dfe879678b592af36967)
+        ;
+
+        
+    
+    
+            var marker_7a09f41973c17615f6446e552d07f72e = L.marker(
+                [38.1035389, 15.6397556],
+                {}
+            ).addTo(map_b5ffaf4bf426321963859969beb80b79);
+        
+    
+            var icon_76fb0019d21de46f7e95909834bde837 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "graduation-cap", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_7a09f41973c17615f6446e552d07f72e.setIcon(icon_76fb0019d21de46f7e95909834bde837);
+        
+    
+        var popup_b8fca27ab7c16fa9fc8efeaf3384337f = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_08fd61be77b72d08974471df09fe1ffe = $(`<div id="html_08fd61be77b72d08974471df09fe1ffe" style="width: 100.0%; height: 100.0%;">Reggio Calabria  Scholarship: 261.71</div>`)[0];
+                popup_b8fca27ab7c16fa9fc8efeaf3384337f.setContent(html_08fd61be77b72d08974471df09fe1ffe);
+            
+        
+
+        marker_7a09f41973c17615f6446e552d07f72e.bindPopup(popup_b8fca27ab7c16fa9fc8efeaf3384337f)
+        ;
+
+        
+    
+    
+            var marker_b6faae35c5680b28622fc6a657b6eb2a = L.marker(
+                [38.354247, 16.0206809],
+                {}
+            ).addTo(map_b5ffaf4bf426321963859969beb80b79);
+        
+    
+            var icon_f3679a79a739e1148dc9990b9193212d = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "graduation-cap", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_b6faae35c5680b28622fc6a657b6eb2a.setIcon(icon_f3679a79a739e1148dc9990b9193212d);
+        
+    
+        var popup_23960927e5edfe0982aa513450590586 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_dd59cabbf12181cfc5a432e6c9b0f637 = $(`<div id="html_dd59cabbf12181cfc5a432e6c9b0f637" style="width: 100.0%; height: 100.0%;">Reggio Calabria - Dante Alighieri  Scholarship: 288.51</div>`)[0];
+                popup_23960927e5edfe0982aa513450590586.setContent(html_dd59cabbf12181cfc5a432e6c9b0f637);
+            
+        
+
+        marker_b6faae35c5680b28622fc6a657b6eb2a.bindPopup(popup_23960927e5edfe0982aa513450590586)
+        ;
+
+        
+    
+    
+            var marker_14bf6526de11040b68e724029b6bab25 = L.marker(
+                [38.1112268, 13.3524434],
+                {}
+            ).addTo(map_b5ffaf4bf426321963859969beb80b79);
+        
+    
+            var icon_afe974981c53d2fe1f3b6a288f44fd5a = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "graduation-cap", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_14bf6526de11040b68e724029b6bab25.setIcon(icon_afe974981c53d2fe1f3b6a288f44fd5a);
+        
+    
+        var popup_bc10bd3675e261c04002e92622003479 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_1c54a4594d033f8b0742f98965c30fed = $(`<div id="html_1c54a4594d033f8b0742f98965c30fed" style="width: 100.0%; height: 100.0%;">Palermo  Scholarship: 301.55</div>`)[0];
+                popup_bc10bd3675e261c04002e92622003479.setContent(html_1c54a4594d033f8b0742f98965c30fed);
+            
+        
+
+        marker_14bf6526de11040b68e724029b6bab25.bindPopup(popup_bc10bd3675e261c04002e92622003479)
+        ;
+
+        
+    
+    
+            var marker_daacecb133294cdb817a9e6adc94f806 = L.marker(
+                [38.1937571, 15.5542082],
+                {}
+            ).addTo(map_b5ffaf4bf426321963859969beb80b79);
+        
+    
+            var icon_045c0c71bc935e98949905a5b632f48d = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "graduation-cap", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_daacecb133294cdb817a9e6adc94f806.setIcon(icon_045c0c71bc935e98949905a5b632f48d);
+        
+    
+        var popup_3972b59b800f0836232d2d5789ce72c6 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_af1ba853b8ad63528190ce95624a3280 = $(`<div id="html_af1ba853b8ad63528190ce95624a3280" style="width: 100.0%; height: 100.0%;">Messina  Scholarship: 283.7</div>`)[0];
+                popup_3972b59b800f0836232d2d5789ce72c6.setContent(html_af1ba853b8ad63528190ce95624a3280);
+            
+        
+
+        marker_daacecb133294cdb817a9e6adc94f806.bindPopup(popup_3972b59b800f0836232d2d5789ce72c6)
+        ;
+
+        
+    
+    
+            var marker_f3e20fb5dcb9a86f3e553194f2dd898e = L.marker(
+                [37.55381355, 14.293522564541211],
+                {}
+            ).addTo(map_b5ffaf4bf426321963859969beb80b79);
+        
+    
+            var icon_d1189c5a109edb8a4547a51a85b3e149 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "graduation-cap", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_f3e20fb5dcb9a86f3e553194f2dd898e.setIcon(icon_d1189c5a109edb8a4547a51a85b3e149);
+        
+    
+        var popup_10632da5ca6afabe0e8e4ff3f4be909e = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_a86ee4386227122cd45cdab630d81cf6 = $(`<div id="html_a86ee4386227122cd45cdab630d81cf6" style="width: 100.0%; height: 100.0%;">Enna KORE  Scholarship: 318.51</div>`)[0];
+                popup_10632da5ca6afabe0e8e4ff3f4be909e.setContent(html_a86ee4386227122cd45cdab630d81cf6);
+            
+        
+
+        marker_f3e20fb5dcb9a86f3e553194f2dd898e.bindPopup(popup_10632da5ca6afabe0e8e4ff3f4be909e)
+        ;
+
+        
+    
+    
+            var marker_571369ed66da5d4593b24348c4e6e421 = L.marker(
+                [37.5023612, 15.0873718],
+                {}
+            ).addTo(map_b5ffaf4bf426321963859969beb80b79);
+        
+    
+            var icon_90135c535564d6c87ce26e2ad5146a78 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "graduation-cap", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_571369ed66da5d4593b24348c4e6e421.setIcon(icon_90135c535564d6c87ce26e2ad5146a78);
+        
+    
+        var popup_1e0a39118c8200f023e567732b427ce3 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_e23c5c68a7f9ccb9cccbf23ee4e9da6a = $(`<div id="html_e23c5c68a7f9ccb9cccbf23ee4e9da6a" style="width: 100.0%; height: 100.0%;">Catania  Scholarship: 249.57</div>`)[0];
+                popup_1e0a39118c8200f023e567732b427ce3.setContent(html_e23c5c68a7f9ccb9cccbf23ee4e9da6a);
+            
+        
+
+        marker_571369ed66da5d4593b24348c4e6e421.bindPopup(popup_1e0a39118c8200f023e567732b427ce3)
+        ;
+
+        
+    
+    
+            var marker_656f3544a2f3c8f69cfe3f2a9d0f88cd = L.marker(
+                [40.7232643, 8.5610074],
+                {}
+            ).addTo(map_b5ffaf4bf426321963859969beb80b79);
+        
+    
+            var icon_16cc6ac6f19197f230bdbf70e659995c = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "graduation-cap", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_656f3544a2f3c8f69cfe3f2a9d0f88cd.setIcon(icon_16cc6ac6f19197f230bdbf70e659995c);
+        
+    
+        var popup_4b3fe8991ec4db31c13e7070b54e4ac8 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_6546cbc63261552ea48f25e765af69a7 = $(`<div id="html_6546cbc63261552ea48f25e765af69a7" style="width: 100.0%; height: 100.0%;">Sassari  Scholarship: 636.38</div>`)[0];
+                popup_4b3fe8991ec4db31c13e7070b54e4ac8.setContent(html_6546cbc63261552ea48f25e765af69a7);
+            
+        
+
+        marker_656f3544a2f3c8f69cfe3f2a9d0f88cd.bindPopup(popup_4b3fe8991ec4db31c13e7070b54e4ac8)
+        ;
+
+        
+    
+    
+            var marker_8494d8cd391dac488a4337742bf2b7a3 = L.marker(
+                [39.2171994, 9.113311],
+                {}
+            ).addTo(map_b5ffaf4bf426321963859969beb80b79);
+        
+    
+            var icon_a8b7d63da287f961116f22e0c899eab3 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "graduation-cap", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_8494d8cd391dac488a4337742bf2b7a3.setIcon(icon_a8b7d63da287f961116f22e0c899eab3);
+        
+    
+        var popup_6e3eaace2ed2b2c326c2e23072e90a62 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_6ce5156445a8bb164c733bbb54bcd4e2 = $(`<div id="html_6ce5156445a8bb164c733bbb54bcd4e2" style="width: 100.0%; height: 100.0%;">Cagliari  Scholarship: 710.77</div>`)[0];
+                popup_6e3eaace2ed2b2c326c2e23072e90a62.setContent(html_6ce5156445a8bb164c733bbb54bcd4e2);
+            
+        
+
+        marker_8494d8cd391dac488a4337742bf2b7a3.bindPopup(popup_6e3eaace2ed2b2c326c2e23072e90a62)
+        ;
+
+        
+    
+</script>
+</html>
