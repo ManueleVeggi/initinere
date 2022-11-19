@@ -113,26 +113,26 @@ def dataligner(dsupath, feepath, studpath, intpath, year, outputpath):
 
 # Call the function and create the datasets
 
-stud = "data/student.csv"
-ints = "data/intStudent.csv"
+stud = "./data/source/student.csv"
+ints = "./data/source/intStudent.csv"
 
-dsu2016 = "data/dsu2016.csv"
-fee2016 = "data/fees2016.csv"
-dest2016 = "data/output/2016.csv"
+dsu2016 = "./data/source/dsu2016.csv"
+fee2016 = "./data/source/fees2016.csv"
+dest2016 = "./data/output/2016.csv"
 
-dsu2017 = "data/dsu2017.csv"
-fee2017 = "data/fees2017.csv"
-dest2017 = "data/output/2017.csv"
+dsu2017 = "./data/source/dsu2017.csv"
+fee2017 = "./data/source/fees2017.csv"
+dest2017 = "./data/output/2017.csv"
 
-dsu2018 = "data/dsu2018.csv"
-fee2018 = "data/fees2018.csv"
-dest2018 = "data/output/2018.csv"
+dsu2018 = "./data/source/dsu2018.csv"
+fee2018 = "./data/source/fees2018.csv"
+dest2018 = "./data/output/2018.csv"
 
-dsu2019 = "data/dsu2019.csv"
-fee2019 = "data/fees2019.csv"
-dest2019 = "data/output/2019.csv"
+dsu2019 = "./data/source/dsu2019.csv"
+fee2019 = "./data/source/fees2019.csv"
+dest2019 = "./data/output/2019.csv"
 
-# print(dataligner(dsu2016, fee2016, stud, ints, "2015/2016", dest2016))
-# print(dataligner(dsu2017, fee2017, stud, ints, "2016/2017", dest2017))
-# print(dataligner(dsu2018, fee2018, stud, ints, "2017/2018", dest2018))
-# print(dataligner(dsu2019, fee2019, stud, ints, "2018/2019", dest2019))
+print(dataligner(dsu2016, fee2016, stud, ints, "2015/2016", dest2016))
+print(dataligner(dsu2017, fee2017, stud, ints, "2016/2017", dest2017))
+print(dataligner(dsu2018, fee2018, stud, ints, "2017/2018", dest2018))
+print(dataligner(dsu2019, fee2019, stud, ints, "2018/2019", dest2019))

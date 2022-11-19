@@ -40,10 +40,10 @@ def getMemberCluster(df, html):
 
 # Create a single dataset with average values
 
-df1 = pd.read_csv("data/output/2016.csv")
-df2 = pd.read_csv("data/output/2017.csv")
-df3 = pd.read_csv("data/output/2018.csv")
-df4 = pd.read_csv("data/output/2017.csv")
+df1 = pd.read_csv("./data/output/2016.csv")
+df2 = pd.read_csv("./data/output/2017.csv")
+df3 = pd.read_csv("./data/output/2018.csv")
+df4 = pd.read_csv("./data/output/2019.csv")
 
 df1 = df1.merge(df2, left_on='uni_id', right_on='uni_id', suffixes=('_2016', '_2017'))
 df1 = df1.merge(df3, left_on='uni_id', right_on='uni_id', suffixes=('_2017', '_2018'))
@@ -52,7 +52,7 @@ df1 = df1.merge(df4, left_on='uni_id', right_on='uni_id', suffixes=('_2018', '_2
 df1 = averageVal(averageVal(averageVal(df1, "perc_intern"), "relative_scholarship"), "paidfee")
 
 data = df1[["uni_2016", "relative_scholarship", "perc_intern", "paidfee"]].rename(columns={"uni_2016": "uni"})
-data.to_csv("data/output/averages.csv", index=False)
+data.to_csv("./data/output/averages.csv", index=False)
 
 X = data.iloc[:,1:4].values
 

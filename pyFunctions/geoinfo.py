@@ -4,7 +4,7 @@ from folium.plugins import HeatMap
 from geopy.geocoders import Nominatim
 
 
-myDf = pd.read_csv("data/output/averages.csv")
+myDf = pd.read_csv("./data/output/averages.csv")
 
 latList = []
 lonList = []
@@ -27,4 +27,4 @@ for idx, row in myDf.iterrows():
 
 myDf["lat"] = latList
 myDf["lon"] = lonList
-myDf.to_csv("data/output/geocordinatesuni.csv", index=False)
+myDf.to_csv("./data/output/geocordinatesuni.csv", index=False)
