@@ -22,7 +22,7 @@ def averageVal(df, parameter):
     df[parameter] = outputList
     return df
 
-def getMemberCluster(df, html):
+def getMemberCluster(df, html=None):
     outputList = []
     for idx, row in df.iterrows():
         if html:
