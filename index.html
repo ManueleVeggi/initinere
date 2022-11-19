@@ -31,7 +31,7 @@
     <script type="text/javascript" src="js/doccharts.js"></script>
 </head>
 
-<body id="page-top">
+<body id="page-top" onload="scraper('data/output/2016.csv')">
     <!-- Navigation-->
     <a class="menu-toggle rounded" href="#"><i class="fas fa-bars"></i></a>
     <nav id="sidebar-wrapper">
@@ -113,32 +113,19 @@
                 </div>
             </div>
         </div>
+        <!-- document.getElementById('myChart').style.display = 'block';  -->
         <div class="container mt-7" style="margin-top: 5em; margin-bottom: 3em;">
-            <div class="row">
-                <div class="col-2">
-                    <form action="/action_page.php" style="font-size: 1.1em;">
-                        <p style="font-weight: bolder;">Please select the reference a.y.</p>
-                        <input type="radio" id="2016" name="year" value="2016"
-                            onclick="scraper('data/output/2016.csv')">
-                        <label for="2016">2015/16</label><br>
-                        <input type="radio" id="2017" name="year" value="2017"
-                            onclick="scraper('data/output/2017.csv')">
-                        <label for="2017">2016/17</label><br>
-                        <input type="radio" id="2018" name="year" value="2019"
-                            onclick="scraper('data/output/2018.csv')">
-                        <label for="2018">2017/18</label><br>
-                        <input type="radio" id="2019" name="year" value="2019"
-                            onclick="scraper('data/output/2019.csv')">
-                        <label for="2019">2018/19</label>
-                    </form>
-                </div>
-                <div class="col-10">
-                    <div id="myChart" style="width: 100%; height: 500px;"></div>
-                </div>
+            <p><b>Please select the reference academic year</b> (default 2015/16):</p>
+            <div class="btn-group" role="group" aria-label="Basic example">
+                <button type="button" class="btn drawbutton" onclick="scraper('data/output/2016.csv')">2015/16</button>
+                <button type="button" class="btn drawbutton" onclick="scraper('data/output/2017.csv')">2016/17</button>
+                <button type="button" class="btn drawbutton" onclick="scraper('data/output/2018.csv')">2017/18</button>
+                <button type="button" class="btn drawbutton" onclick="scraper('data/output/2019.csv')">2018/19</button>
             </div>
+            <!-- document.getElementById('chart_div').style.display = 'block'; -->
+            <div class="mt-3" id="myChart" style="width: 100%; height: 500px;"></div>
         </div>
-        <p>The data show that no correlation can be found between the amount of fees and scholarships, and the
-            percentage of enrolled international students:</p>
+        <p class="textualcontent">The data show that no correlation can be found between the amount of fees and scholarships, and the percentage of enrolled international students:</p>
         <table class="table mt-3">
             <thead>
                 <tr class="table-active">
@@ -207,12 +194,12 @@
                     <h4>Spesa per interventi</h4>
                 </div>
                 <div onclick="toggleEl('.datainfo', 'ISTAT1')" class="col-lg-3 datasetList text-center">
-                    <h3>ISTAT</h3>
-                    <h4>Popolazione insistente per studio e lavoro</h4>
+                    <h3>MUR</h3>
+                    <h4>Iscritti per ateneo</h4>
                 </div>
                 <div onclick="toggleEl('.datainfo', 'ISTAT2')" class="col-lg-3 datasetList text-center">
-                    <h3>ISTAT</h3>
-                    <h4>Studenti e bacini universitari<sup>*</sup></h4>
+                    <h3>MUR</h3>
+                    <h4>Iscritti stranieri per anno accademico</h4>
                 </div>
                 <hr class="my-2">
                 <div class="col-lg-12 datainfo" id="MUR1">
@@ -284,7 +271,10 @@
                     <!-- Visualization -->
                     <h2>Visualization</h2>
                     <p>Further visualizations are available in this section.</p>
-                    <p><b>Scatterplot</b>: <br>Select the variables and the reference year. Then click on the button to visualize the result. Click <b style="color: #ad3a31" onclick="document.getElementById('chart_div').style.display = 'none';">here</b> to disable the chart canvas.</p>
+                    <p><b>Scatterplot</b>: <br>Select the variables and the reference year. Then click on the button to
+                        visualize the result. Click <b style="color: #ad3a31"
+                            onclick="document.getElementById('chart_div').style.display = 'none';">here</b> to disable
+                        the chart canvas.</p>
                     <div>
                         <table class="table">
                             <tbody>
@@ -331,11 +321,14 @@
                             </tbody>
                         </table>
 
-                        <button id="drawbutton" type="button" class="btn btn-lg btn-block" onclick=" document.getElementById('chart_div').style.display = 'block'; getdata()" style="width: 100%"><i class="fa-solid fa-pen"></i></button>
+                        <button type="button" class="drawbutton btn btn-lg btn-block"
+                            onclick=" document.getElementById('chart_div').style.display = 'block'; getdata()"
+                            style="width: 100%"><i class="fa-solid fa-pen"></i></button>
                         <div id="chart_div" style="width: 100%; height: 500px;"></div>
                     </div>
                     <hr class="my-4">
-                    <p><b>Cluster</b>: <br>A new dataset was created, averaging the values of the timeserie. Note that only the institutions present in all four datasets have been considered for clustering.</p>
+                    <p><b>Cluster</b>: <br>A new dataset was created, averaging the values of the timeserie. Note that
+                        only the institutions present in all four datasets have been considered for clustering.</p>
                     <div class="accordion" id="accordionExample">
                         <div class="accordion-item">
                             <h2 class="accordion-header" id="headingOne">
@@ -352,79 +345,78 @@
                                             <div class="col-4">
                                                 <ul>
                                                     <li>Torino</li>
-                                        <li>Torino Politecnico</li>
-                                        <li>Piemonte Orientale</li>
-                                        <li>Aosta</li>
-                                        <li>Genova</li>
-                                        <li>Insubria</li>
-                                        <li>Milano</li>
-                                        <li>Milano Politecnico</li>
-                                        <li>Milano Bicocca</li>
-                                        <li>Bergamo</li>
-                                        <li>Brescia</li>
-                                        <li>Pavia</li>
-                                        <li>Bolzano</li>
-                                        <li>Trento</li>
-                                        <li>Verona</li>
-                                        <li>Venezia C Foscari</li>
-                                        <li>Venezia Iuav</li>
-                                        <li>Padova</li>
-                                        <li>Udine</li>
-                                        <li>Trieste</li>
-                                        <li>Parma</li>
-                                        <li>Modena e Reggio Emilia</li>
+                                                    <li>Torino Politecnico</li>
+                                                    <li>Piemonte Orientale</li>
+                                                    <li>Aosta</li>
+                                                    <li>Genova</li>
+                                                    <li>Insubria</li>
+                                                    <li>Milano</li>
+                                                    <li>Milano Politecnico</li>
+                                                    <li>Milano Bicocca</li>
+                                                    <li>Bergamo</li>
+                                                    <li>Brescia</li>
+                                                    <li>Pavia</li>
+                                                    <li>Bolzano</li>
+                                                    <li>Trento</li>
+                                                    <li>Verona</li>
+                                                    <li>Venezia Ca' Foscari</li>
+                                                    <li>Venezia Iuav</li>
+                                                    <li>Padova</li>
+                                                    <li>Udine</li>
+                                                    <li>Trieste</li>
+                                                    <li>Parma</li>
+                                                    <li>Modena e <br>Reggio Emilia</li>
                                                 </ul>
                                             </div>
                                             <div class="col-4">
                                                 <li>Bologna</li>
-                                        <li>Ferrara</li>
-                                        <li>Urbino</li>
-                                        <li>Marche</li>
-                                        <li>Macerata</li>
-                                        <li>Camerino</li>
-                                        <li>Firenze</li>
-                                        <li>Pisa</li>
-                                        <li>Siena</li>
-                                        <li>Siena Stranieri</li>
-                                        <li>Perugia</li>
-                                        <li>Perugia Stranieri</li>
-                                        <li>Tuscia</li>
-                                        <li>Roma La Sapienza</li>
-                                        <li>Roma Tor Vergata</li>
-                                        <li>Roma Foro Italico</li>
-                                        <li>Roma Tre</li>
-                                        <li>Cassino</li>
-                                        <li>Sannio</li>
-                                        <li>Napoli Federico II</li>
-                                        <li>Napoli Parthenope</li>
-                                        <li>Napoli L'Orientale</li>
+                                                <li>Ferrara</li>
+                                                <li>Urbino</li>
+                                                <li>Marche</li>
+                                                <li>Macerata</li>
+                                                <li>Camerino</li>
+                                                <li>Firenze</li>
+                                                <li>Pisa</li>
+                                                <li>Siena</li>
+                                                <li>Siena Stranieri</li>
+                                                <li>Perugia</li>
+                                                <li>Perugia Stranieri</li>
+                                                <li>Tuscia</li>
+                                                <li>Roma La Sapienza</li>
+                                                <li>Roma Tor Vergata</li>
+                                                <li>Roma Foro Italico</li>
+                                                <li>Roma Tre</li>
+                                                <li>Cassino</li>
+                                                <li>Sannio</li>
+                                                <li>Napoli Federico II</li>
+                                                <li>Napoli Parthenope</li>
+                                                <li>Napoli L'Orientale</li>
                                             </div>
                                             <div class="col-4">
                                                 <li>Napoli Benincasa</li>
-                                        <li>Napoli Vanvitelli</li>
-                                        <li>Salerno</li>
-                                        <li>L'Aquila</li>
-                                        <li>Teramo</li>
-                                        <li>Chieti e Pescara</li>
-                                        <li>Molise</li>
-                                        <li>Foggia</li>
-                                        <li>Bari</li>
-                                        <li>Bari Politecnico</li>
-                                        <li>Salento</li>
-                                        <li>Basilicata</li>
-                                        <li>Calabria</li>
-                                        <li>Catanzaro</li>
-                                        <li>Reggio Calabria</li>
-                                        <li>Reggio Calabria - Dante Alighieri</li>
-                                        <li>Palermo</li>
-                                        <li>Messina</li>
-                                        <li>Enna KORE</li>
-                                        <li>Catania</li>
-                                        <li>Sassari</li>
-                                        <li>Cagliari</li>
-
+                                                <li>Napoli Vanvitelli</li>
+                                                <li>Salerno</li>
+                                                <li>L'Aquila</li>
+                                                <li>Teramo</li>
+                                                <li>Chieti e Pescara</li>
+                                                <li>Molise</li>
+                                                <li>Foggia</li>
+                                                <li>Bari</li>
+                                                <li>Bari Politecnico</li>
+                                                <li>Salento</li>
+                                                <li>Basilicata</li>
+                                                <li>Calabria</li>
+                                                <li>Catanzaro</li>
+                                                <li>Reggio Calabria</li>
+                                                <li>Reggio Calabria - <br>Dante Alighieri</li>
+                                                <li>Palermo</li>
+                                                <li>Messina</li>
+                                                <li>Enna KORE</li>
+                                                <li>Catania</li>
+                                                <li>Sassari</li>
+                                                <li>Cagliari</li>
                                             </div>
-                                        </div> 
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -472,24 +464,28 @@
                             </div>
                         </div>
                     </div>
-                    <p class="mt-2"><small>Please read the following <a href="clusteralgo.py" style="color: #ad3a31"><b>Jupyter Notebook</b></a> for the reference code and the 3D visualization of the clusters</small></p>
+                    <p class="mt-2"><small>Please read the following <a href="clusteralgo.py"
+                                style="color: #ad3a31"><b>Jupyter Notebook</b></a> for the reference code and the 3D
+                            visualization of the clusters</small></p>
                     <hr class="my-4">
                     <p>
-                        <b>Heatmap</b>: <br>This is the new map. These maps can visualized at the following links (the following links will redirect you to a new window):
+                        <b>Heatmap</b>: <br>This is the new map. These maps can visualized at the following links (the
+                        following links will redirect you to a new window):
                         <ul class="fa-ul">
-                            <li><span class="fa-li"><a href="assets/leafletgeomap/heat_map_dsu.html"><i class="fa-solid fa-thumbtack" style="color: #ad3a31"></i></a></span>Scholarships</li>
-                            <li><span class="fa-li"><a href="assets/leafletgeomap/heat_map_paidfee.html"><i class="fa-solid fa-thumbtack" style="color: #ad3a31"></i></a></span>Paidfees</li>
-                            <li><span class="fa-li"><a href="assets/leafletgeomap/heat_map_perc.html"><i class="fa-solid fa-thumbtack" style="color: #ad3a31"></a></i></span>International students</li>
+                            <li><span class="fa-li"><a href="assets/leafletgeomap/heat_map_dsu.html"><i
+                                            class="fa-solid fa-thumbtack"
+                                            style="color: #ad3a31"></i></a></span>Scholarships</li>
+                            <li><span class="fa-li"><a href="assets/leafletgeomap/heat_map_paidfee.html"><i
+                                            class="fa-solid fa-thumbtack" style="color: #ad3a31"></i></a></span>Paidfees
+                            </li>
+                            <li><span class="fa-li"><a href="assets/leafletgeomap/heat_map_perc.html"><i
+                                            class="fa-solid fa-thumbtack"
+                                            style="color: #ad3a31"></a></i></span>International students</li>
                         </ul>
                     </p>
-                    <p class="mt-2"><small> Please read the following <a href="pyFunctions/jupyternote/geomap.ipynb" style="color: #ad3a31"><b>Jupyter Notebook</b></a> for the reference code and customizable visualization of the heatmaps</small></p>
-                    
-                    
-                    <!--
-                    <div><iframe src="assets/leafletgeomap/heat_map_dsu.html" style="width: 100%;"> </iframe></div>
-                    <div><iframe src="assets/leafletgeomap/heat_map_paidfee.html"> </iframe></div>
-                    <div><iframe src="assets/leafletgeomap/heat_map_perc.html"> </iframe></div>
-                    -->
+                    <p class="mt-2"><small> Please read the following <a href="pyFunctions/jupyternote/geomap.ipynb"
+                                style="color: #ad3a31"><b>Jupyter Notebook</b></a> for the reference code and
+                            customizable visualization of the heatmaps</small></p>
                 </div>
                 <div class="col-8 docsec" id="doc9">
                     <p>This is the text of section 9 of the documentation</p>

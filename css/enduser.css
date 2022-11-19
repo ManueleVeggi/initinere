@@ -52,15 +52,20 @@ header .btn:hover,
     color: #ad3a31;
 }
 
-#drawbutton {
+.drawbutton {
     background-color: #ad3a31;
     border: #643735;
     color: white;
 }
 
-#drawbutton:active {
+.drawbutton:active {
     background-color: #643735;
+    color: white;
     border: #643735;
+}
+
+.drawbutton:hover {
+    color: white;
 }
 
 .footer {
@@ -101,6 +106,12 @@ header .btn:hover,
 }
 
 .docsec {
-text-align: justify;
-  text-justify: inter-word;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.textualcontent {
+    font-size: 1.4em;
+    text-align: justify;
+    text-justify: inter-word;
 }
