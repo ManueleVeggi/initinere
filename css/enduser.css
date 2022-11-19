@@ -99,3 +99,8 @@ header .btn:hover,
 #chart_div {
     display: none;
 }
+
+.docsec {
+text-align: justify;
+  text-justify: inter-word;
+}
