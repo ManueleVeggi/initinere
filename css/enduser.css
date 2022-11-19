@@ -87,3 +87,15 @@ header .btn:hover,
 .stat-title {
     margin-top: 0.5em;
 }
+
+.accordion-button {
+    font-size: 0.7em;
+}
+
+.accordion-body {
+    font-size: 1em;
+}
+
+#chart_div {
+    display: none;
+}
