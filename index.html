@@ -24,11 +24,12 @@
     <link href="css/enduser.css" rel="stylesheet" />
 
     <!-- Libraries for visualization -->
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.7.0/d3.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script type="text/javascript" src="js/graphmaker.js"></script>
     <script type="text/javascript" src="js/doccharts.js"></script>
+    <script type="text/javascript" src="js/linechart.js"></script>
 </head>
 
 <body id="page-top" onload="scraper('data/output/2016.csv')">
@@ -327,8 +328,107 @@
                         <div id="chart_div" style="width: 100%; height: 500px;"></div>
                     </div>
                     <hr class="my-4">
-                    <p><b>Cluster</b>: <br>A new dataset was created, averaging the values of the timeserie. Note that
-                        only the institutions present in all four datasets have been considered for clustering.</p>
+                    <p><b>Timeseries</b>: <br>Select a university and visualize the change of the observation during the reference period.</p>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12 d-flex justify-content-center mb-2" style="width: 100%;">
+                                <select id="timelinechart">
+                                    <option selected><b>Choose institution</b>:</option>
+                                    <option value='Torino'>Torino</option>
+                                    <option value='Torino Politecnico'>Torino Politecnico</option>
+                                    <option value='Piemonte Orientale'>Piemonte Orientale</option>
+                                    <option value='Bra Scienze Gastronomiche'>Bra Scienze Gastronomiche</option>
+                                    <option value='Aosta'>Aosta</option>
+                                    <option value='Genova'>Genova</option>
+                                    <option value='Castellanza LIUC'>Castellanza LIUC</option>
+                                    <option value='Insubria'>Insubria</option>
+                                    <option value='Milano'>Milano</option>
+                                    <option value='Milano Politecnico'>Milano Politecnico</option>
+                                    <option value='Milano Bocconi'>Milano Bocconi</option>
+                                    <option value='Milano Cattolica'>Milano Cattolica</option>
+                                    <option value='Milano IULM'>Milano IULM</option>
+                                    <option value='Milano San Raffaele'>Milano San Raffaele</option>
+                                    <option value='Milano Bicocca'>Milano Bicocca</option>
+                                    <option value='Rozzano (MI) Humanitas University'>Rozzano (MI) Humanitas University</option>
+                                    <option value='Bergamo'>Bergamo</option>
+                                    <option value='Brescia'>Brescia</option>
+                                    <option value='Pavia'>Pavia</option>
+                                    <option value='Bolzano'>Bolzano</option>
+                                    <option value='Trento'>Trento</option>
+                                    <option value='Verona'>Verona</option>
+                                    <option value='Venezia C Foscari'>Venezia Ca' Foscari</option>
+                                    <option value='Venezia Iuav'>Venezia Iuav</option>
+                                    <option value='Padova'>Padova</option>
+                                    <option value='Udine'>Udine</option>
+                                    <option value='Trieste'>Trieste</option>
+                                    <option value='Parma'>Parma</option>
+                                    <option value='Modena e Reggio Emilia'>Modena e Reggio Emilia</option>
+                                    <option value='Bologna'>Bologna</option>
+                                    <option value='Ferrara'>Ferrara</option>
+                                    <option value='Urbino'>Urbino</option>
+                                    <option value='Marche'>Marche</option>
+                                    <option value='Macerata'>Macerata</option>
+                                    <option value='Camerino'>Camerino</option>
+                                    <option value='Firenze'>Firenze</option>
+                                    <option value='Pisa'>Pisa</option>
+                                    <option value='Siena'>Siena</option>
+                                    <option value='Siena Stranieri'>Siena Stranieri</option>
+                                    <option value='Perugia'>Perugia</option>
+                                    <option value='Perugia Stranieri'>Perugia Stranieri</option>
+                                    <option value='Tuscia'>Tuscia</option>
+                                    <option value='Roma La Sapienza'>Roma La Sapienza</option>
+                                    <option value='Roma Tor Vergata'>Roma Tor Vergata</option>
+                                    <option value='Roma LUMSA'>Roma LUMSA</option>
+                                    <option value='Roma LUISS'>Roma LUISS</option>
+                                    <option value='Roma Foro Italico'>Roma Foro Italico</option>
+                                    <option value='Roma Tre'>Roma Tre</option>
+                                    <option value='Roma Biomedico'>Roma Biomedico</option>
+                                    <option value='Roma UNINT'>Roma UNINT</option>
+                                    <option value='Roma Europea'>Roma Europea</option>
+                                    <option value='Roma Link Campus'>Roma Link Campus</option>
+                                    <option value='Roma Saint Camillus'>Roma Saint Camillus</option>
+                                    <option value='Cassino'>Cassino</option>
+                                    <option value='Sannio'>Sannio</option>
+                                    <option value='Napoli Federico II'>Napoli Federico II</option>
+                                    <option value='Napoli Parthenope'>Napoli Parthenope</option>
+                                    <option value='Napoli L' Orientale'>Napoli L'Orientale</option>
+                                    <option value='Napoli Benincasa'>Napoli Benincasa</option>
+                                    <option value='Napoli Vanvitelli'>Napoli Vanvitelli</option>
+                                    <option value='Salerno'>Salerno</option>
+                                    <option value='L' Aquila'>L'Aquila</option>
+                                    <option value='Teramo'>Teramo</option>
+                                    <option value='Chieti e Pescara'>Chieti e Pescara</option>
+                                    <option value='Molise'>Molise</option>
+                                    <option value='Foggia'>Foggia</option>
+                                    <option value='Bari'>Bari</option>
+                                    <option value='Bari Politecnico'>Bari Politecnico</option>
+                                    <option value='Casamassima - G.Degennaro'>Casamassima - G.Degennaro</option>
+                                    <option value='Salento'>Salento</option>
+                                    <option value='Basilicata'>Basilicata</option>
+                                    <option value='Calabria'>Calabria</option>
+                                    <option value='Catanzaro'>Catanzaro</option>
+                                    <option value='Reggio Calabria'>Reggio Calabria</option>
+                                    <option value='Reggio Calabria - Dante Alighieri'>Reggio Calabria - Dante Alighieri</option>
+                                    <option value='Palermo'>Palermo</option>
+                                    <option value='Messina'>Messina</option>
+                                    <option value='Enna KORE'>Enna KORE</option>
+                                    <option value='Catania'>Catania</option>
+                                    <option value='Sassari'>Sassari</option>
+                                    <option value='Cagliari'>Cagliari</option>
+                                </select>
+                            </div>
+                            <div class="col-12">
+                                <button type="button" class="drawbutton btn btn-lg"
+                            onclick="linedata('data/output/forline.csv')"
+                            style="width: 100%;"><i class="fa-solid fa-pen"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="linechart_material"></div>
+                    <p class="mt-2"><small> The creation of the source data set is implemented in this <a href="pyFunctions/preline.py"
+                        style="color: #ad3a31"><b>Python file</b></a>. The code is also responsible for the creation of parts of the <i>option</i> tags.</small></p>
+                    <hr class="my-4">
+                    <p><b>Cluster</b>: <br>A new dataset was created, averaging the values of the timeserie. Note that only the institutions present in all four datasets have been considered for clustering.</p>
                     <div class="accordion" id="accordionExample">
                         <div class="accordion-item">
                             <h2 class="accordion-header" id="headingOne">
