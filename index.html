@@ -14,6 +14,7 @@
     <!-- Simple line icons-->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.5.5/css/simple-line-icons.min.css"
         rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- Google fonts-->
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic"
         rel="stylesheet" type="text/css" />
@@ -186,36 +187,271 @@
                 <h2 class="mb-5" style="font-size: 3.5rem;">Source datasets</h2>
             </div>
             <div class="row gx-0">
-                <div onclick="toggleEl('.datainfo', 'MUR1')" class="col-lg-3 datasetList text-center">
-                    <h3>MUR</h3>
+                <div onclick="toggleEl('.datainfo', 'MIUR1')" class="col-lg-3 datasetList text-center">
+                    <h3>MIUR</h3>
                     <h4>Contribuzione e interventi atenei</h4>
                 </div>
-                <div onclick="toggleEl('.datainfo', 'MUR2')" class="col-lg-3 datasetList text-center">
-                    <h3>MUR</h3>
+                <div onclick="toggleEl('.datainfo', 'MIUR2')" class="col-lg-3 datasetList text-center">
+                    <h3>MIUR</h3>
                     <h4>Spesa per interventi</h4>
                 </div>
-                <div onclick="toggleEl('.datainfo', 'ISTAT1')" class="col-lg-3 datasetList text-center">
-                    <h3>MUR</h3>
+                <div onclick="toggleEl('.datainfo', 'MIUR3')" class="col-lg-3 datasetList text-center">
+                    <h3>MIUR</h3>
                     <h4>Iscritti per ateneo</h4>
                 </div>
-                <div onclick="toggleEl('.datainfo', 'ISTAT2')" class="col-lg-3 datasetList text-center">
-                    <h3>MUR</h3>
+                <div onclick="toggleEl('.datainfo', 'MIUR4')" class="col-lg-3 datasetList text-center">
+                    <h3>MIUR</h3>
                     <h4>Iscritti stranieri per anno accademico</h4>
                 </div>
                 <hr class="my-2">
-                <div class="col-lg-12 datainfo" id="MUR1">
-                    <p>Info on MUR 1</p>
+                <div class="col-lg-12 datainfo" id="MIUR1">
+                    <div class="row justify-content-center">
+                        <div class="col-4">
+                            <div class="flip-card">
+                                <div class="flip-card-inner">
+                                    <div class="flip-card-front">
+                                        <p>Paid Fees 2016</p>
+                                        <hr>
+                                        <p>ID: fees2016</p>
+                                        <p>Provenance: <a href="http://ustat.miur.it/">MIUR (USTAT)</a></p>
+                                        <p>Creation Date: più di 4 anni fa</p>
+                                    </div>
+                                    <div class="flip-card-back">
+                                        <div class="codesection">
+                                            <code>
+                                                Format: .csv .tsv .json .xml<br>
+                                                Metadata: Provided<br>
+                                                URI: <a href="http://dati.ustat.miur.it/dataset/2016-contribuzione-e-interventi-atenei/resource/0ff2992a-88a1-41e9-af2b-b7ddc07b98a2">2016ContribuzioneMedia</a><br>
+                                            </code>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="flip-card">
+                                <div class="flip-card-inner">
+                                    <div class="flip-card-front">
+                                        <p>Paid Fees 2017</p>
+                                        <hr>
+                                        <p>ID: fees2017</p>
+                                        <p>Provenance: <a href="http://ustat.miur.it/">MIUR (USTAT)</a></p>
+                                        <p>Creation Date: più di 4 anni fa
+                                        </p>
+                                    </div>
+                                    <div class="flip-card-back">
+                                        <div class="codesection">
+                                            <code>
+                                                Format: .csv .tsv .json .xml<br>
+                                                Metadata: Provided<br>
+                                                URI: <a href="http://dati.ustat.miur.it/dataset/2017-contribuzione-e-interventi-atenei/resource/5f2cf8c5-9346-4eb2-8e9e-812a2938f6da">2017ContribuzioneMedia</a><br>
+                                            </code>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mt-1 justify-content-center">
+                        <div class="col-4">
+                            <div class="flip-card">
+                                <div class="flip-card-inner">
+                                    <div class="flip-card-front">
+                                        <p>Paid Fees 2018</p>
+                                        <hr>
+                                        <p>ID: fees2018</p>
+                                        <p>Provenance: <a href="http://ustat.miur.it/">MIUR (USTAT)</a></p>
+                                        <p>Creation Date: più di 3 anni fa</p>
+                                    </div>
+                                    <div class="flip-card-back">
+                                        <div class="codesection">
+                                            <code>
+                                                Format: .csv .tsv .json .xml<br>
+                                                Metadata: Provided<br>
+                                                URI: <a href="http://dati.ustat.miur.it/dataset/2018-contribuzione-e-interventi-atenei/resource/1eb81181-c3c4-4d34-9561-83e31ccf3228">2018ContribuzioneMedia</a><br>
+                                            </code>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="flip-card">
+                                <div class="flip-card-inner">
+                                    <div class="flip-card-front">
+                                        <p>Paid Fees 2019</p>
+                                        <hr>
+                                        <p>ID: fees2019</p>
+                                        <p>Provenance: <a href="http://ustat.miur.it/">MIUR (USTAT)</a></p>
+                                        <p>Creation Date: più di 2 anni fa
+                                        </p>
+                                    </div>
+                                    <div class="flip-card-back">
+                                        <div class="codesection">
+                                            <code>
+                                                Format: .csv .tsv .json .xml<br>
+                                                Metadata: Provided<br>
+                                                URI: <a href="http://dati.ustat.miur.it/dataset/2019-contribuzione-e-interventi-atenei/resource/51f1d268-cea5-4425-8eee-c1378806caca">2019ContribuzioneMedia</a><br>
+                                            </code>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-lg-12 datainfo" id="MUR2">
-                    <p>Info on MUR 2</p>
+                <div class="col-lg-12 datainfo" id="MIUR2">
+                    <div class="row justify-content-center">
+                        <div class="col-4">
+                            <div class="flip-card">
+                                <div class="flip-card-inner">
+                                    <div class="flip-card-front">
+                                        <p>Fundings 2016</p>
+                                        <hr>
+                                        <p>ID: dsu2016</p>
+                                        <p>Provenance: <a href="http://ustat.miur.it/">MIUR (USTAT)</a></p>
+                                        <p>Creation Date: più di 5 anni fa
+                                        </p>
+                                    </div>
+                                    <div class="flip-card-back">
+                                        <div class="codesection">
+                                            <code>
+                                                Format: .csv .tsv .json .xml<br>
+                                                Metadata: Provided<br>
+                                                URI: <a href="">2016SpesaInterventi</a><br>
+                                            </code>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="flip-card">
+                                <div class="flip-card-inner">
+                                    <div class="flip-card-front">
+                                        <p>Fundings 2017</p>
+                                        <hr>
+                                        <p>ID: dsu2017</p>
+                                        <p>Provenance: <a href="http://ustat.miur.it/">MIUR (USTAT)</a></p>
+                                        <p>Creation Date: più di 4 anni fa
+                                        </p>
+                                    </div>
+                                    <div class="flip-card-back">
+                                        <div class="codesection">
+                                            <code>
+                                                Format: .csv .tsv .json .xml<br>
+                                                Metadata: Provided<br>
+                                                URI: <a href="http://dati.ustat.miur.it/dataset/2017-diritto-allo-studio-universitario-dsu-regionale/resource/5bb0ff78-f60e-4e30-b237-7791dff940c2">2017SpesaInterventi</a><br>
+                                            </code>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mt-1 justify-content-center">
+                        <div class="col-4">
+                            <div class="flip-card">
+                                <div class="flip-card-inner">
+                                    <div class="flip-card-front">
+                                        <p>Fundings 2018</p>
+                                        <hr>
+                                        <p>ID: dsu2018</p>
+                                        <p>Provenance: <a href="http://ustat.miur.it/">MIUR (USTAT)</a></p>
+                                        <p>Creation Date:più di 3 anni fa
+                                        </p>
+                                    </div>
+                                    <div class="flip-card-back">
+                                        <div class="codesection">
+                                            <code>
+                                                Format: .csv .tsv .json .xml<br>
+                                                Metadata: Provided<br>
+                                                URI: <a href="http://dati.ustat.miur.it/dataset/2018-diritto-allo-studio-universitario-dsu-regionale/resource/cdc018f4-4f3e-4a36-9717-dd82921fa00d">2018SpesaInterventi</a><br>
+                                            </code>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="flip-card">
+                                <div class="flip-card-inner">
+                                    <div class="flip-card-front">
+                                        <p>Fundings 2019</p>
+                                        <hr>
+                                        <p>ID: dsu2019</p>
+                                        <p>Provenance: <a href="http://ustat.miur.it/">MIUR (USTAT)</a></p>
+                                        <p>Creation Date: più di 2 anni fa
+                                        </p>
+                                    </div>
+                                    <div class="flip-card-back">
+                                        <div class="codesection">
+                                            <code>
+                                                Format: .csv .tsv .json .xml<br>
+                                                Metadata: Provided<br>
+                                                URI: <a href="http://dati.ustat.miur.it/dataset/2019-diritto-allo-studio-universitario-dsu-regionale/resource/600e464d-6205-4480-9341-2c1cf48bda55">2019SpesaInterventi</a><br>
+                                            </code>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-lg-12 datainfo" id="ISTAT1">
-                    <p>Info on ISTAT 1</p>
+                <div class="col-lg-12 datainfo" id="MIUR3">
+                    <div class="row justify-content-center">
+                        <div class="col-4 justify-content-center">
+                            <div class="flip-card">
+                                <div class="flip-card-inner">
+                                    <div class="flip-card-front">
+                                        <p>Total Students 2016-2019</p>
+                                        <hr>
+                                        <p>ID: student</p>
+                                        <p>Provenance: <a href="http://ustat.miur.it/">MIUR (USTAT)</a></p>
+                                        <p>Creation Date: più di 3 anni fa
+                                        </p>
+                                    </div>
+                                    <div class="flip-card-back">
+                                        <div class="codesection">
+                                            <code>
+                                                Format: .csv .tsv .json .xml<br>
+                                                Metadata: Provided<br>
+                                                URI: <a href="http://dati.ustat.miur.it/dataset/iscritti/resource/32d26e28-a0b5-45f3-9152-6072164f3e63">IscrittiAteneo</a> <br>
+                                            </code>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-lg-12 datainfo" id="ISTAT2">
-                    <p>Info on ISTAT 2</p>
+                <div class="col-lg-12 datainfo" id="MIUR4">
+                    <div class="row justify-content-center">
+                        <div class="col-4 d-flex justify-content-center">
+                            <div class="flip-card">
+                                <div class="flip-card-inner">
+                                    <div class="flip-card-front">
+                                        <p>International Students 2016-2019</p>
+                                        <hr>
+                                        <p>ID: intstudent</p>
+                                        <p>Provenance: <a href="http://ustat.miur.it/">MIUR (USTAT)</a></p>
+                                        <p>Creation Date: più di 1 anno fa
+                                        </p>
+                                    </div>
+                                    <div class="flip-card-back">
+                                        <div class="codesection">
+                                            <code>
+                                                Format: .csv .tsv .json .xml<br>
+                                                Metadata: Provided<br>
+                                                URI: <a href="http://dati.ustat.miur.it/dataset/iscritti/resource/f0fb0a0a-02a6-44bb-a2b9-feadc9d05f16">IscrittiStranieriAA</a> <br>
+                                            </code>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <!-- **** -->
             </div>
         </div>
     </section>
@@ -257,13 +493,729 @@
                     <p>This is the text of section 3 of the documentation</p>
                 </div>
                 <div class="col-8 docsec" id="doc4">
-                    <p>This is the text of section 4 of the documentation</p>
+                    <!-- Legal Analysis -->
+                    <h2>Legal Analysis</h2>
+                    <p>The following check list is an instrument for the public administration that intends to release open data in order to verify the legal aspects connected. For each dataset the responsible of the service has to evaluate the following topics: privacy issues, IPR policy, licenses, limitations on public access, economical conditions, temporal aspects of the dataset.</p>
+                    <div class="accordion" id="accordionExample">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingOne">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                                    Privacy Issues
+                                </button>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <div class="container">
+                                        <div class="table-responsive-lg">
+                                            <table class="table">
+                                                <thead>
+                                                    <tr>
+                                                        <th scope="col">To check</th>
+                                                        <th scope="col">Paid Fees</th>
+                                                        <th scope="col">Fundings</th>
+                                                        <th scope="col">Total Students</th>
+                                                        <th scope="col">International Students</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <th scope="row">Free of any personal data as defined in the Regulation (EU) 2016/679?</th>
+                                                        <td class="table-txt">Yes</td>
+                                                        <td class="table-txt">Yes</td>
+                                                        <td class="table-txt">Yes</td>
+                                                        <td class="table-txt">Yes</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Free of any indirect personal data that could be used for identifying the natural person?</th>
+                                                        <td class="table-txt">Yes</td>
+                                                        <td class="table-txt">Yes</td>
+                                                        <td class="table-txt">Yes</td>
+                                                        <td class="table-txt">Yes</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Free of any particular personal data (art. 9 GDPR)?</th>
+                                                        <td class="table-txt">Yes</td>
+                                                        <td class="table-txt">Yes</td>
+                                                        <td class="table-txt">Yes</td>
+                                                        <td class="table-txt">Yes</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Free of any information that combined with common data available in the web, could identify the person?</th>
+                                                        <td class="table-txt">Yes</td>
+                                                        <td class="table-txt">Yes</td>
+                                                        <td class="table-txt">Yes</td>
+                                                        <td class="table-txt">Yes</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Free of any information related to human rights?</th>
+                                                        <td class="table-txt">Yes</td>
+                                                        <td class="table-txt">Yes</td>
+                                                        <td class="table-txt">Yes</td>
+                                                        <td class="table-txt">Yes</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Do you use a tool for calculating the range of the risk of de-anonymization?</th>
+                                                        <td class="table-txt">Not needed</td>
+                                                        <td class="table-txt">Not needed</td>
+                                                        <td class="table-txt">Not needed</td>
+                                                        <td class="table-txt">Not needed</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Are you using geolocalization capabilities?</th>
+                                                        <td class="table-txt">Yes</td>
+                                                        <td class="table-txt">Yes</td>
+                                                        <td class="table-txt">Yes</td>
+                                                        <td class="table-txt">Yes</td>
+                                                    <tr>
+                                                        <th scope="row">Did you check that the open data platform respect all the privacy regulations?</th>
+                                                        <td class="table-txt">Yes</td>
+                                                        <td class="table-txt">Yes</td>
+                                                        <td class="table-txt">Yes</td>
+                                                        <td class="table-txt">Yes</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Do you know who are in your open data platform the Controller and Processor of the privacy data of the system?</th>
+                                                        <td class="table-txt">Yes</td>
+                                                        <td class="table-txt">Yes</td>
+                                                        <td class="table-txt">Yes</td>
+                                                        <td class="table-txt">Yes</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Do you have checked the privacy regulation of the country where the dataset are physically stored?</th>
+                                                        <td class="table-txt">Yes</td>
+                                                        <td class="table-txt">Yes</td>
+                                                        <td class="table-txt">Yes</td>
+                                                        <td class="table-txt">Yes</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Do you have non-personal data?</th>
+                                                        <td class="table-txt">Yes</td>
+                                                        <td class="table-txt">Yes</td>
+                                                        <td class="table-txt">Yes</td>
+                                                        <td class="table-txt">Yes</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingTwo">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    IPR of the dataset
+                                </button>
+                            </h2>
+                            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <div class="container">
+                                        <div class="table-responsive-lg">
+                                            <table class="table">
+                                                <thead>
+                                                    <tr>
+                                                        <th scope="col">To check</th>
+                                                        <th scope="col">Paid Fees</th>
+                                                        <th scope="col">Fundings</th>
+                                                        <th scope="col">Total Students</th>
+                                                        <th scope="col">International Students</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <th scope="row">Do you have created and generated the dataset?</th>
+                                                        <td class="table-txt">No</td>
+                                                        <td class="table-txt">No</td>
+                                                        <td class="table-txt">No</td>
+                                                        <td class="table-txt">No</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Are you the owner of the dataset?</th>
+                                                        <td class="table-txt">No</td>
+                                                        <td class="table-txt">No</td>
+                                                        <td class="table-txt">No</td>
+                                                        <td class="table-txt">No</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Are the dataset free from third party licenses or patents?</th>
+                                                        <td class="table-txt">Yes</td>
+                                                        <td class="table-txt">Yes</td>
+                                                        <td class="table-txt">Yes</td>
+                                                        <td class="table-txt">Yes</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Do you have checked if there are some limitations in your national legal system for releasing some kind of datasets with open license?</th>
+                                                        <td class="table-txt">Yes</td>
+                                                        <td class="table-txt">Yes</td>
+                                                        <td class="table-txt">Yes</td>
+                                                        <td class="table-txt">Yes</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingThree">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                    Licenses
+                                </button>
+                            </h2>
+                            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <div class="container">
+                                        <div class="table-responsive-lg">
+                                            <table class="table">
+                                                <thead>
+                                                    <tr>
+                                                        <th scope="col">To check</th>
+                                                        <th scope="col">Paid Fees</th>
+                                                        <th scope="col">Fundings</th>
+                                                        <th scope="col">Total Students</th>
+                                                        <th scope="col">International Students</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <th scope="row">Do you release the dataset with an open data license ?</th>
+                                                        <td class="table-txt">Yes</td>
+                                                        <td class="table-txt">Yes</td>
+                                                        <td class="table-txt">Yes</td>
+                                                        <td class="table-txt">Yes</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Do you include the clause: "In any case the dataset can’t be used for re-identifying the person"?</th>
+                                                        <td class="table-txt">No</td>
+                                                        <td class="table-txt">No</td>
+                                                        <td class="table-txt">No</td>
+                                                        <td class="table-txt">No</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Do you release the API (in case you have) with an open source license?</th>
+                                                        <td class="table-txt">Not needed</td>
+                                                        <td class="table-txt">Not needed</td>
+                                                        <td class="table-txt">Not needed</td>
+                                                        <td class="table-txt">Not needed</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Do you check that the open data/API platform license regime is compliance with your IPR policy?</th>
+                                                        <td class="table-txt">Not needed</td>
+                                                        <td class="table-txt">Not needed</td>
+                                                        <td class="table-txt">Not needed</td>
+                                                        <td class="table-txt">Not needed</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingFour">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                    Limitations on public access
+                                </button>
+                            </h2>
+                            <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <div class="container">
+                                        <div class="table-responsive-lg">
+                                            <table class="table">
+                                                <thead>
+                                                    <tr>
+                                                        <th scope="col">To check</th>
+                                                        <th scope="col">Paid Fees</th>
+                                                        <th scope="col">Fundings</th>
+                                                        <th scope="col">Total Students</th>
+                                                        <th scope="col">International Students</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <th scope="row">Do you check that the dataset concerns your institutional competences, scope and finality?</th>
+                                                        <td class="table-txt">Yes</td>
+                                                        <td class="table-txt">Yes</td>
+                                                        <td class="table-txt">Yes</td>
+                                                        <td class="table-txt">Yes</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Do you check the limitations for the publication stated by your national legislation or by the EU directives?</th>
+                                                        <td class="table-txt">Yes</td>
+                                                        <td class="table-txt">Yes</td>
+                                                        <td class="table-txt">Yes</td>
+                                                        <td class="table-txt">Yes</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Do you check if there are some limitations connected to the international relations, public security or national defence?</th>
+                                                        <td class="table-txt">Yes</td>
+                                                        <td class="table-txt">Yes</td>
+                                                        <td class="table-txt">Yes</td>
+                                                        <td class="table-txt">Yes</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Do you check if there are some limitations concerning the public interest?</th>
+                                                        <td class="table-txt">Yes</td>
+                                                        <td class="table-txt">Yes</td>
+                                                        <td class="table-txt">Yes</td>
+                                                        <td class="table-txt">Yes</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Do you check the international law limitations?</th>
+                                                        <td class="table-txt">Yes</td>
+                                                        <td class="table-txt">Yes</td>
+                                                        <td class="table-txt">Yes</td>
+                                                        <td class="table-txt">Yes</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Do you check the INSPIRE law limitations for the spatial data?</th>
+                                                        <td class="table-txt">Yes</td>
+                                                        <td class="table-txt">Yes</td>
+                                                        <td class="table-txt">Yes</td>
+                                                        <td class="table-txt">Yes</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingFive">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                    Economical Conditions
+                                </button>
+                            </h2>
+                            <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive"
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <div class="container">
+                                        <div class="table-responsive-lg">
+                                            <table class="table">
+                                                <thead>
+                                                    <tr>
+                                                        <th scope="col">To check</th>
+                                                        <th scope="col">Paid Fees</th>
+                                                        <th scope="col">Fundings</th>
+                                                        <th scope="col">Total Students</th>
+                                                        <th scope="col">International Students</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <th scope="row">Do you check that the dataset could be released for free?</th>
+                                                        <td class="table-txt">Yes</td>
+                                                        <td class="table-txt">Yes</td>
+                                                        <td class="table-txt">Yes</td>
+                                                        <td class="table-txt">Yes</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Do you check if there are some agreements with some other partners in order to release the dataset with a reasonable price?</th>
+                                                        <td class="table-txt">Not needed</td>
+                                                        <td class="table-txt">Not needed</td>
+                                                        <td class="table-txt">Not needed</td>
+                                                        <td class="table-txt">Not needed</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Do you check if the open data platform terms of service include a clause of “non liability agreement” regarding the dataset and API provided?</th>
+                                                        <td class="table-txt">Yes</td>
+                                                        <td class="table-txt">Yes</td>
+                                                        <td class="table-txt">Yes</td>
+                                                        <td class="table-txt">Yes</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">In case you decide to release the dataset to a reasonable price do you check if the limitation imposed by the new directive 2019/1024/EU are respected?</th>
+                                                        <td class="table-txt">Not needed</td>
+                                                        <td class="table-txt">Not needed</td>
+                                                        <td class="table-txt">Not needed</td>
+                                                        <td class="table-txt">Not needed</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">In case you decide to release the dataset to a reasonable price do you check the e-Commerce directive1 and regulation?</th>
+                                                        <td class="table-txt">Not needed</td>
+                                                        <td class="table-txt">Not needed</td>
+                                                        <td class="table-txt">Not needed</td>
+                                                        <td class="table-txt">Not needed</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingSix">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                                    Temporary aspects
+                                </button>
+                            </h2>
+                            <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix"
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <div class="container">
+                                        <div class="table-responsive-lg">
+                                            <table class="table">
+                                                <thead>
+                                                    <tr>
+                                                        <th scope="col">To check</th>
+                                                        <th scope="col">Paid Fees</th>
+                                                        <th scope="col">Fundings</th>
+                                                        <th scope="col">Total Students</th>
+                                                        <th scope="col">International Students</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <th scope="row">Do you have a temporary policy for updating the dataset?</th>
+                                                        <td class="table-txt">No</td>
+                                                        <td class="table-txt">No</td>
+                                                        <td class="table-txt">No</td>
+                                                        <td class="table-txt">No</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Do you have some mechanism for informing the end-user that the dataset is updated at a given time to avoid mis-usage and so potential risk of damage?</th>
+                                                        <td class="table-txt">No</td>
+                                                        <td class="table-txt">No</td>
+                                                        <td class="table-txt">No</td>
+                                                        <td class="table-txt">No</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Did you check if the dataset for some reason can’t be indexed by the research engines (e.g. Google, Yahoo, etc.)?</th>
+                                                        <td class="table-txt">Yes</td>
+                                                        <td class="table-txt">Yes</td>
+                                                        <td class="table-txt">Yes</td>
+                                                        <td class="table-txt">Yes</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">In case of personal data, do you have a reasonable technical mechanism for collecting request of deletion (e.g. right to be forgotten)?</th>
+                                                        <td class="table-txt">Not needed</td>
+                                                        <td class="table-txt">Not needed</td>
+                                                        <td class="table-txt">Not needed</td>
+                                                        <td class="table-txt">Not needed</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>    
+                    <h3 style="padding-top:30px;">License Comparison</h3>
+                    <p>Original datasets in IODL v2.0 (less restriction) can be published under CC BY 4.0. <br>Original datasets in A1 Public Domain = CC0 (no restriction at all) can be published under CC BY 4.0.</p>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th scope="col"></th>
+                                <th scope="col">Original License</th>
+                                <th scope="col">Output License</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">MIUR-Paid Fees (2016-19)</th>
+                                <td class="table-txt">IODL v2.0</td>
+                                <td class="table-txt" rowspan="4">CC-BY 4.0</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">MIUR-Fundings (2016-19)</th>
+                                <td class="table-txt">IODL v2.0</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">MIUR-Total Students</th>
+                                <td class="table-txt">A1 Public Domain</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">MIUR-International Students</th>
+                                <td class="table-txt">A1 Public Domain</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    
                 </div>
                 <div class="col-8 docsec" id="doc5">
                     <p>This is the text of section 5 of the documentation</p>
                 </div>
                 <div class="col-8 docsec" id="doc6">
-                    <p>This is the text of section 6 of the documentation</p>
+                    <h2>Technical Analysis</h2>
+                    <p>All datasets were provided by MIUR Open Data Portal and follow more or less the same metadata schema, however there are some differences between the datasets published </p>
+                    <div class="table-responsive-sm">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th scope="col"></th>
+                                    <th scope="col" colspan="4">MIUR-Paid Fees</th>
+                                    <th scope="col" colspan="4">MIUR-Fundings</th>
+                                    <th scope="col">MIUR-Total Students</th>
+                                    <th scope="col">MIUR-International Students</th>
+                                </tr>
+                                <tr>
+                                    <th scope="col"></th>
+                                    <th scope="col">2016</th>
+                                    <th scope="col">2017</th>
+                                    <th scope="col">2018</th>
+                                    <th scope="col">2019</th>
+                                    <th scope="col">2016</th>
+                                    <th scope="col">2017</th>
+                                    <th scope="col">2018</th>
+                                    <th scope="col">2019</th>
+                                    <th scope="col">2016-19</th>
+                                    <th scope="col">2016-19</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">distribution format</th>
+                                    <td class="table-txt"><i class="fa fa-check" aria-hidden="true"></i></td>
+                                    <td class="table-txt"><i class="fa fa-check" aria-hidden="true"></i></td>
+                                    <td class="table-txt"><i class="fa fa-check" aria-hidden="true"></i></td>
+                                    <td class="table-txt"><i class="fa fa-check" aria-hidden="true"></i></td>
+                                    <td class="table-txt" style="background-color:#ff6666;"><i class="fa fa-times" aria-hidden="true"></i></td>
+                                    <td class="table-txt"><i class="fa fa-check" aria-hidden="true"></i></td>
+                                    <td class="table-txt"><i class="fa fa-check" aria-hidden="true"></i></td>
+                                    <td class="table-txt"><i class="fa fa-check" aria-hidden="true"></i></td>
+                                    <td class="table-txt"><i class="fa fa-check" aria-hidden="true"></i></td>
+                                    <td class="table-txt"><i class="fa fa-check" aria-hidden="true"></i></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">license</th>
+                                    <td class="table-txt" style="background-color:#ff6666;"><i class="fa fa-times" aria-hidden="true"></i></td>
+                                    <td class="table-txt" style="background-color:#ff6666;"><i class="fa fa-times" aria-hidden="true"></i></td>
+                                    <td class="table-txt" style="background-color:#ff6666;"><i class="fa fa-times" aria-hidden="true"></i></td>
+                                    <td class="table-txt" style="background-color:#ff6666;"><i class="fa fa-times" aria-hidden="true"></i></td>
+                                    <td class="table-txt" style="background-color:#ff6666;"><i class="fa fa-times" aria-hidden="true"></i></td>
+                                    <td class="table-txt" style="background-color:#ff6666;"><i class="fa fa-times" aria-hidden="true"></i></td>
+                                    <td class="table-txt" style="background-color:#ff6666;"><i class="fa fa-times" aria-hidden="true"></i></td>
+                                    <td class="table-txt" style="background-color:#ff6666;"><i class="fa fa-times" aria-hidden="true"></i></td>
+                                    <td class="table-txt"><i class="fa fa-check" aria-hidden="true"></i></td>
+                                    <td class="table-txt"><i class="fa fa-check" aria-hidden="true"></i></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">last modify</th>
+                                    <td class="table-txt"><i class="fa fa-check" aria-hidden="true"></i></td>
+                                    <td class="table-txt"><i class="fa fa-check" aria-hidden="true"></i></td>
+                                    <td class="table-txt"><i class="fa fa-check" aria-hidden="true"></i></td>
+                                    <td class="table-txt"><i class="fa fa-check" aria-hidden="true"></i></td>
+                                    <td class="table-txt"><i class="fa fa-check" aria-hidden="true"></i></td>
+                                    <td class="table-txt"><i class="fa fa-check" aria-hidden="true"></i></td>
+                                    <td class="table-txt"><i class="fa fa-check" aria-hidden="true"></i></td>
+                                    <td class="table-txt"><i class="fa fa-check" aria-hidden="true"></i></td>
+                                    <td class="table-txt"><i class="fa fa-check" aria-hidden="true"></i></td>
+                                    <td class="table-txt"><i class="fa fa-check" aria-hidden="true"></i></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">creator</th>
+                                    <td class="table-txt" style="background-color:#ff6666;"><i class="fa fa-times" aria-hidden="true"></i></td>
+                                    <td class="table-txt" style="background-color:#ff6666;"><i class="fa fa-times" aria-hidden="true"></i></td>
+                                    <td class="table-txt" style="background-color:#ff6666;"><i class="fa fa-times" aria-hidden="true"></i></td>
+                                    <td class="table-txt" style="background-color:#ff6666;"><i class="fa fa-times" aria-hidden="true"></i></td>
+                                    <td class="table-txt" style="background-color:#ff6666;"><i class="fa fa-times" aria-hidden="true"></i></td>
+                                    <td class="table-txt" style="background-color:#ff6666;"><i class="fa fa-times" aria-hidden="true"></i></td>
+                                    <td class="table-txt" style="background-color:#ff6666;"><i class="fa fa-times" aria-hidden="true"></i></td>
+                                    <td class="table-txt" style="background-color:#ff6666;"><i class="fa fa-times" aria-hidden="true"></i></td>
+                                    <td class="table-txt" style="background-color:#ff6666;"><i class="fa fa-times" aria-hidden="true"></i></td>
+                                    <td class="table-txt" style="background-color:#ff6666;"><i class="fa fa-times" aria-hidden="true"></i></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">format</th>
+                                    <td class="table-txt"><i class="fa fa-check" aria-hidden="true"></i></td>
+                                    <td class="table-txt"><i class="fa fa-check" aria-hidden="true"></i></td>
+                                    <td class="table-txt"><i class="fa fa-check" aria-hidden="true"></i></td>
+                                    <td class="table-txt"><i class="fa fa-check" aria-hidden="true"></i></td>
+                                    <td class="table-txt"><i class="fa fa-check" aria-hidden="true"></i></td>
+                                    <td class="table-txt"><i class="fa fa-check" aria-hidden="true"></i></td>
+                                    <td class="table-txt"><i class="fa fa-check" aria-hidden="true"></i></td>
+                                    <td class="table-txt"><i class="fa fa-check" aria-hidden="true"></i></td>
+                                    <td class="table-txt"><i class="fa fa-check" aria-hidden="true"></i></td>
+                                    <td class="table-txt"><i class="fa fa-check" aria-hidden="true"></i></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">creation time</th>
+                                    <td class="table-txt"><i class="fa fa-check" aria-hidden="true"></i></td>
+                                    <td class="table-txt"><i class="fa fa-check" aria-hidden="true"></i></td>
+                                    <td class="table-txt"><i class="fa fa-check" aria-hidden="true"></i></td>
+                                    <td class="table-txt"><i class="fa fa-check" aria-hidden="true"></i></td>
+                                    <td class="table-txt"><i class="fa fa-check" aria-hidden="true"></i></td>
+                                    <td class="table-txt"><i class="fa fa-check" aria-hidden="true"></i></td>
+                                    <td class="table-txt"><i class="fa fa-check" aria-hidden="true"></i></td>
+                                    <td class="table-txt"><i class="fa fa-check" aria-hidden="true"></i></td>
+                                    <td class="table-txt"><i class="fa fa-check" aria-hidden="true"></i></td>
+                                    <td class="table-txt"><i class="fa fa-check" aria-hidden="true"></i></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">media type</th>
+                                    <td class="table-txt" style="background-color:#ff6666;"><i class="fa fa-times" aria-hidden="true"></i></td>
+                                    <td class="table-txt" style="background-color:#ff6666;"><i class="fa fa-times" aria-hidden="true"></i></td>
+                                    <td class="table-txt" style="background-color:#ff6666;"><i class="fa fa-times" aria-hidden="true"></i></td>
+                                    <td class="table-txt" style="background-color:#ff6666;"><i class="fa fa-times" aria-hidden="true"></i></td>
+                                    <td class="table-txt" style="background-color:#ff6666;"><i class="fa fa-times" aria-hidden="true"></i></td>
+                                    <td class="table-txt" style="background-color:#ff6666;"><i class="fa fa-times" aria-hidden="true"></i></td>
+                                    <td class="table-txt" style="background-color:#ff6666;"><i class="fa fa-times" aria-hidden="true"></i></td>
+                                    <td class="table-txt" style="background-color:#ff6666;"><i class="fa fa-times" aria-hidden="true"></i></td>
+                                    <td class="table-txt"><i class="fa fa-check" aria-hidden="true"></i></td>
+                                    <td class="table-txt"><i class="fa fa-check" aria-hidden="true"></i></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">datastore active</th>
+                                    <td class="table-txt"><i class="fa fa-check" aria-hidden="true"></i></td>
+                                    <td class="table-txt"><i class="fa fa-check" aria-hidden="true"></i></td>
+                                    <td class="table-txt"><i class="fa fa-check" aria-hidden="true"></i></td>
+                                    <td class="table-txt"><i class="fa fa-check" aria-hidden="true"></i></td>
+                                    <td class="table-txt"><i class="fa fa-check" aria-hidden="true"></i></td>
+                                    <td class="table-txt"><i class="fa fa-check" aria-hidden="true"></i></td>
+                                    <td class="table-txt"><i class="fa fa-check" aria-hidden="true"></i></td>
+                                    <td class="table-txt"><i class="fa fa-check" aria-hidden="true"></i></td>
+                                    <td class="table-txt"><i class="fa fa-check" aria-hidden="true"></i></td>
+                                    <td class="table-txt"><i class="fa fa-check" aria-hidden="true"></i></td>
+                                </tr>
+                                
+                                <tr>
+                                    <th scope="row">has views</th>
+                                    <td class="table-txt"><i class="fa fa-check" aria-hidden="true"></i></td>
+                                    <td class="table-txt"><i class="fa fa-check" aria-hidden="true"></i></td>
+                                    <td class="table-txt"><i class="fa fa-check" aria-hidden="true"></i></td>
+                                    <td class="table-txt"><i class="fa fa-check" aria-hidden="true"></i></td>
+                                    <td class="table-txt"><i class="fa fa-check" aria-hidden="true"></i></td>
+                                    <td class="table-txt"><i class="fa fa-check" aria-hidden="true"></i></td>
+                                    <td class="table-txt"><i class="fa fa-check" aria-hidden="true"></i></td>
+                                    <td class="table-txt"><i class="fa fa-check" aria-hidden="true"></i></td>
+                                    <td class="table-txt"><i class="fa fa-check" aria-hidden="true"></i></td>
+                                    <td class="table-txt"><i class="fa fa-check" aria-hidden="true"></i></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">id</th>
+                                    <td class="table-txt"><i class="fa fa-check" aria-hidden="true"></i></td>
+                                    <td class="table-txt"><i class="fa fa-check" aria-hidden="true"></i></td>
+                                    <td class="table-txt"><i class="fa fa-check" aria-hidden="true"></i></td>
+                                    <td class="table-txt"><i class="fa fa-check" aria-hidden="true"></i></td>
+                                    <td class="table-txt"><i class="fa fa-check" aria-hidden="true"></i></td>
+                                    <td class="table-txt"><i class="fa fa-check" aria-hidden="true"></i></td>
+                                    <td class="table-txt"><i class="fa fa-check" aria-hidden="true"></i></td>
+                                    <td class="table-txt"><i class="fa fa-check" aria-hidden="true"></i></td>
+                                    <td class="table-txt"><i class="fa fa-check" aria-hidden="true"></i></td>
+                                    <td class="table-txt"><i class="fa fa-check" aria-hidden="true"></i></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">last modified</th>
+                                    <td class="table-txt"><i class="fa fa-check" aria-hidden="true"></i></td>
+                                    <td class="table-txt"><i class="fa fa-check" aria-hidden="true"></i></td>
+                                    <td class="table-txt"><i class="fa fa-check" aria-hidden="true"></i></td>
+                                    <td class="table-txt"><i class="fa fa-check" aria-hidden="true"></i></td>
+                                    <td class="table-txt"><i class="fa fa-check" aria-hidden="true"></i></td>
+                                    <td class="table-txt"><i class="fa fa-check" aria-hidden="true"></i></td>
+                                    <td class="table-txt"><i class="fa fa-check" aria-hidden="true"></i></td>
+                                    <td class="table-txt"><i class="fa fa-check" aria-hidden="true"></i></td>
+                                    <td class="table-txt"><i class="fa fa-check" aria-hidden="true"></i></td>
+                                    <td class="table-txt"><i class="fa fa-check" aria-hidden="true"></i></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">license type</th>
+                                    <td class="table-txt" style="background-color:#ff6666;"><i class="fa fa-times" aria-hidden="true"></i></td>
+                                    <td class="table-txt" style="background-color:#ff6666;"><i class="fa fa-times" aria-hidden="true"></i></td>
+                                    <td class="table-txt" style="background-color:#ff6666;"><i class="fa fa-times" aria-hidden="true"></i></td>
+                                    <td class="table-txt" style="background-color:#ff6666;"><i class="fa fa-times" aria-hidden="true"></i></td>
+                                    <td class="table-txt" style="background-color:#ff6666;"><i class="fa fa-times" aria-hidden="true"></i></td>
+                                    <td class="table-txt" style="background-color:#ff6666;"><i class="fa fa-times" aria-hidden="true"></i></td>
+                                    <td class="table-txt" style="background-color:#ff6666;"><i class="fa fa-times" aria-hidden="true"></i></td>
+                                    <td class="table-txt" style="background-color:#ff6666;"><i class="fa fa-times" aria-hidden="true"></i></td>
+                                    <td class="table-txt"><i class="fa fa-check" aria-hidden="true"></i></td>
+                                    <td class="table-txt"><i class="fa fa-check" aria-hidden="true"></i></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">on same domain</th>
+                                    <td class="table-txt"><i class="fa fa-check" aria-hidden="true"></i></td>
+                                    <td class="table-txt"><i class="fa fa-check" aria-hidden="true"></i></td>
+                                    <td class="table-txt"><i class="fa fa-check" aria-hidden="true"></i></td>
+                                    <td class="table-txt"><i class="fa fa-check" aria-hidden="true"></i></td>
+                                    <td class="table-txt"><i class="fa fa-check" aria-hidden="true"></i></td>
+                                    <td class="table-txt"><i class="fa fa-check" aria-hidden="true"></i></td>
+                                    <td class="table-txt"><i class="fa fa-check" aria-hidden="true"></i></td>
+                                    <td class="table-txt"><i class="fa fa-check" aria-hidden="true"></i></td>
+                                    <td class="table-txt"><i class="fa fa-check" aria-hidden="true"></i></td>
+                                    <td class="table-txt"><i class="fa fa-check" aria-hidden="true"></i></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">package id</th>
+                                    <td class="table-txt"><i class="fa fa-check" aria-hidden="true"></i></td>
+                                    <td class="table-txt"><i class="fa fa-check" aria-hidden="true"></i></td>
+                                    <td class="table-txt"><i class="fa fa-check" aria-hidden="true"></i></td>
+                                    <td class="table-txt"><i class="fa fa-check" aria-hidden="true"></i></td>
+                                    <td class="table-txt"><i class="fa fa-check" aria-hidden="true"></i></td>
+                                    <td class="table-txt"><i class="fa fa-check" aria-hidden="true"></i></td>
+                                    <td class="table-txt"><i class="fa fa-check" aria-hidden="true"></i></td>
+                                    <td class="table-txt"><i class="fa fa-check" aria-hidden="true"></i></td>
+                                    <td class="table-txt"><i class="fa fa-check" aria-hidden="true"></i></td>
+                                    <td class="table-txt"><i class="fa fa-check" aria-hidden="true"></i></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">position</th>
+                                    <td class="table-txt"><i class="fa fa-check" aria-hidden="true"></i></td>
+                                    <td class="table-txt"><i class="fa fa-check" aria-hidden="true"></i></td>
+                                    <td class="table-txt"><i class="fa fa-check" aria-hidden="true"></i></td>
+                                    <td class="table-txt"><i class="fa fa-check" aria-hidden="true"></i></td>
+                                    <td class="table-txt"><i class="fa fa-check" aria-hidden="true"></i></td>
+                                    <td class="table-txt"><i class="fa fa-check" aria-hidden="true"></i></td>
+                                    <td class="table-txt"><i class="fa fa-check" aria-hidden="true"></i></td>
+                                    <td class="table-txt"><i class="fa fa-check" aria-hidden="true"></i></td>
+                                    <td class="table-txt"><i class="fa fa-check" aria-hidden="true"></i></td>
+                                    <td class="table-txt"><i class="fa fa-check" aria-hidden="true"></i></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">revision id</th>
+                                    <td class="table-txt"><i class="fa fa-check" aria-hidden="true"></i></td>
+                                    <td class="table-txt"><i class="fa fa-check" aria-hidden="true"></i></td>
+                                    <td class="table-txt"><i class="fa fa-check" aria-hidden="true"></i></td>
+                                    <td class="table-txt"><i class="fa fa-check" aria-hidden="true"></i></td>
+                                    <td class="table-txt"><i class="fa fa-check" aria-hidden="true"></i></td>
+                                    <td class="table-txt"><i class="fa fa-check" aria-hidden="true"></i></td>
+                                    <td class="table-txt"><i class="fa fa-check" aria-hidden="true"></i></td>
+                                    <td class="table-txt"><i class="fa fa-check" aria-hidden="true"></i></td>
+                                    <td class="table-txt"><i class="fa fa-check" aria-hidden="true"></i></td>
+                                    <td class="table-txt"><i class="fa fa-check" aria-hidden="true"></i></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">state</th>
+                                    <td class="table-txt"><i class="fa fa-check" aria-hidden="true"></i></td>
+                                    <td class="table-txt"><i class="fa fa-check" aria-hidden="true"></i></td>
+                                    <td class="table-txt"><i class="fa fa-check" aria-hidden="true"></i></td>
+                                    <td class="table-txt"><i class="fa fa-check" aria-hidden="true"></i></td>
+                                    <td class="table-txt"><i class="fa fa-check" aria-hidden="true"></i></td>
+                                    <td class="table-txt"><i class="fa fa-check" aria-hidden="true"></i></td>
+                                    <td class="table-txt"><i class="fa fa-check" aria-hidden="true"></i></td>
+                                    <td class="table-txt"><i class="fa fa-check" aria-hidden="true"></i></td>
+                                    <td class="table-txt"><i class="fa fa-check" aria-hidden="true"></i></td>
+                                    <td class="table-txt"><i class="fa fa-check" aria-hidden="true"></i></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">url type</th>
+                                    <td class="table-txt"><i class="fa fa-check" aria-hidden="true"></i></td>
+                                    <td class="table-txt"><i class="fa fa-check" aria-hidden="true"></i></td>
+                                    <td class="table-txt"><i class="fa fa-check" aria-hidden="true"></i></td>
+                                    <td class="table-txt"><i class="fa fa-check" aria-hidden="true"></i></td>
+                                    <td class="table-txt"><i class="fa fa-check" aria-hidden="true"></i></td>
+                                    <td class="table-txt"><i class="fa fa-check" aria-hidden="true"></i></td>
+                                    <td class="table-txt"><i class="fa fa-check" aria-hidden="true"></i></td>
+                                    <td class="table-txt"><i class="fa fa-check" aria-hidden="true"></i></td>
+                                    <td class="table-txt"><i class="fa fa-check" aria-hidden="true"></i></td>
+                                    <td class="table-txt"><i class="fa fa-check" aria-hidden="true"></i></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
                 <div class="col-8 docsec" id="doc7">
                     <p>This is the text of section 7 of the documentation</p>
