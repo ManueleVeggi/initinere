@@ -272,11 +272,8 @@
                     <!-- Visualization -->
                     <h2>Visualization</h2>
                     <p>Further visualizations are available in this section.</p>
-                    <p><b>Scatterplot</b>: <br>Select the variables and the reference year. Then click on the button to
-                        visualize the result. Click <b style="color: #ad3a31"
-                            onclick="document.getElementById('chart_div').style.display = 'none';">here</b> to disable
-                        the chart canvas.</p>
-                    <div>
+                    <p><b>Scatterplot</b>: <br>Select the variables and the reference year. Then click on the button to visualize the result.</p>
+                    <div class="container">
                         <table class="table">
                             <tbody>
                                 <tr>
@@ -321,10 +318,18 @@
                                 </tr>
                             </tbody>
                         </table>
-
-                        <button type="button" class="drawbutton btn btn-lg btn-block"
+                        <div class="row"> 
+                            <div class="col-6">
+                                <button type="button" class="drawbutton btn btn-lg btn-block"
                             onclick=" document.getElementById('chart_div').style.display = 'block'; getdata()"
                             style="width: 100%"><i class="fa-solid fa-pen"></i></button>
+                            </div>
+                            <div class="col-6 ml-1">
+                                <button type="button" class="drawbutton btn btn-lg"
+                            onclick="document.getElementById('chart_div').style.display = 'none';"
+                            style="width: 100%;"><i class="fa-solid fa-trash"></i></button>
+                            </div>
+                        </div>
                         <div id="chart_div" style="width: 100%; height: 500px;"></div>
                     </div>
                     <hr class="my-4">
@@ -417,10 +422,15 @@
                                     <option value='Cagliari'>Cagliari</option>
                                 </select>
                             </div>
-                            <div class="col-12">
+                            <div class="col-6">
                                 <button type="button" class="drawbutton btn btn-lg"
-                            onclick="linedata('data/output/forline.csv')"
+                            onclick="document.getElementById('linechart_material').style.display = 'block'; linedata('data/output/forline.csv')"
                             style="width: 100%;"><i class="fa-solid fa-pen"></i></button>
+                            </div>
+                            <div class="col-6 ml-1">
+                                <button type="button" class="drawbutton btn btn-lg"
+                            onclick="document.getElementById('linechart_material').style.display = 'none';"
+                            style="width: 100%;"><i class="fa-solid fa-trash"></i></button>
                             </div>
                         </div>
                     </div>
