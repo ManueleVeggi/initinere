@@ -52,12 +52,7 @@ function drawChart(rawData) {
     var data = google.visualization.arrayToDataTable(arr);
 
     var options = {
-/*        chart: {
-            title: 'Average Temperatures and Daylight in Iceland Throughout the Year',
-            subtitle: 'Selected university: ' + labelUni
-        },
-*/
-        title: 'Average Temperatures and Daylight in Iceland Throughout the Year',
+        title: 'Fees, scholarships and international students rate across the reference period',
         subtitle: 'Selected university: ' + labelUni,
         width: 900,
         height: 500,
