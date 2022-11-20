@@ -11565,3 +11565,93 @@ footer.footer .social-link:hover>.icon-social-github {
   font-size: 2.25rem;
   box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.1);
 }
+
+
+/* TABLES */
+.table-txt { 
+  vertical-align: middle;
+  text-align: center;
+}
+
+th {
+  vertical-align: middle;
+  text-align: center;
+}
+
+/*FLIP CARDS */
+ /* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+ .flip-card {
+  background-color: transparent;
+  width: 100%;
+  height: 300px;
+  border: none;
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: 1px solid #60370e;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card-front {
+  margin: 0.5em 0.5em 0em 0.5em;
+  background-color: #f6d8b9;
+  color: #60370e;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.flip-card hr {
+  margin: 0 5% 0 5%;
+}
+
+.flip-card-front p {
+  margin: 0.5em 0.5em 0em 0.5em;
+}
+
+.flip-card-front p:first-child {
+  font-weight: bold;
+  text-align: center;
+}
+
+.flip-card-front p:last-child { 
+  color: #946c44;
+}
+
+/* Style the back side */
+.flip-card-back {
+  background-color: #f9f7de;
+  color: black;
+  transform: rotateY(180deg);
+  text-align: center;
+  vertical-align: middle;
+} 
+
+.flip-card-back code{
+  color: black;
+} 
+
+.codesection {
+  margin: 0.5em 0.5em 0em 0.5em;
+  margin-top: 0.5em;
+}
