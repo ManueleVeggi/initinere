@@ -46,7 +46,7 @@ def dataligner(dsupath, feepath, studpath, intpath, year, outputpath):
     dsuRaw = dsuRaw.astype({'CODICE_ISTITUTO':'int64'})
     dsuRaw = dsuRaw.astype({'CODICE_ISTITUTO':'string'})
 
-    #Do not consider telematic university, simplify redundant records, uniform the ids
+    #Do not consider telematic university, simplify redundant records, clean univerisities' names, uniform the ids
     for idx, row in dsuRaw.iterrows():
         if "telematic" not in row['NOME_ISTITUTO']:
             if "<" in row[6]:

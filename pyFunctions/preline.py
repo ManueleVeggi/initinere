@@ -1,5 +1,7 @@
 import pandas as pd
 
+# In order to streamiline the visualization through a JS script of the line series, the creation of a new datasets is deemed necessary. This new table should contain all the information for every academic year stored into a single column: the single data will be later parsed and extracted in JS, according to the preferences set by the user
+
 def setUni(df):
     mySet = set()
     for idx, row in df.iterrows():

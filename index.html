@@ -50,7 +50,7 @@
     <header class="masthead d-flex align-items-center">
         <div class="container px-4 px-lg-5 text-center">
             <h1 class="mb-1"><i>In itinere</i></h1>
-            <h3 class="mb-5"><em>An open data project on international students in Italian university</em></h3>
+            <h3 class="mb-5"><em>An open data project on international students in Italian universities</em></h3>
             <a class="btn btn-primary btn-xl" href="#services">Find Out More</a>
         </div>
     </header>
@@ -128,7 +128,7 @@
             <div class="mt-3" id="myChart" style="width: 100%; height: 500px;"></div>
         </div>
         <p class="textualcontent">The data show that no correlation can be found between the amount of fees and scholarships, and the percentage of enrolled international students:</p>
-        <table class="table mt-3">
+        <table class="table mt-3" style="background-color: white;">
             <thead>
                 <tr class="table-active">
                     <th scope="col">#</th>
@@ -471,28 +471,153 @@
             </div>
             <div class="row gx-0">
                 <div class="col-4" style="font-size: 1.3rem;" id="indexdoc">
-                    <ul>
-                        <li onclick="toggleEl('.docsec', 'doc1')">Introduction</li>
-                        <li onclick="toggleEl('.docsec', 'doc2')">Scenario</li>
-                        <li onclick="toggleEl('.docsec', 'doc3')">Original dataset & mushup datasets</li>
-                        <li onclick="toggleEl('.docsec', 'doc4')">Legal analysis</li>
-                        <li onclick="toggleEl('.docsec', 'doc5')">Ethical anlysis</li>
-                        <li onclick="toggleEl('.docsec', 'doc6')">Technical analysis</li>
-                        <li onclick="toggleEl('.docsec', 'doc7')">Sostenibility of the update</li>
-                        <li onclick="toggleEl('.docsec', 'doc8')">Visualization</li>
-                        <li onclick="toggleEl('.docsec', 'doc9')">RDF assertion of the metadata</li>
-                    </ul>
+                    <h4>Table of content</h4>
+                    <ol>
+                        <li onclick="toggleEl('.docsec', 'doc1')">Introduction & scenario</li>
+                        <!-- <li onclick="toggleEl('.docsec', 'doc2')">Scenario</li> -->
+                        <li onclick="toggleEl('.docsec', 'doc2')">Original & mash-up datasets</li>
+                        <li onclick="toggleEl('.docsec', 'doc3')">Legal analysis</li>
+                        <li onclick="toggleEl('.docsec', 'doc4')">Ethical anlysis</li>
+                        <li onclick="toggleEl('.docsec', 'doc5')">Technical analysis</li>
+                        <li onclick="toggleEl('.docsec', 'doc6')">Sostenibility of the update</li>
+                        <li onclick="toggleEl('.docsec', 'doc7')">Visualization</li>
+                        <li onclick="toggleEl('.docsec', 'doc8')">RDF assertion of the metadata</li>
+                    </ol>
                 </div>
                 <div class="col-8 docsec" id="doc1">
-                    <p>This is the text of section 1 of the documentation</p>
+                    <p><i>In itinere</i> is an open data project analyzing the enorolment of international students in Italian universities over a reference period of academic years (a.y. 2015/2016 - 2018/2019). Indeed, in the decades Italy has stressed the importance of opening academia to international students and researchers. To this end, exchange project are funded and international and English-taught degree courses have been opened. Moreover, specific institutions have been opened such as the "Università per stranieri" such as the one in Perugia (already in 1925), Siena (1992) and "Dante Alighieri" in Reggio Calabria (2007).</p>
+                    <p> As mentioned in the previous sections of the webpage, the main goal of the project is to analyze possible factors which influence the choice of the university from the perspective of an international students. To adress this question, after the analysis of the available data, we chose to reformulate this goal in a more circumscribed research question: are scholarships and fees riliable indicators to describe the presence of international students in Italian universities? For the sake of simplicity (expecially in the implementation of algorithms) we translated with "scholarships" several expenditures made by universities (also dorms, canteens, international mobilites etc.), grouped in the Italian term "diritto allo studio".</p>
+                    <p>To what concerns the availability of open data, we relied on the catalogue <a href="dati.gov.it">dati.gov.it</a>. This platform is part of the Italian ongoing process of digital transition, Piano di Crescita Digitale: it includes 56.893 datasets, mainly from local and regional administration. National datasets are scarce (almost 8%): this results in a difficulty in fetching exaustive data. The entirety of the source datasets have been taken from <a href="http://ustat.miur.it/">USTAT</a>, the data portal of tertiary education. Its section <a href="http://ustat.miur.it/opendata/">"Open Data"</a> is the most updated, yet some datasets do not provide information after a. y. 2019. We also considered to integrate them with other sources, such as ISTAT: unfortunately, it either provides information and useful observations referenced to different academic years (often older than the ministerial one) or groups information geographically, which is incompatible with the subdivision per insitution.</p>
+                    <h4>Statement of resposibility:</h4>
+                    <p>The project was carried out by:</p>
+                    <ul class="fa-ul">
+                        <li><span class="fa-li"><a href="https://www.linkedin.com/in/federica-bonifazi-5b16a6243/"><i class="fab fa-linkedin-in" style="color: #ad3a31"></i></a></span>Federica Bonifazi</li>
+                        <li><span class="fa-li"><a href="https://www.linkedin.com/in/manuele-veggi/"><i class="fab fa-linkedin-in" style="color: #ad3a31"></i></a></span>Manuele Veggi</li>
+                    </ul>
+                    <p>The workload was divided as following:</p>
+                    <table class="table">
+                        <thead>
+                          <tr>
+                            <th scope="col"></th>
+                            <th scope="col">Project</th>
+                            <th scope="col">Documentation</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <th scope="row">Federica Bonifazi</th>
+                            <td>
+                                Project ideation<br>
+                                Data retrieval<br>
+                                Mashup Datasets<br>
+                                Metadata creation<br>
+                                Data legal analysis<br>
+                            </td>
+                            <td>
+                                3. Legal analysis<br>
+                                4. Ethical analysis<br>
+                                5. Technical analysis<br>
+                                6. Sostenibility of the update<br>
+                                8. RDF assertion of the metadata<br>
+                            </td>
+                          </tr>
+                          <tr>
+                            <th scope="row">Manuele Veggi</th>
+                            <td>
+                                Project ideation<br>
+                                Data retrieval<br>
+                                Mashup Datasets<br>
+                                Data visualization<br>
+                                Web infrastructure<br>
+                            </td>
+                            <td>
+                                1. Introduction & scenario<br>
+                                2. Original & mash-up datasets<br>
+                                7. Visualization<br>
+                                <a href="pyFunctions/jupyternote"><i class="fa-solid fa-code" style="color: #ad3a31"></i></a> Creation of the Jupyter Notebooks <br>for the implemented scripts.
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
                 </div>
                 <div class="col-8 docsec" id="doc2">
-                    <p>This is the text of section 2 of the documentation</p>
+                    <p>As mentioned, the ten <b>source datasets</b> (dowloaded as .csv files) come from the same ministerial portal, USTAT. From now on it will be cited as MIUR, after the domain of the URL, even though the former "Ministero dell'Istruzione, dell'Università e della Ricerca" have been splitted into "Ministero dell'Università e della Ricerca" and the Ministry of Education (its name changed considerably during the last governments). As listed in the previous sections, the source datasets are:</p>
+                    <table class="table">
+                        <thead>
+                          <tr>
+                            <th scope="col">Topic</th>
+                            <th scope="col">Portal</th>
+                            <th scope="col">Dataset(s)</th>
+                          </tr>
+                        </thead>
+                        <tbody class="align-middle">
+                            <tr>
+                            <th scope="row">Contribuzione e interventi atenei. <br>Contribuzione media</th>
+                            <td rowspan="4"><a href="http://dati.ustat.miur.it/organization/miur?q=diritto+allo+studio&amp;sort=score+desc%2C+metadata_modified+desc&amp;page=2">MIUR</a></td>
+                            <td><a href="http://dati.ustat.miur.it/dataset/2016-contribuzione-e-interventi-atenei/resource/0ff2992a-88a1-41e9-af2b-b7ddc07b98a2">2016</a>, <a href="http://dati.ustat.miur.it/dataset/2017-contribuzione-e-interventi-atenei/resource/5f2cf8c5-9346-4eb2-8e9e-812a2938f6da">2017</a>, <a href="http://dati.ustat.miur.it/dataset/2018-contribuzione-e-interventi-atenei/resource/1eb81181-c3c4-4d34-9561-83e31ccf3228">2018</a>, <a href="http://dati.ustat.miur.it/dataset/2019-contribuzione-e-interventi-atenei/resource/51f1d268-cea5-4425-8eee-c1378806caca">2019</a></td>
+                            </tr>
+                            <tr>
+                            <th scope="row">Diritto allo Studio Universitario (DSU) <br>Regionale. Spesa per interventi</th>
+                            <td><a href="http://dati.ustat.miur.it/dataset/2016-diritto-allo-studio-universitario-dsu-regionale/resource/52b1b27b-341c-480c-873e-12e4e28b08da">2016</a>, <a href="http://dati.ustat.miur.it/dataset/2017-diritto-allo-studio-universitario-dsu-regionale/resource/5bb0ff78-f60e-4e30-b237-7791dff940c2">2017</a>, <a href="http://dati.ustat.miur.it/dataset/2018-diritto-allo-studio-universitario-dsu-regionale/resource/cdc018f4-4f3e-4a36-9717-dd82921fa00d">2018</a>, <a href="http://dati.ustat.miur.it/dataset/2019-diritto-allo-studio-universitario-dsu-regionale/resource/600e464d-6205-4480-9341-2c1cf48bda55">2019</a></td>
+                            </tr>
+                            <tr>
+                            <th scope="row">Iscritti. Iscritti per ateneo</th>
+                            <td><a href="http://dati.ustat.miur.it/dataset/iscritti/resource/32d26e28-a0b5-45f3-9152-6072164f3e63">2016-2019</a></td>
+                            </tr>
+                            <tr>
+                            <th scope="row">Iscritti. Iscritti stranieri per anno accademico</th>
+                            <td><a href="http://dati.ustat.miur.it/dataset/iscritti/resource/f0fb0a0a-02a6-44bb-a2b9-feadc9d05f16">2016-2019</a></td>
+                            </tr>
+                            </tbody>
+                      </table>
+                      <p>Before the mashup, the datasets are filtered as both telematic univerisities and AFAM (fine and performing arts academies) have been excluded. Moreover, expecially in the first two topics, not all the univerisites are present in all the datasets (which justfies considerably differences in some of the visualization): this is case of three Roman universities,
+                        <ul>
+                            <li>Roma Europea, missing in 2016 dataset about scholarships</li>
+                            <li>Roma Link Campus, missing in 2016, 2017 datasets about scholarships</li>
+                            <li>Roma Saint Camillus, present exclusively in 2019 (probably because it has been founded only 2017)</li>
+                        </ul>
+                        These differences can be easily computed through the function <code>distElement(dframe1, dframe2)</code> in the Python script used to create a temporary datasets for the linechart visualization (see §7).
+                      </p>
+                      <p>
+                        The four <b>output datasets</b> are obtained using the algorithms described in this <a href="pyFunctions/jupyternote/mashup.ipynb">Jupyter Notebook</a>: please make reference to this document for a more precise description of the rationale and of the computational steps beneath this phase. We decided to keep the diachronical distinction also in the output datasets: as a consequence the association between source and output dataset is the following (indicated by reference year). 
+                        <table class="table align-middle text-center">
+                            <thead>
+                              <tr>
+                                <th scope="col">Output</th>
+                                <th scope="col">Scholarships</th>
+                                <th scope="col">Paid fees</th>
+                                <th scope="col">Students</th>
+                                <th scope="col">International</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <th scope="row"><a href="data/output/2016.csv">2016</a></th>
+                                <td><a href="data/source/dsu2016.csv">2016</a></td>
+                                <td><a href="data/source/fees2016.csv">2016</a></td>
+                                <td rowspan="4"><a href="data/source/student.csv">2016-2019</a></td>
+                                <td rowspan="4"><a href="data/source/intStudent.csv">2016-2019</a></td>
+                              </tr>
+                              <tr>
+                                <th scope="row"><a href="data/output/2017.csv">2016</a></th>
+                                <td><a href="data/source/dsu2017.csv">2017</a></td>
+                                <td><a href="data/source/fees2017.csv">2017</a></td>
+                              </tr>
+                              <tr>
+                                <th scope="row"><a href="data/output/2018.csv">2018</a></th>
+                                <td><a href="data/source/dsu2018.csv">2018</a></td>
+                                <td><a href="data/source/fees2018.csv">2018</a></td>
+                              </tr>
+                              <tr>
+                                <th scope="row"><a href="data/output/2019.csv">2019</a></th>
+                                <td><a href="data/source/dsu2019.csv">2019</a></td>
+                                <td><a href="data/source/fees2019.csv">2019</a></td>
+                              </tr>
+                            </tbody>
+                          </table>
+                      </p>
                 </div>
                 <div class="col-8 docsec" id="doc3">
-                    <p>This is the text of section 3 of the documentation</p>
-                </div>
-                <div class="col-8 docsec" id="doc4">
                     <!-- Legal Analysis -->
                     <h2>Legal Analysis</h2>
                     <p>The following check list is an instrument for the public administration that intends to release open data in order to verify the legal aspects connected. For each dataset the responsible of the service has to evaluate the following topics: privacy issues, IPR policy, licenses, limitations on public access, economical conditions, temporal aspects of the dataset.</p>
@@ -947,10 +1072,10 @@
                     </table>
                     
                 </div>
-                <div class="col-8 docsec" id="doc5">
+                <div class="col-8 docsec" id="doc4">
                     <p>This is the text of section 5 of the documentation</p>
                 </div>
-                <div class="col-8 docsec" id="doc6">
+                <div class="col-8 docsec" id="doc5">
                     <h2>Technical Analysis</h2>
                     <p>All datasets were provided by MIUR Open Data Portal and follow more or less the same metadata schema, however there are some differences between the datasets published </p>
                     <div class="table-responsive-sm">
@@ -1217,14 +1342,14 @@
                         </table>
                     </div>
                 </div>
-                <div class="col-8 docsec" id="doc7">
+                <div class="col-8 docsec" id="doc6">
                     <p>This is the text of section 7 of the documentation</p>
                 </div>
-                <div class="col-8 docsec" id="doc8">
+                <div class="col-8 docsec" id="doc7">
                     <!-- Visualization -->
                     <h2>Visualization</h2>
-                    <p>Further visualizations are available in this section.</p>
-                    <p><b>Scatterplot</b>: <br>Select the variables and the reference year. Then click on the button to visualize the result.</p>
+                    <p>Even though the research question is proven wrong, data can be used to provide further visualizations. The following section proposed for different graphic interpretation of the data: they allow to analyse macro- and microtrends on both a chronological and geographical basis. They have been realized (where not differently states) through the library <a href="https://developers.google.com/chart">Google Developers Charts</a>: the implementation of algorithms based on this library and on <a href="https://d3js.org/">D3.js</a> allow the user to interactively change the information to display. Please note that most of the provided charts aims at merging together variables with different measurements (euros and percentages): for sake of readability, this made necessary the creation of a secondary vertical axis. Unfortunately (expecially in time series), this could lead to visualization biases: sharp trends could actually be justified by different reference values on the second y axis.</p>
+                    <p><b>Scatterplot</b>: <br>Select the variables and the reference year. Then click on the button to visualize the result. </p>
                     <div class="container">
                         <table class="table">
                             <tbody>
@@ -1390,7 +1515,7 @@
                     <p class="mt-2"><small> The creation of the source data set is implemented in this <a href="pyFunctions/preline.py"
                         style="color: #ad3a31"><b>Python file</b></a>. The code is also responsible for the creation of parts of the <i>option</i> tags.</small></p>
                     <hr class="my-4">
-                    <p><b>Cluster</b>: <br>A new dataset was created, averaging the values of the timeserie. Note that only the institutions present in all four datasets have been considered for clustering.</p>
+                    <p><b>Cluster</b>: <br>A new dataset was created, averaging the values of the timeseries. This clusterization is interesting, expecially if we analyse the composition of the first cluster against the other two: public univerisites tend to populate the former group, while private the latter ones. <br> <small>Note that only the institutions present in all four datasets have been considered for clustering (Roma Europea, Roma Link Campus and Roma Saint Camillus are hence excluded).</small></p>
                     <div class="accordion" id="accordionExample">
                         <div class="accordion-item">
                             <h2 class="accordion-header" id="headingOne">
@@ -1549,7 +1674,7 @@
                                 style="color: #ad3a31"><b>Jupyter Notebook</b></a> for the reference code and
                             customizable visualization of the heatmaps</small></p>
                 </div>
-                <div class="col-8 docsec" id="doc9">
+                <div class="col-8 docsec" id="doc8">
                     <p>This is the text of section 9 of the documentation</p>
                 </div>
             </div>

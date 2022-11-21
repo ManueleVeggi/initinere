@@ -44,7 +44,7 @@ header .btn:hover,
     font-size: 1.5em;
 }
 
-.datainfo:not(#MUR1) {
+.datainfo:not(#MIUR1) {
     display: none;
 }
 
@@ -114,4 +114,9 @@ header .btn:hover,
     font-size: 1.4em;
     text-align: justify;
     text-justify: inter-word;
+}
+
+.docsec a:any-link, #sourcedata a:any-link {
+    text-decoration: none;
+    color: #ad3a31
 }
