@@ -27,7 +27,7 @@ def refineStudId(myDf):
 
 def dataligner(dsupath, feepath, studpath, intpath, year, outputpath):
     
-    #FASE 1
+    #STEP 1
     #Creates source dataframes from csv
     dsuRaw = pd.read_csv(dsupath, sep=";", encoding = "ISO-8859-1")
     feeRaw = pd.read_csv(feepath, sep=";", encoding = "ISO-8859-1")
@@ -38,9 +38,8 @@ def dataligner(dsupath, feepath, studpath, intpath, year, outputpath):
     dsuDf = pd.DataFrame(columns=["uni_id", "university", "scholarship"])
     studDf = pd.DataFrame(columns=["uni_id", "uni", "total_students"])
     outputDf = pd.DataFrame(columns=["uni_id", "uni", "total_students", "int_students", "perc_intern", "relative_scholarship"])
-    mashupDf = pd.DataFrame(columns=["uni_id", "uni", "total_students", "int_students", "perc_intern", "relative_scholarship"])
 
-    #FASE 2
+    #STEP 2
     #Clean dataframe about "Diritto allo studio", aka scholarships
     dsuRaw = dsuRaw.query('TIPO_ISTITUTO == "Ateneo"')
     dsuRaw = dsuRaw.astype({'NOME_ISTITUTO':'string'})
@@ -60,7 +59,7 @@ def dataligner(dsupath, feepath, studpath, intpath, year, outputpath):
             dsuRaw.at[idx, "CODICE_ISTITUTO"] = row[5][:-2:]       
     dsuDf = mergeCount(dsuRaw, dsuDf, "uni_id", "university", "scholarship", "CODICE_ISTITUTO", "NOME_ISTITUTO", "SPESA_LAUREA")
 
-    #FASE 3
+    #STEP 3
     #Refine and uniform the ids in the fees dataframe
     for idx, row in feeRaw.iterrows():
         while str(row["COD_Ateneo"]).startswith("0"):
@@ -74,7 +73,7 @@ def dataligner(dsupath, feepath, studpath, intpath, year, outputpath):
     dsuDf = dsuDf[['uni_id', 'NOME_ATENEO', 'scholarship', 'TASSA_MEDIA_PAGANTI_LAUREA', 'TASSA_MEDIA_TOTALE_ISCRITTI_LAUREA']].rename(columns= {'NOME_ATENEO':'uni', 'TASSA_MEDIA_PAGANTI_LAUREA':'paidfee','TASSA_MEDIA_TOTALE_ISCRITTI_LAUREA':'totalfee'})
     dsuDf.drop_duplicates(ignore_index=True, inplace=True)
 
-    #FASE 4
+    #STEP 4
     #Apply similar processes for overall enrolling
     studentRaw = refineStudId(studentRaw)
     studDf = mergeCount(studentRaw, studDf, "uni_id", "uni", "total_students", "AteneoCOD", "AteneoNOME", "Isc")
@@ -106,7 +105,7 @@ def dataligner(dsupath, feepath, studpath, intpath, year, outputpath):
     #Some telematic univeristies remain in the dF: we have to drop these institutions
     outputDf.drop(outputDf[outputDf['uni'].str.contains(" - telematica")].index, inplace = True)
 
-    #FASE 6
+    #STEP 6
     #Export the dataframe
     outputDf.to_csv(outputpath, index=False)
     return outputDf
