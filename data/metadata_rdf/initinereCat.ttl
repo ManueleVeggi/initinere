@@ -1,0 +1,73 @@
+https://www.w3.org/TR/vocab-dcat-3/
+
+@prefix dcat: <http://www.w3.org/ns/dcat#>.
+@prefix dcatap: <http://data.europa.eu/r5r/>.
+@prefix dcterms: <http://purl.org/dc/terms/>.
+@prefix foaf: <http://xmlns.com/foaf/0.1/>.
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#>.
+@prefix adms: <http://www.w3.org/ns/adms#>.
+@prefix skos: <http://www.w3.org/2004/02/skos/core#>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix cc: <https://wiki.creativecommons.org/wiki/License_Output>.
+
+<https://github.com/ManueleVeggi/initinere/resource/metadata/initinereCat>
+
+    a       dcatap:Catalogue , dcat:Catalog;
+
+    dcterms:title       "initinereCat"@en;
+    adms:identifier "initinereCat";
+    dcterms:description     "Catalogue containing mashed-up datasets for the Project Initinere";
+    dcat:keyword     "university"@en, "international student"@en, "student"@en, "scholarship"@en, "fees"@en;
+    dcat:keyword     "università"@it "studenti internazionali"@it, "studenti"@it, "borse di studio"@it, "tasse"@it ;
+    
+    dcterms:issued      "2022-11-20@"^^xsd:date;
+    dcterms:modified    "2022-11-20@"^^xsd:date;
+
+    dcat:datasets   <https://github.com/ManueleVeggi/initinere/resource/metadata/initinere2016>;
+    dcat:datasets   <https://github.com/ManueleVeggi/initinere/resource/metadata/initinere2017>;
+    dcat:datasets   <https://github.com/ManueleVeggi/initinere/resource/metadata/initinere2018>;
+    dcat:datasets   <https://github.com/ManueleVeggi/initinere/resource/metadata/initinere2019>;
+    
+    dcterms:publisher   <https://github.com/ManueleVeggi/initinere>;
+    dcterms:creator     <https://github.com/ManueleVeggi/initinere/team/ManueleVeggi>;
+    dcterms:creator     <https://github.com/ManueleVeggi/initinere/team/FedericaBonifazi>;
+    
+    dcterms:language	<http://publications.europa.eu/resource/authority/language/ENG>; 
+    dcterms:license	    <https://creativecommons.org/licenses/by/4.0/>;
+    dcterms:rights      "Under this licence you may copy, distribute, display and perform the work and make derivative works and remixes based on it, even for commercial purposes, only if you give the author or licensor the credits (attribution) in the manner specified by the license, and indicating if changes were made.You may distribute derivative works only under a licence identical to the licence that governs the original work.";
+    
+    foaf:homepage   <https://manueleveggi.github.io/initinere/>.
+
+
+<https://github.com/ManueleVeggi/initinere/resource/metadata/initinere2016>
+    a dcatap:Dataset , dcat:Dataset ;
+
+<https://github.com/ManueleVeggi/initinere/resource/metadata/initinere2017>
+    a dcatap:Dataset , dcat:Dataset ;
+
+<https://github.com/ManueleVeggi/initinere/resource/metadata/initinere2018>
+    a dcatap:Dataset , dcat:Dataset ;
+
+<https://github.com/ManueleVeggi/initinere/resource/metadata/initinere2019>
+    a dcatap:Dataset , dcat:Dataset ;
+
+<https://github.com/ManueleVeggi/initinere> 
+    a foaf:agent;
+    foaf:name "initinere"@en;
+    .
+
+<https://github.com/ManueleVeggi/initinere/team/FedericaBonifazi>
+    a   foaf:Person;
+    foaf:name "Federica Bonifazi"@it;
+    .
+
+<https://github.com/ManueleVeggi/initinere/team/ManueleVeggi> 
+    a   foaf:Person;
+    foaf:name "Manuele Veggi"@it;
+    .
+
+cc:cc-by-4.0 a cc:License;
+    cc:legalcode   <https://creativecommons.org/licenses/by-sa/4.0/>;
+    cc:permits    cc:Reproduction, cc:Distribution, cc:DerivativeWorks;
+    cc:requires   cc:Notice, cc:Attribution;
+    .

@@ -1,0 +1,73 @@
+@prefix dcat: <http://www.w3.org/ns/dcat#>.
+@prefix dcatap: <http://data.europa.eu/r5r/>.
+@prefix dcterms: <http://purl.org/dc/terms/>.
+@prefix foaf: <http://xmlns.com/foaf/0.1/>.
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#>.
+@prefix adms: <http://www.w3.org/ns/adms#>.
+@prefix skos: <http://www.w3.org/2004/02/skos/core#>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix prov: <https://www.w3.org/TR/prov-o/>.
+@prefix cc: <https://wiki.creativecommons.org/wiki/License_Output>.
+
+<https://github.com/ManueleVeggi/initinere/resource/metadata/initinere2016>
+
+    a dcatap:Dataset , dcat:Dataset ;
+
+    adms:identifier     "2016"
+    dcterms:title     "Initinere 2016 Mashup"@en ;
+    dcterms:description    "Mash-up Dataset containing data on inernational students, total students, paid fees and scholarshp for each italian university for the year 2016"@en;
+    dcat:keyword     "university"@en, "international student"@en, "student"@en, "scholarship"@en, "fees"@en;
+    dcat:keyword     "università"@it "studenti internazionali"@it, "studenti"@it, "borse di studio"@it, "tasse"@it ;
+
+    dcterms:publisher   <https://github.com/ManueleVeggi/initinere>;
+    dcterms:creator     <https://github.com/ManueleVeggi/initinere/team/ManueleVeggi>;
+    dcterms:creator     <https://github.com/ManueleVeggi/initinere/team/FedericaBonifazi>;
+
+    dcterms:issued      "2022-11-20@"^^xsd:date;
+    dcterms:modified    "2022-11-20@"^^xsd:date;
+
+    prov:wasDerivedFrom    <http://dati.ustat.miur.it/dataset/2016-contribuzione-e-interventi-atenei/resource/0ff2992a-88a1-41e9-af2b-b7ddc07b98a2>, <http://dati.ustat.miur.it/dataset/2016-diritto-allo-studio-universitario-dsu-regionale/resource/52b1b27b-341c-480c-873e-12e4e28b08da>, <http://dati.ustat.miur.it/dataset/iscritti/resource/32d26e28-a0b5-45f3-9152-6072164f3e63>, <http://dati.ustat.miur.it/dataset/iscritti/resource/f0fb0a0a-02a6-44bb-a2b9-feadc9d05f16>  ;
+
+    dcterms:temporal     [ a dcterms:PeriodOfTime ;
+    dcat:startDate     "2016-01-01"^^xsd:date ;
+    dcat:endDate       "2016-12-31"^^xsd:date ;
+    ];
+    dcterms:spatial     <https://www.geonames.org/countries/IT/italy> ;
+
+    dcterms:language     <http://id.loc.gov/vocabulary/iso639-1/en> ;
+    dcat:distribution      <https://github.com/ManueleVeggi/initinere/resource/data/2016-csv> ;
+    dcterms:license	    <https://creativecommons.org/licenses/by/4.0/>;
+    dcterms:rightsHolder     <https://github.com/ManueleVeggi/initinere>
+    .
+
+
+<https://github.com/ManueleVeggi/initinere/resource/data/2016-csv>
+    a dcat:Distribution ;
+    dcterms:title "CSV Initinere Mash-up Dataset for the year 2017"@en ;
+    dcterms:description     "CSV Mash-up Dataset containing data on inernational students, total students, paid fees and scholarshp for each italian university for the year 2016"@en ;
+    dct:format    <http://publications.europa.eu/resource/authority/file-type/CSV> ;
+    dcat:mediaType    <http://www.iana.org/assignments/media-types/text/csv> ;
+    dcat:downloadURL    <https://github.com/ManueleVeggi/initinere/blob/main/data/output/2016.csv> ;
+    dct:licence     <https://creativecommons.org/licenses/by/4.0/>;
+    .
+
+<https://github.com/ManueleVeggi/initinere> 
+    a foaf:agent;
+    foaf:name "initinere"@en;
+    .
+
+<https://github.com/ManueleVeggi/initinere/team/FedericaBonifazi>
+    a   foaf:Person;
+    foaf:name "Federica Bonifazi"@it;
+    .
+
+<https://github.com/ManueleVeggi/initinere/team/ManueleVeggi> 
+    a   foaf:Person;
+    foaf:name "Manuele Veggi"@it;
+    .
+
+cc:cc-by-4.0 a cc:License;
+    cc:legalcode   <https://creativecommons.org/licenses/by-sa/4.0/>;
+    cc:permits    cc:Reproduction, cc:Distribution, cc:DerivativeWorks;
+    cc:requires   cc:Notice, cc:Attribution;
+    .
