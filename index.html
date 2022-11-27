@@ -576,6 +576,7 @@
                     </ol>
                 </div>
                 <div class="col-8 docsec" id="doc1">
+                    <h2>Introduction & scenario</h2>
                     <p><i>In itinere</i> is an open data project analyzing the enrollment of international students in Italian universities over a reference period of four academic years (a.y. 2015/2016 - 2018/2019). Indeed, in the last decades Italy has stressed the importance of opening academia to international students and researchers. To this end, exchange project are funded and international and English-taught degree courses have been opened. Moreover, specific institutions have been founded such as the "Università per stranieri" such as the one in Perugia (already in 1925), Siena (1992) and "Dante Alighieri" in Reggio Calabria (2007).</p>
                     <p> As mentioned in the previous sections of this webpage, the main goal of the project is to analyze possible factors which influence the choice of the university from the perspective of an international student. To address this question, after the analysis of the available data, we chose to reformulate this goal in a more circumscribed research question: are scholarships and fees riliable indicators to describe the presence of international students in Italian universities? For the sake of simplicity (expecially in the implementation of algorithms), we translated with "scholarships" several expenditures made by universities (also dorms, canteens, international mobilites etc.), grouped in the Italian term "diritto allo studio".</p>
                     <p>To what concerns the availability of open data, we relied on the catalogue <a href="dati.gov.it">dati.gov.it</a>. This platform is part of the Italian ongoing process of digital transition, "Piano di Crescita Digitale": it includes 56.893 datasets, mainly from local and regional administration. National datasets are scarce (almost 8%): this results in a difficulty in fetching exaustive data for our project. The entirety of the source datasets have been taken from <a href="http://ustat.miur.it/">USTAT</a>, the data portal of tertiary education. Its section <a href="http://ustat.miur.it/opendata/">"Open Data"</a> is the most updated, yet some datasets do not provide information after a. y. 2018/19. We also considered to integrate them with other sources, such as ISTAT: unfortunately, it either provides information and useful observations referenced to different academic years (often older than the ministerial one) or groups information geographically, which is incompatible with the subdivision per insitution adopted by MIUR datasets.</p>
@@ -641,6 +642,7 @@
                       </table>
                 </div>
                 <div class="col-8 docsec" id="doc2">
+                    <h2>Original datasets</h2>
                     <p>As mentioned, the ten <b>source datasets</b> (dowloaded as .csv files) come from the same ministerial portal, USTAT. From now on it will be cited as MIUR, after the domain of the URL, even though the former "Ministero dell'Istruzione, dell'Università e della Ricerca" have been splitted into "Ministero dell'Università e della Ricerca" and the Ministry of Education (its name changed considerably during the last governments). As listed in the previous sections, the source datasets are:</p>
                     <table class="table">
                         <thead>
@@ -678,6 +680,7 @@
                         </ul>
                         These differences can be easily computed through the function <code>distElement(dframe1, dframe2)</code> in the Python script used to create a temporary datasets for the linechart visualization (see §7).
                       </p>
+                      <h2>Mash-up datasets</h2>
                       <p>
                         The four <b>output datasets</b> are obtained using the algorithms described in this <a href="pyFunctions/jupyternote/mashup.ipynb">Jupyter Notebook</a>: please make reference to this document for a more precise description of the rationale and of the computational steps beneath this phase. We decided to keep the diachronical distinction also in the output datasets: as a consequence the association between source and output dataset is the following (indicated by reference year). 
                         <table class="table align-middle text-center">
@@ -718,6 +721,7 @@
                       </p>
                 </div>
                 <div class="col-8 docsec" id="doc3">
+                    <h2>Quality analysis</h2>
                     <p>The qualitative analysis of the datasets follows the <a href="https://docs.italia.it/italia/daf/lg-patrimonio-pubblico/it/stabile/aspettiorg.html#qualita-dei-dati">guidelines</a> available on the  Italian official governmental portal "Docs Italia". The four reference categories are <b>accuracy</b>, <b>consistency</b>, <b>completeness</b> and <b>timeliness</b>. They are drawn from <a href="https://www.agid.gov.it/sites/default/files/repository_files/circolari/dt_cs_n.68_-_2013dig_-regole_tecniche_basi_dati_critiche_art_2bis_dl_179-2012_sito.pdf">AgID Determinazione Commissariale n. 68/2013</a>, which states that (description of the categories was translated in English <span style="text-decoration: underline;"><span onclick="tradCriteria()">here</span></span>):</p>
 
                     <i class=></i>
@@ -1874,7 +1878,7 @@
                             customizable visualization of the heatmaps</small></p>
                 </div>
                 <div class="col-8 docsec" id="doc9">
-                    <h3>Output Metadata</h3>
+                    <h2>Output Metadata</h2>
                     <p>The produced mashed-up datasets have been described in their metadata specification following <a href="https://www.w3.org/TR/vocab-dcat-2/">DCAT AP version 2.0.0</a>, an RDF vocabulary designed to facilitate interoperability between data-catalogs published on the Web, and the resulting Turtle serialization can be accessed and downloaded by selecting the item of interest in the following list.</p>
                     <ul>
                         <li><a href="https://github.com/ManueleVeggi/initinere/blob/main/data/metadata_rdf/initinereCat.ttl">Initinere Catalog</a></li>
