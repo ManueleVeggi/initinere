@@ -476,18 +476,27 @@
                         <li onclick="toggleEl('.docsec', 'doc1')">Introduction & scenario</li>
                         <!-- <li onclick="toggleEl('.docsec', 'doc2')">Scenario</li> -->
                         <li onclick="toggleEl('.docsec', 'doc2')">Original & mash-up datasets</li>
-                        <li onclick="toggleEl('.docsec', 'doc3')">Legal analysis</li>
-                        <li onclick="toggleEl('.docsec', 'doc4')">Ethical anlysis</li>
-                        <li onclick="toggleEl('.docsec', 'doc5')">Technical analysis</li>
-                        <li onclick="toggleEl('.docsec', 'doc6')">Sostenibility of the update</li>
-                        <li onclick="toggleEl('.docsec', 'doc7')">Visualization</li>
-                        <li onclick="toggleEl('.docsec', 'doc8')">RDF assertion of the metadata</li>
+                        <li onclick="toggleEl('.docsec', 'doc3')">Quality analysis</li>
+                        <li onclick="toggleEl('.docsec', 'doc4')">Legal analysis</li>
+                        <li onclick="toggleEl('.docsec', 'doc5')">Ethical anlysis</li>
+                        <li onclick="toggleEl('.docsec', 'doc6')">Technical analysis</li>
+                        <li onclick="toggleEl('.docsec', 'doc7')">Sostenibility of the update</li>
+                        <li onclick="toggleEl('.docsec', 'doc8')">Visualization</li>
+                        <li onclick="toggleEl('.docsec', 'doc9')">RDF assertion of the metadata</li>
                     </ol>
                 </div>
                 <div class="col-8 docsec" id="doc1">
-                    <p><i>In itinere</i> is an open data project analyzing the enorolment of international students in Italian universities over a reference period of academic years (a.y. 2015/2016 - 2018/2019). Indeed, in the decades Italy has stressed the importance of opening academia to international students and researchers. To this end, exchange project are funded and international and English-taught degree courses have been opened. Moreover, specific institutions have been opened such as the "Università per stranieri" such as the one in Perugia (already in 1925), Siena (1992) and "Dante Alighieri" in Reggio Calabria (2007).</p>
-                    <p> As mentioned in the previous sections of the webpage, the main goal of the project is to analyze possible factors which influence the choice of the university from the perspective of an international students. To adress this question, after the analysis of the available data, we chose to reformulate this goal in a more circumscribed research question: are scholarships and fees riliable indicators to describe the presence of international students in Italian universities? For the sake of simplicity (expecially in the implementation of algorithms) we translated with "scholarships" several expenditures made by universities (also dorms, canteens, international mobilites etc.), grouped in the Italian term "diritto allo studio".</p>
-                    <p>To what concerns the availability of open data, we relied on the catalogue <a href="dati.gov.it">dati.gov.it</a>. This platform is part of the Italian ongoing process of digital transition, Piano di Crescita Digitale: it includes 56.893 datasets, mainly from local and regional administration. National datasets are scarce (almost 8%): this results in a difficulty in fetching exaustive data. The entirety of the source datasets have been taken from <a href="http://ustat.miur.it/">USTAT</a>, the data portal of tertiary education. Its section <a href="http://ustat.miur.it/opendata/">"Open Data"</a> is the most updated, yet some datasets do not provide information after a. y. 2019. We also considered to integrate them with other sources, such as ISTAT: unfortunately, it either provides information and useful observations referenced to different academic years (often older than the ministerial one) or groups information geographically, which is incompatible with the subdivision per insitution.</p>
+                    <p><i>In itinere</i> is an open data project analyzing the enrollment of international students in Italian universities over a reference period of four academic years (a.y. 2015/2016 - 2018/2019). Indeed, in the last decades Italy has stressed the importance of opening academia to international students and researchers. To this end, exchange project are funded and international and English-taught degree courses have been opened. Moreover, specific institutions have been founded such as the "Università per stranieri" such as the one in Perugia (already in 1925), Siena (1992) and "Dante Alighieri" in Reggio Calabria (2007).</p>
+                    <p> As mentioned in the previous sections of this webpage, the main goal of the project is to analyze possible factors which influence the choice of the university from the perspective of an international student. To address this question, after the analysis of the available data, we chose to reformulate this goal in a more circumscribed research question: are scholarships and fees riliable indicators to describe the presence of international students in Italian universities? For the sake of simplicity (expecially in the implementation of algorithms), we translated with "scholarships" several expenditures made by universities (also dorms, canteens, international mobilites etc.), grouped in the Italian term "diritto allo studio".</p>
+                    <p>To what concerns the availability of open data, we relied on the catalogue <a href="dati.gov.it">dati.gov.it</a>. This platform is part of the Italian ongoing process of digital transition, "Piano di Crescita Digitale": it includes 56.893 datasets, mainly from local and regional administration. National datasets are scarce (almost 8%): this results in a difficulty in fetching exaustive data for our project. The entirety of the source datasets have been taken from <a href="http://ustat.miur.it/">USTAT</a>, the data portal of tertiary education. Its section <a href="http://ustat.miur.it/opendata/">"Open Data"</a> is the most updated, yet some datasets do not provide information after a. y. 2018/19. We also considered to integrate them with other sources, such as ISTAT: unfortunately, it either provides information and useful observations referenced to different academic years (often older than the ministerial one) or groups information geographically, which is incompatible with the subdivision per insitution adopted by MIUR datasets.</p>
+                    <p>To better investigate the access to new data, it is necessary to have access to more detailed data. In particular, further researches will surely benefit from datasets including observations about:
+                        <ul>
+                            <li>number of international (mainly English-taught) degree courses and teachings</li>
+                            <li>provenance of international students (from EU, non-EU European country, other continents)</li>
+                            <li>number and width of international partnerships per university</li>
+                            <li>average financial background (which can be described through ISEE) of Italian and international students per university</li>
+                        </ul>
+                    </p>
                     <h4>Statement of resposibility:</h4>
                     <p>The project was carried out by:</p>
                     <ul class="fa-ul">
@@ -514,11 +523,11 @@
                                 Data legal analysis<br>
                             </td>
                             <td>
-                                3. Legal analysis<br>
-                                4. Ethical analysis<br>
-                                5. Technical analysis<br>
-                                6. Sostenibility of the update<br>
-                                8. RDF assertion of the metadata<br>
+                                4. Legal analysis<br>
+                                5. Ethical analysis<br>
+                                6. Technical analysis<br>
+                                7. Sostenibility of the update<br>
+                                9. RDF assertion of the metadata<br>
                             </td>
                           </tr>
                           <tr>
@@ -533,8 +542,9 @@
                             <td>
                                 1. Introduction & scenario<br>
                                 2. Original & mash-up datasets<br>
-                                7. Visualization<br>
-                                <a href="pyFunctions/jupyternote"><i class="fa-solid fa-code" style="color: #ad3a31"></i></a> Creation of the Jupyter Notebooks <br>for the implemented scripts.
+                                3. Quality analysis<br>
+                                8. Visualization<br>
+                                <a href="pyFunctions/jupyternote"><i class="fa-solid fa-code" style="color: #ad3a31"></i></a> Creation of the Jupyter Notebooks.
                             </td>
                           </tr>
                         </tbody>
@@ -618,9 +628,88 @@
                       </p>
                 </div>
                 <div class="col-8 docsec" id="doc3">
+                    <p>The qualitative analysis of the datasets follows the <a href="https://docs.italia.it/italia/daf/lg-patrimonio-pubblico/it/stabile/aspettiorg.html#qualita-dei-dati">guidelines</a> available on the  Italian official governmental portal "Docs Italia". The four reference categories are <b>accuracy</b>, <b>consistency</b>, <b>completeness</b> and <b>timeliness</b>. They are drawn from <a href="https://www.agid.gov.it/sites/default/files/repository_files/circolari/dt_cs_n.68_-_2013dig_-regole_tecniche_basi_dati_critiche_art_2bis_dl_179-2012_sito.pdf">AgID Determinazione Commissariale n. 68/2013</a>, which states that (description of the categories was translated in English <span style="text-decoration: underline;"><span onclick="tradCriteria()">here</span></span>):</p>
+
+                    <i class=></i>
+
+                    <section class="my-5" style="background-color: #f5f7fa;">
+                        <div class="container">
+                          <div class="row d-flex justify-content-center align-items-center">
+                            <div class="col">
+                              <div class="card">
+                                <div class="card-body">
+                                  <blockquote class="blockquote blockquote-custom bg-white px-3">
+                                    <div class="blockquote-custom-icon shadow-1-strong pt-1">
+                                        <a href="https://www.agid.gov.it/sites/default/files/repository_files/circolari/dt_cs_n.68_-_2013dig_-regole_tecniche_basi_dati_critiche_art_2bis_dl_179-2012_sito.pdf">
+                                            <i class="fa-solid fa-scale-balanced" style="color: white;"></i>
+                                    </a>
+                                    </div>
+                                    <p class="mb-0 mt-2 font-italic" style="font-style: italic;">
+                                        In relazione allo specifico contesto d'uso e alle finalità perseguite dalla norma, le basi di dati critiche devono assicurare il valore intrinseco dei dati in modo che gli attributi dei dati stessi siano adeguati rispetto alle caratteristiche di "inerenza" definite nell'ambito del suddetto standard ISO/IEC 25012, di seguito sintetizzate:
+                                        <ul style="font-style: italic;">
+                                            <li>accuratezza: il dato, e i suoi attributi, rappresenta correttamente il valore reale del concetto o evento cui si riferisce;</li>
+                                            <li>attualità (o tempestività di aggiornamento): il dato, e i suoi attributi, è del “giusto tempo” (è aggiornato) rispetto al procedimento cui si riferisce;</li>
+                                            <li>coerenza: il dato, e i suoi attributi, non presenta contraddittorietà rispetto ad altri dati del contesto d’uso dell'amministrazione titolare;</li>
+                                            <li>completezza: il dato risulta esaustivo per tutti i suoi valori attesi e rispetto alle entità relative (fonti) che concorrono alla definizione del procedimento</li>
+                                        </ul>
+                                    </p>
+                                    <footer class="blockquote-footer pt-4 mt-4 border-top">
+                                      <cite title="Source Law">Agenzia per l'Italia Digitale, Determinazione Commissariale n. 68/2013 DIG, article 4</cite>
+                                    </footer>
+                                  </blockquote>
+                                </div>
+                              </div>
+                      
+                            </div>
+                          </div>
+                        </div>
+                      </section>
+
+                    <p>As stated on the aforementioned portal, it is garanteed that all the provided data respect these four criteria. Indeed, generally the datasets are of good quality, yet minor flaws can be highlighted. In the following table, a concise description is provided (datasets are analyzed by typology and chronological distinction is not reflected, as data concerning the same field appears to be coerent):</p>
+                    <table class="table">
+                        <thead>
+                          <tr>
+                            <th scope="col">Dataset</th>
+                            <th scope="col">Accuracy</th>
+                            <th scope="col">Consistency</th>
+                            <th scope="col">Completeness</th>
+                            <th scope="col">Timeliness</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">Scholarships</th>
+                                <td><small>Only in some cases detached seats are considered separatedly from main campus (e.g. distinguishes between Bari and Taranto for University of Bari, but Bologna is handled without distinguishing different seats)</small></td>
+                                <td class="table-txt"><i class="fa fa-check" aria-hidden="true"></i></td>
+                                <td><small>Missing information about Roma - Link Campus University (2016, 2017) and Roma - Università Europea (2016)</small></td>
+                                <td><small>Last update is older than two years. No information available after a.y. 2018/2019</small></td>
+                              </tr>
+                          <tr>
+                            <th scope="row">Fee</th>
+                            <td rowspan="3" class="align-middle"><small>They do not distinguish detached seats of a university from the main campus</small></td>
+                            <td class="table-txt"><i class="fa fa-check" aria-hidden="true"></i></td>
+                            <td class="table-txt"><i class="fa fa-check" aria-hidden="true"></i></td>
+                            <td><small>Last update is older than two years. No information available after a.y. 2018/2019</small></td>
+                          </tr>
+                          <tr>
+                            <th scope="row">Students</th>
+                            <td class="table-txt"><i class="fa fa-check" aria-hidden="true"></i></td>
+                            <td class="table-txt"><i class="fa fa-check" aria-hidden="true"></i></td>
+                            <td class="table-txt"><i class="fa fa-check" aria-hidden="true"></i></td>
+                          </tr>
+                          <tr>
+                            <th scope="row">International students</th>
+                            <td class="table-txt"><i class="fa fa-check" aria-hidden="true"></i></td>
+                            <td class="table-txt"><i class="fa fa-check" aria-hidden="true"></i></td>
+                            <td class="table-txt"><i class="fa fa-check" aria-hidden="true"></i></td>
+                          </tr>
+                        </tbody>
+                      </table>
+                </div>
+                <div class="col-8 docsec" id="doc4">
                     <!-- Legal Analysis -->
                     <h2>Legal Analysis</h2>
-                    <p>To analyse the leagal aspects of the original datasets used for this project the following check list was adopted as a tool to check the evaluation of some specific topics: privacy issues, IPR policy, licenses, limitations on public access, economical conditions, temporal aspects of the dataset.</p>
+                    <p>To analyse the legal aspects of the original datasets used for this project the following check list was adopted as a tool to check the evaluation of some specific topics: privacy issues, IPR policy, licenses, limitations on public access, economical conditions, temporal aspects of the dataset.</p>
                     <div class="accordion" id="accordionExample">
                         <div class="accordion-item">
                             <h2 class="accordion-header" id="headingOne">
@@ -1074,20 +1163,20 @@
                     </table>
                     
                 </div>
-                <div class="col-8 docsec" id="doc4">
+                <div class="col-8 docsec" id="doc5">
                     <h2>Ethical Analysis</h2>
-                    <p>As seen in the previous sections each dataset analysed and re-used in this project has been collected from the <a href="http://ustat.miur.it/">MIUR-USTAT</a> Open Data platform, that gathers data from italian university and publishes them in compliance with the <a href="https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2013-03-14;33!vig=">Legislative Decree n. 33 March 14th</a> on Publicity, Transparency and Diffusion of Information for Public Administration, of course these data as declared on their <a href="http://ustat.miur.it/attivit%C3%A0/studenti-universitari/">webpage</a> are extremely sensible, covering aspects related to genre, age, residence and citizenship of universities' students and the ethical aspect of their handling has to be carefully considered.</p>
-                    <p>As far as we could see no specific ethical issue was encountered, but it's worth analysing each dataset in detail: </p>
+                    <p>As seen in the previous sections each dataset analysed and re-used in this project has been collected from the <a href="http://ustat.miur.it/">MIUR-USTAT</a> Open Data platform, that gathers data from Italian universities and publishes them in compliance with the <a href="https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2013-03-14;33!vig=">Legislative Decree n. 33 March 14th</a> on Publicity, Transparency and Diffusion of Information for Public Administration. As declared on their <a href="http://ustat.miur.it/attivit%C3%A0/studenti-universitari/">webpage</a>, these date are undoubtedly extremely sensible, covering aspects related to genre, age, residence and citizenship of universities' students and the ethical aspect of their handling has to be carefully considered.</p>
+                    <p>As far as we could see, no specific ethical issue was encountered, yet it is worth analysing each dataset in detail: </p>
                     <ul>
                         <li><b>Paid Fees</b>: Data collected in this first set of datasets regard Academic Year, Name of the Academc Istitution, Average Fees on paying students and Average Fees on total number of students, here none of these information can be redirected to single individuals and have been therefore considered ethical and usable by the team.</li>
-                        <li><b>Scholarships</b>: The second set of datasets contains information about the scholarships offered by each university, their specific description and amount, divided for the academic level thy're destined to (bachelors ans masters, PhDs, specializations), this kind of data potentially of very sensible matter since concerning the economic means of the enrolled students, have however been aggregated before being published therefore no connection to the single individual can again be found, allowing also the second dataset to be considered acceptable.</li>
-                        <li><b>Students</b>: The third dataset contains information on the amount of students enrolled in each universities for Academic Year, divided by genre but again correctly anonymized to avoid any connection to single individual, however the distinction of the students' genre wasn't considered helpful to the aims of this project and therefore unified in the creation of the mashed-up datasets used here.</li>
+                        <li><b>Scholarships</b>: The second set of datasets contains information about the scholarships offered by each university, their specific description and amount, divided for the academic level they are destined to (Bachelors and Masters, PhDs, specializations). This kind of data, which are potentially very sensible since concerning the economic means of the enrolled students, have however been aggregated before being published. As a result, no connection to the single individual can again be found, allowing also the second dataset to be considered acceptable.</li>
+                        <li><b>Students</b>: The third dataset contains information on the amount of students enrolled in each universities for Academic Year, divided by genre but again correctly anonymized to avoid any connection to single individual, however the distinction of the students' genre was not considered helpful to the aims of this project and could be also percieved as discriminatory. They have been hence unified in the creation of "In itinere" mashed-up datasets.</li>
                         <li><b>International Students</b>: The last dataset concerned only the amount of international students enrolled in each universities for Academic Year, and despite this also being a potentially sensible information, again all data were anonymized and no correlation with the individuals could be gathered.</li>
                     </ul>
                 </div>
-                <div class="col-8 docsec" id="doc5">
+                <div class="col-8 docsec" id="doc6">
                     <h2>Technical Analysis</h2>
-                    <p>All original datasets considered for this project have been provided by the <a href="">MIUR-USTAT Open Data Portal</a> and have all been described following the same metadata schema, displaying notable temporal information (publication date and following modifications) however often lacking others (license and creator) that needs to be retrieved elsewhere on the website, challenging the accessibility for the users.</p>
+                    <p>All original datasets considered for this project have been provided by the <a href="">MIUR-USTAT Open Data Portal</a> and have all been described following the same metadata schema, displaying notable temporal information (publication date and following modifications). Nonetheless other pieces of information where missing, such as license and creator: indeed, they need to be retrieved elsewhere on the website, challenging the accessibility for the users.</p>
                     <p>An overview of the output on the metadata analysis is shown below, highlithing weakenesses and differences between the datasets.</p>
                     <div class="table-responsive-sm">
                         <table class="table">
@@ -1353,22 +1442,22 @@
                         </table>
                     </div>
                 </div>
-                <div class="col-8 docsec" id="doc6">
+                <div class="col-8 docsec" id="doc7">
                     <h2>Sostenibility</h2>
                     <p>All data and information available on this website have been published under a CC-BY 4.0 license and are compliant with the FAIR principles:</p>
                     <ul>
-                        <li><b>Findability</b>: The websie is easily findable and correctly indexed, and each mashed-up dataset produced for the analysis described here are uniquely identified.</li>
-                        <li><b>Accessibility</b>: All data collected is accessible both here and on the relative Github Repository and will remain available and downloadable even if the original source would remove them in the future.</li>
+                        <li><b>Findability</b>: The website is easily findable and correctly indexed, and each mashed-up dataset produced for the performed analysis is uniquely identified.</li>
+                        <li><b>Accessibility</b>: All data collected are accessible both here and on the relative Github Repository and will remain available and downloadable even if the original source would remove them in the future.</li>
                         <li><b>Interoperability</b>: The mashed-up datasets are described following the <a href="https://www.w3.org/TR/vocab-dcat-2/">DCAT AP version 2.0.0</a> guidelines for metadata, that are created to be interoperable with other well-known and widely used formats (SKOS, FOAF, PROV-O, DCTerms).</li>
                         <li><b>Reusability</b>: All data published on the website can be freely reused in accordance with the output license.</li>
                     </ul>
                     <p>Being developed as a final project for the course "Open Access
-                        and Digital Ethics" (MA "Digital Humaninities and Digital Knowledge"), University of Bologna for the a.y. 2022/2023, there's no current intention of updating the resource in the future, although the source of the original datasets here analysed does provide annual updates and is the most reliable source of information in this field, therefore the team would like to draw the attention of any interested users to their platform for any further reference oh how this data may change in the next years.</p>
+                        and Digital Ethics" (MA "Digital Humaninities and Digital Knowledge"), University of Bologna for the a.y. 2022/2023, there is no current intention of updating the resource in the future. On the contrary, the source of the original datasets here analysed does provide annual updates and is the most reliable source of information in this field. Consequently, the team would like to draw the attention of any interested users to their platform for any further reference oh how this data may change in the next years.</p>
                 </div>
-                <div class="col-8 docsec" id="doc7">
+                <div class="col-8 docsec" id="doc8">
                     <!-- Visualization -->
                     <h2>Visualization</h2>
-                    <p>Even though the research question is proven wrong, data can be used to provide further visualizations. The following section proposed for different graphic interpretation of the data: they allow to analyse macro- and microtrends on both a chronological and geographical basis. They have been realized (where not differently states) through the library <a href="https://developers.google.com/chart">Google Developers Charts</a>: the implementation of algorithms based on this library and on <a href="https://d3js.org/">D3.js</a> allow the user to interactively change the information to display. Please note that most of the provided charts aims at merging together variables with different measurements (euros and percentages): for sake of readability, this made necessary the creation of a secondary vertical axis. Unfortunately (expecially in time series), this could lead to visualization biases: sharp trends could actually be justified by different reference values on the second y axis.</p>
+                    <p>Even though the research question is proven wrong, data can be used to provide further visualizations. The following section proposes different graphic interpretations of the data: they allow to analyse macro- and microtrends on both a chronological and geographical basis. They have been realized (where not differently states) through the library <a href="https://developers.google.com/chart">Google Developers Charts</a>: the implementation of algorithms based on this library and on <a href="https://d3js.org/">D3.js</a> allow the user to interactively change the displayed information. Please note that most of the provided charts aims at merging together variables with different measurements (euros and percentages): for sake of readability, this made necessary the creation of a secondary vertical axis. Unfortunately (expecially in time series), this could lead to visualization biases: sharp trends could actually be justified by just different reference values on the second y axis.</p>
                     <p><b>Scatterplot</b>: <br>Select the variables and the reference year. Then click on the button to visualize the result. </p>
                     <div class="container">
                         <table class="table">
@@ -1430,7 +1519,7 @@
                         <div id="chart_div" style="width: 100%; height: 500px;"></div>
                     </div>
                     <hr class="my-4">
-                    <p><b>Timeseries</b>: <br>Select a university and visualize the change of the observation during the reference period.</p>
+                    <p><b>Timeseries</b>: <br>Select a university and visualize the change of the observations during the reference period.</p>
                     <div class="container">
                         <div class="row">
                             <div class="col-12 d-flex justify-content-center mb-2" style="width: 100%;">
@@ -1533,7 +1622,7 @@
                     </div>
                     <div id="linechart_material"></div>
                     <p class="mt-2"><small> The creation of the source data set is implemented in this <a href="pyFunctions/preline.py"
-                        style="color: #ad3a31"><b>Python file</b></a>. The code is also responsible for the creation of parts of the <i>option</i> tags.</small></p>
+                        style="color: #ad3a31"><b>Python file</b></a>. The code is also responsible for the creation of parts of the <i>option</i> HTML tags.</small></p>
                     <hr class="my-4">
                     <p><b>Cluster</b>: <br>A new dataset was created, averaging the values of the timeseries. This clusterization is interesting, expecially if we analyse the composition of the first cluster against the other two: public univerisites tend to populate the former group, while private the latter ones. <br> <small>Note that only the institutions present in all four datasets have been considered for clustering (Roma Europea, Roma Link Campus and Roma Saint Camillus are hence excluded).</small></p>
                     <div class="accordion" id="accordionExample">
@@ -1676,14 +1765,14 @@
                             visualization of the clusters</small></p>
                     <hr class="my-4">
                     <p>
-                        <b>Heatmap</b>: <br>This is the new map. These maps can visualized at the following links (the
-                        following links will redirect you to a new window):
+                        <b>Heatmap</b>: <br>These maps can visualized at the following links (they
+                        will redirect you to a new window):
                         <ul class="fa-ul">
                             <li><span class="fa-li"><a href="assets/leafletgeomap/heat_map_dsu.html" target="_blank"><i
                                             class="fa-solid fa-thumbtack"
                                             style="color: #ad3a31"></i></a></span>Scholarships</li>
                             <li><span class="fa-li"><a href="assets/leafletgeomap/heat_map_paidfee.html" target="_blank"><i
-                                            class="fa-solid fa-thumbtack" style="color: #ad3a31"></i></a></span>Paidfees
+                                            class="fa-solid fa-thumbtack" style="color: #ad3a31"></i></a></span>Paid fees
                             </li>
                             <li><span class="fa-li"><a href="assets/leafletgeomap/heat_map_perc.html" target="_blank"><i
                                             class="fa-solid fa-thumbtack"
@@ -1694,9 +1783,9 @@
                                 style="color: #ad3a31"><b>Jupyter Notebook</b></a> for the reference code and
                             customizable visualization of the heatmaps</small></p>
                 </div>
-                <div class="col-8 docsec" id="doc8">
+                <div class="col-8 docsec" id="doc9">
                     <h3>Output Metadata</h3>
-                    <p>The mashed-up datasets produced have been described in their metadata specification following <a href="https://www.w3.org/TR/vocab-dcat-2/">DCAT AP version 2.0.0</a>, an RDF vocabulary designed to facilitate interoperability between data catalogs published on the Web, and the resulting Turtle serialization can be accessed and downloaded by selecting the item of interest in the following list.</p>
+                    <p>The produced mashed-up datasets have been described in their metadata specification following <a href="https://www.w3.org/TR/vocab-dcat-2/">DCAT AP version 2.0.0</a>, an RDF vocabulary designed to facilitate interoperability between data-catalogs published on the Web, and the resulting Turtle serialization can be accessed and downloaded by selecting the item of interest in the following list.</p>
                     <ul>
                         <li><a href="https://github.com/ManueleVeggi/initinere/blob/main/data/metadata_rdf/initinereCat.ttl">Initinere Catalog</a></li>
                         <li><a href="https://github.com/ManueleVeggi/initinere/blob/main/data/metadata_rdf/initinere2016.ttl">Initinere 2016</a></li>
@@ -1704,7 +1793,7 @@
                         <li><a href="https://github.com/ManueleVeggi/initinere/blob/main/data/metadata_rdf/initinere2018.ttl">Initinere 2018</a></li>
                         <li><a href="https://github.com/ManueleVeggi/initinere/blob/main/data/metadata_rdf/initinere2019.ttl">Initinere 2019</a></li>
                     </ul>
-                    <p>The datasets have been analysed both as single individual <b>dcat:Dataset</b> and as a whole as a <b>dcat:Catalog</b> gathering them all; the main metadata properties used in the description have been summarized in the next table, with specific attention at including both mandatory elements and the highest number of reccomended and optional information as possible to meaningfully enrich the collection.</p>
+                    <p>The datasets have been analysed both as single individual <b>dcat:Dataset</b> and as a whole as a <b>dcat:Catalog</b> gathering them all. The main used metadata properties have been summarized in the next table, with specific attention at including both mandatory elements and the highest number of reccomended and optional information as possible to meaningfully enrich the collection.</p>
                     <div class="container">
                         <div class="table-responsive-sm">
                             <table class="table">

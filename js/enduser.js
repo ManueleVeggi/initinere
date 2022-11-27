@@ -40,3 +40,12 @@ function toggleEl(cl, id) {
     $(cl).css("display", "none");
     current.style.display = "block";
 }
+
+function tradCriteria() {
+    var text = 
+        "• accuracy (syntactic and semantic): the data, and its attributes, correctly represents the true value of the concept or event to which it refers \n" +
+        "• consistency: the data, and its attributes, does not present contradictions with other data in the context of use of the owner administration  \n" +
+        "• completeness: the data is exhaustive for all its expected values and with respect to the related entities (sources) that contribute to the definition of the process \n" +
+        "• timeliness (or timeliness of updating): the data, and its attributes, is of the 'right time' (is up-to-date) with respect to the proceedings to which it refers"
+    alert(text)
+}
