@@ -65,7 +65,7 @@
     .
 
 cc:cc-by-4.0 a cc:License;
-    cc:legalcode   <https://creativecommons.org/licenses/by-sa/4.0/>;
+    cc:legalcode   <https://creativecommons.org/licenses/by/4.0/>;
     cc:permits    cc:Reproduction, cc:Distribution, cc:DerivativeWorks;
     cc:requires   cc:Notice, cc:Attribution;
     .
